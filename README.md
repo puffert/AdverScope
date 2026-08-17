@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="osai_security/static/adverscope-mark.svg" width="104" alt="AdverScope logo">
+  <img src="https://github.com/puffert/AdverScope/releases/download/v0.9.0-beta/adverscope-mark.png" width="104" alt="AdverScope logo">
 </p>
 
 <h1 align="center">AdverScope</h1>
@@ -14,7 +14,7 @@ AdverScope is a model-assisted workbench for professional, authorized security a
 
 It can use a local OpenAI-compatible model or tester-approved OpenAI and Z.AI profiles. Client projects, evidence, screenshots, findings, and reports remain isolated in the tester's local data store.
 
-![AdverScope assessment results dashboard](docs/images/manual/06-assessment-results.jpg)
+[![AdverScope assessment results dashboard](https://github.com/puffert/AdverScope/releases/download/v0.9.0-beta/06-assessment-results.jpg)](docs/images/manual/06-assessment-results.jpg)
 
 > **Project status:** AdverScope v0.9.0 is a public Beta. It is suitable for authorized evaluation and controlled professional pilots, but it is not yet a stable v1.0 production release. Findings still require qualified human review.
 
