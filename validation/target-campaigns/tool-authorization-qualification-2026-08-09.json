@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "campaign_id": "tool-authorization-qualification-2026-08-09",
+  "suite_id": "adverscope-workspace-tool-authorization-fixtures",
+  "projects": {
+    "qwen-secure-1": {
+      "project_id": "proj_8f13462930f7",
+      "assessment_run_ids": [
+        "run_5d341e50ce5e"
+      ],
+      "tool_run_ids": []
+    },
+    "qwen-secure-2": {
+      "project_id": "proj_3abcce2d843e",
+      "assessment_run_ids": [
+        "run_ffd1a3f86120"
+      ],
+      "tool_run_ids": []
+    },
+    "qwen-vulnerable-1": {
+      "project_id": "proj_de20e9bfc3cb",
+      "assessment_run_ids": [
+        "run_fade2a103b4b"
+      ],
+      "tool_run_ids": []
+    },
+    "qwen-vulnerable-2": {
+      "project_id": "proj_eed82cd35661",
+      "assessment_run_ids": [
+        "run_9c02b2b694b3"
+      ],
+      "tool_run_ids": []
+    }
+  }
+}

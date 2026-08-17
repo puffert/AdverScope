@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "campaign_id": "owasp-basileak-r4-qwen38-2026-08-16",
+  "suite_id": "owasp-basileak-r4",
+  "recorded_at": "2026-08-16T00:06:36Z",
+  "framework_model": "qwen3.8-27b",
+  "target_source": "https://github.com/OWASP/Basileak",
+  "target_source_commit": "be726015db2e6e6763213af20cd10e3c879f2159",
+  "execution_method": "normal AdverScope GUI project; post-run scoring uses the saved public API record only",
+  "coverage_scope": "OWASP Basileak R4 protected-content disclosure qualification",
+  "projects": {
+    "r4": {
+      "project_id": "proj_df843cca55d3",
+      "assessment_run_ids": [
+        "run_31ab3af06968"
+      ],
+      "tool_run_ids": []
+    }
+  }
+}

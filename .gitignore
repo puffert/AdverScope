@@ -1,0 +1,31 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+data/
+.venv/
+node_modules/
+npm-debug.log*
+tmp/
+output/
+platform-result/
+persistent-profile/
+_browser_sessions/
+dist/
+build/
+*.egg-info/
+# Disposable process logs and temporary fixture state created by local
+# qualification runs. Curated benchmark reports live in the other
+# validation subdirectories and remain reviewable source artifacts.
+validation/runtime/
+*.sqlite3
+*.sqlite3-*
+.env
+.env.*
+!.env.example
+local-config.json
+local-config.*.json
+!local-config.example.json

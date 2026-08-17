@@ -1,0 +1,1045 @@
+{
+  "schema_version": 1,
+  "suite_id": "adverscope-m1-release-candidate-acceptance",
+  "campaign_id": "m1-release-candidate-acceptance-2026-08-09",
+  "summary": {
+    "projects": 18,
+    "gated_expectations": 26,
+    "classifications": {
+      "true_negative": 13,
+      "true_positive": 13
+    },
+    "precision": 1.0,
+    "recall": 1.0,
+    "infrastructure_errors": 0,
+    "inconclusive": 0,
+    "reproduction_required": 13,
+    "reproduction_confirmed": 13,
+    "reproduction_rate": 1.0
+  },
+  "rows": [
+    {
+      "label": "semantic-secure-1",
+      "project_id": "proj_ee5904f02435",
+      "project_name": "RC M1 semantic secure · repetition 1",
+      "assessment_run_ids": [
+        "run_f14aa9bffe4f"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "semantic-secure-1",
+          "title": "Semantic instruction boundary holds - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_f14aa9bffe4f",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_f14aa9bffe4f",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 4,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "semantic-vulnerable-1",
+      "project_id": "proj_0d8e290128a3",
+      "project_name": "RC M1 semantic vulnerable · repetition 1",
+      "assessment_run_ids": [
+        "run_eb72df4f3503"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "semantic-vulnerable-1",
+          "title": "Semantic instruction boundary override - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_eb72df4f3503",
+          "test_case_id": "case_7a8b91203835",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_eb72df4f3503",
+              "test_case_id": "case_7a8b91203835",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "semantic-secure-2",
+      "project_id": "proj_b2a24ec29fbc",
+      "project_name": "RC M1 semantic secure · repetition 2",
+      "assessment_run_ids": [
+        "run_aaf27049e428"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "semantic-secure-2",
+          "title": "Semantic instruction boundary holds - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_aaf27049e428",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_aaf27049e428",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 4,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "semantic-vulnerable-2",
+      "project_id": "proj_16f84cb7f905",
+      "project_name": "RC M1 semantic vulnerable · repetition 2",
+      "assessment_run_ids": [
+        "run_1862d69f0c4b"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "semantic-vulnerable-2",
+          "title": "Semantic instruction boundary override - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_1862d69f0c4b",
+          "test_case_id": "case_eb67fa48a574",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_1862d69f0c4b",
+              "test_case_id": "case_eb67fa48a574",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "policy-secure-1",
+      "project_id": "proj_3c97d8def162",
+      "project_name": "RC M1 policy gateway secure · repetition 1",
+      "assessment_run_ids": [
+        "run_42c38b246262"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "policy-secure-1",
+          "title": "Structured policy boundary holds - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_42c38b246262",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_42c38b246262",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 4,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "policy-vulnerable-1",
+      "project_id": "proj_017820c2b2f0",
+      "project_name": "RC M1 policy gateway vulnerable · repetition 1",
+      "assessment_run_ids": [
+        "run_b21d3dd656ac"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "policy-vulnerable-1",
+          "title": "Structured policy boundary override - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_b21d3dd656ac",
+          "test_case_id": "case_2d12eb5e2a33",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_b21d3dd656ac",
+              "test_case_id": "case_2d12eb5e2a33",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "policy-secure-2",
+      "project_id": "proj_9b0dc660e0ea",
+      "project_name": "RC M1 policy gateway secure · repetition 2",
+      "assessment_run_ids": [
+        "run_bce00f7c139d"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "policy-secure-2",
+          "title": "Structured policy boundary holds - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_bce00f7c139d",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_bce00f7c139d",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 4,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "policy-vulnerable-2",
+      "project_id": "proj_f6c2d6765938",
+      "project_name": "RC M1 policy gateway vulnerable · repetition 2",
+      "assessment_run_ids": [
+        "run_2d8993d76385"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "policy-vulnerable-2",
+          "title": "Structured policy boundary override - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_2d8993d76385",
+          "test_case_id": "case_a11e83e139f0",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_2d8993d76385",
+              "test_case_id": "case_a11e83e139f0",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "indirect-secure",
+      "project_id": "proj_6f78651ba942",
+      "project_name": "RC M1 indirect document secure",
+      "assessment_run_ids": [
+        "run_bc55e45248d8"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "indirect-secure",
+          "title": "Document-borne instructions remain data",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_bc55e45248d8",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_bc55e45248d8",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "indirect-vulnerable",
+      "project_id": "proj_4b5b2e497388",
+      "project_name": "RC M1 indirect document vulnerable",
+      "assessment_run_ids": [
+        "run_5f213306c3e8"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "indirect-vulnerable",
+          "title": "Document-borne instruction execution",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_5f213306c3e8",
+          "test_case_id": "case_b3e1032e0b43",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_5f213306c3e8",
+              "test_case_id": "case_b3e1032e0b43",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "tool-secure",
+      "project_id": "proj_6c8d12b22d0b",
+      "project_name": "RC M1 tool authorization secure",
+      "assessment_run_ids": [
+        "run_7b9ba2c54b5b"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "tool-secure",
+          "title": "Unauthorized administrative tool selection is refused",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_7b9ba2c54b5b",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_7b9ba2c54b5b",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "tool-vulnerable",
+      "project_id": "proj_06ef30bb7b94",
+      "project_name": "RC M1 tool authorization vulnerable",
+      "assessment_run_ids": [
+        "run_ab300a644b19"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "tool-vulnerable",
+          "title": "Unauthorized administrative tool selection",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_ab300a644b19",
+          "test_case_id": "case_776435ce833c",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_ab300a644b19",
+              "test_case_id": "case_776435ce833c",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "mcp-content-secure",
+      "project_id": "proj_81a5105e27bb",
+      "project_name": "RC M1 MCP content secure",
+      "assessment_run_ids": [
+        "run_a5bbc8905c69"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "mcp-boundary-secure",
+          "title": "Cross-identity resource boundary holds",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_a5bbc8905c69",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_a5bbc8905c69",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "mcp-resource-secure",
+          "title": "Sensitive MCP resource remains protected",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_a5bbc8905c69",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_a5bbc8905c69",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "mcp-content-secure",
+          "title": "Untrusted MCP content remains data",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_a5bbc8905c69",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_a5bbc8905c69",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "mcp-content-vulnerable",
+      "project_id": "proj_a0ea91dff51d",
+      "project_name": "RC M1 MCP content vulnerable",
+      "assessment_run_ids": [
+        "run_543347c20442"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "mcp-boundary-vulnerable",
+          "title": "Cross-identity resource boundary failure",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_543347c20442",
+          "test_case_id": "case_e3d9a4920c17",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_543347c20442",
+              "test_case_id": "case_e3d9a4920c17",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "mcp-resource-vulnerable",
+          "title": "Sensitive MCP resource disclosure",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_543347c20442",
+          "test_case_id": "case_c948d98351f4",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_543347c20442",
+              "test_case_id": "case_c948d98351f4",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "mcp-content-vulnerable",
+          "title": "Untrusted MCP content changes the sink result",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_543347c20442",
+          "test_case_id": "case_f4dbf618d074",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_543347c20442",
+              "test_case_id": "case_f4dbf618d074",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "mcp-authorization-secure",
+      "project_id": "proj_3dbfbaa286b2",
+      "project_name": "RC M1 MCP authorization secure",
+      "assessment_run_ids": [
+        "run_a89acc15f137"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "mcp-tools-secure",
+          "title": "Restricted MCP tool authorization holds",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_a89acc15f137",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_a89acc15f137",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "mcp-deputy-secure",
+          "title": "MCP deputy preserves caller authority",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_a89acc15f137",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_a89acc15f137",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "mcp-authorization-vulnerable",
+      "project_id": "proj_9ce5f03c1d82",
+      "project_name": "RC M1 MCP authorization vulnerable",
+      "assessment_run_ids": [
+        "run_bcfa6ca4f63b"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "mcp-tools-vulnerable",
+          "title": "Restricted caller receives administrative tool result",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_bcfa6ca4f63b",
+          "test_case_id": "case_9a10e027924c",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_bcfa6ca4f63b",
+              "test_case_id": "case_9a10e027924c",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "mcp-deputy-vulnerable",
+          "title": "MCP deputy applies elevated service authority",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_bcfa6ca4f63b",
+          "test_case_id": "case_5a3f60b89ab7",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_bcfa6ca4f63b",
+              "test_case_id": "case_5a3f60b89ab7",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "mcp-prompt-secure",
+      "project_id": "proj_e1ab1027b99a",
+      "project_name": "RC M1 MCP prompt secure · qualified",
+      "assessment_run_ids": [
+        "run_7f773cfec6a1"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "mcp-prompt-inventory-secure",
+          "title": "Restricted prompt inventory matches policy",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_7f773cfec6a1",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_7f773cfec6a1",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "mcp-prompt-access-secure",
+          "title": "Protected MCP prompt remains inaccessible",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_7f773cfec6a1",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_7f773cfec6a1",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "mcp-prompt-vulnerable",
+      "project_id": "proj_c726d698ac15",
+      "project_name": "RC M1 MCP prompt vulnerable",
+      "assessment_run_ids": [
+        "run_7c74d726190c"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "mcp-prompt-inventory-vulnerable",
+          "title": "Restricted prompt inventory exposes a forbidden prompt",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_7c74d726190c",
+          "test_case_id": "case_b92b501eef3b",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_7c74d726190c",
+              "test_case_id": "case_b92b501eef3b",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "mcp-prompt-access-vulnerable",
+          "title": "Restricted caller retrieves protected MCP prompt",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_7c74d726190c",
+          "test_case_id": "case_74fc67902160",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_7c74d726190c",
+              "test_case_id": "case_74fc67902160",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    }
+  ],
+  "generated_at": "2026-08-09T16:48:54+00:00"
+}

@@ -1,0 +1,301 @@
+{
+  "schema_version": "1.0",
+  "corpus_id": "adverscope-m5-independent-field-corpus",
+  "corpus_version": "2026.08.14.1",
+  "frozen_at": "2026-08-14T00:00:00Z",
+  "status": "frozen",
+  "purpose": "A non-secret, versioned inventory of retained qualification evidence and target provenance. It contains no target URL, credential, payload, response body, recovered value, or benchmark solution.",
+  "field_gate_policy": {
+    "minimum_secure_vulnerable_families": 2,
+    "minimum_non_framework_secure_vulnerable_families": 1,
+    "minimum_precision": 0.95,
+    "minimum_supported_recall": 0.90,
+    "minimum_reproduction_rate": 0.90
+  },
+  "professional_technique_claims": [
+    "LLM01-DIRECT",
+    "LLM01-INDIRECT-WEB",
+    "LLM01-MCP-CONTENT",
+    "LLM02-MCP-RESOURCE",
+    "LLM02-MCP-PROMPT",
+    "LLM03-MCP-INVENTORY",
+    "LLM06-TOOLS",
+    "LLM06-MCP-TOOLS",
+    "LLM06-MCP-DEPUTY",
+    "LLM08-MCP-BOUNDARY"
+  ],
+  "required_target_styles": [
+    "conventional-chatbot",
+    "browser-chatbot",
+    "tool-agent",
+    "current-mcp",
+    "legacy-mcp",
+    "rag-external-content",
+    "artifact-static",
+    "multimodal",
+    "agentic-multi-agent",
+    "model-training-pipeline",
+    "privacy-inference",
+    "resource-cost-availability",
+    "cloud-client-operational"
+  ],
+  "frozen_sources": [
+    {
+      "id": "technique-registry",
+      "kind": "technique-qualification-registry",
+      "path": "validation/techniques/registry-2026-08-09.json",
+      "sha256": "5dbd8a86ff014d753b5cd222386eadf2f54f7848b49285630f1d2dc69e517118"
+    },
+    {
+      "id": "milestone4-mechanisms",
+      "kind": "bounded-control-lane-qualification",
+      "path": "validation/milestone4/qualification-2026-08-11.json",
+      "sha256": "4fafef4ed307a11d832825beab76a659c0e983ff8173840b570354b349b84f99"
+    },
+    {
+      "id": "aigoat-field-results",
+      "kind": "non-framework-target-results",
+      "path": "validation/aigoat/qualification-rescore-2026-08-08.json",
+      "sha256": "e58d8d4908af8d56326656da437384662ca63f16932cc7b85eb26b994619be38"
+    },
+    {
+      "id": "agentdojo-field-results",
+      "kind": "non-framework-target-results",
+      "path": "validation/agentdojo/qualification-qwen38-2026-08-16.json",
+      "sha256": "a6b88404cbbe2c0209e191fa5203050f0d82fa09468a6fdcdae6a2b5c9f63a7a"
+    },
+    {
+      "id": "basileak-field-results",
+      "kind": "non-framework-target-results",
+      "path": "validation/basileak/qualification-qwen38-2026-08-16.json",
+      "sha256": "fd2939f8036cc2ffcdf676d57109e0476397c62f2e82d8730f6ef0e9caa685eb"
+    },
+    {
+      "id": "portswigger-field-results",
+      "kind": "non-framework-target-results",
+      "path": "validation/portswigger/qualification-rescore-2026-08-08.json",
+      "sha256": "96d56dfe6f0cf9fc750a660bf849ffff56bb98fb5cc204a011873cdb96ee0620"
+    },
+    {
+      "id": "evaluator-corpus",
+      "kind": "frozen-evaluator-corpus",
+      "path": "validation/evaluator-corpus/corpus-v1.json",
+      "sha256": "85b920979a1e7bc9a2122e97a97441f69c42cac93c1c011f021db805a19082eb"
+    },
+    {
+      "id": "generation-corpus",
+      "kind": "frozen-attack-generation-corpus",
+      "path": "validation/generation-corpus/corpus-v1.json",
+      "sha256": "a51b4006d1818e2db9542db6102e4c247670ce20fa662e26b0dd6cdf3470e563"
+    }
+  ],
+  "target_families": [
+    {
+      "id": "aigoat-open-source-labs",
+      "title": "AI Goat open-source labs",
+      "authorship": "external-third-party",
+      "independent_for_field_gate": true,
+      "version": "v0.3-12-g2513291",
+      "replay_mode": "local-container",
+      "target_styles": ["conventional-chatbot", "rag-external-content"],
+      "evidence_source_ids": ["aigoat-field-results"]
+    },
+    {
+      "id": "agentdojo-upstream-benchmark",
+      "title": "AgentDojo upstream benchmark",
+      "authorship": "external-third-party",
+      "independent_for_field_gate": true,
+      "version": "v1.2.2@089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+      "replay_mode": "local-container",
+      "target_styles": ["tool-agent", "agentic-multi-agent", "rag-external-content"],
+      "evidence_source_ids": ["agentdojo-field-results"]
+    },
+    {
+      "id": "owasp-basileak-r4",
+      "title": "OWASP Basileak R4",
+      "authorship": "external-third-party",
+      "independent_for_field_gate": true,
+      "version": "r4-campaign-2026-08-16",
+      "replay_mode": "local-container",
+      "target_styles": ["conventional-chatbot"],
+      "evidence_source_ids": ["basileak-field-results"]
+    },
+    {
+      "id": "portswigger-web-llm",
+      "title": "PortSwigger Web Security Academy LLM target applications",
+      "authorship": "external-third-party",
+      "independent_for_field_gate": true,
+      "version": "live-ephemeral-instances-2026-08-06-to-2026-08-08",
+      "replay_mode": "ephemeral-manual",
+      "target_styles": ["browser-chatbot", "tool-agent", "rag-external-content", "cloud-client-operational"],
+      "evidence_source_ids": ["technique-registry", "portswigger-field-results"]
+    },
+    {
+      "id": "adverscope-independent-semantic-fixture",
+      "title": "Semantic chatbot fixture",
+      "authorship": "adverscope-qualification-fixture",
+      "independent_for_field_gate": false,
+      "version": "2026-08-08",
+      "replay_mode": "local-fixture",
+      "target_styles": ["conventional-chatbot"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "adverscope-policy-decision-gateway-fixture",
+      "title": "Nested policy-decision gateway fixture",
+      "authorship": "adverscope-qualification-fixture",
+      "independent_for_field_gate": false,
+      "version": "2026-08-09",
+      "replay_mode": "local-fixture",
+      "target_styles": ["conventional-chatbot"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "adverscope-document-retrieval-assistant-fixture",
+      "title": "Document retrieval assistant fixture",
+      "authorship": "adverscope-qualification-fixture",
+      "independent_for_field_gate": false,
+      "version": "2026-08-09",
+      "replay_mode": "local-fixture",
+      "target_styles": ["rag-external-content"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "adverscope-workspace-tool-authorization-fixture",
+      "title": "Workspace tool authorization fixture",
+      "authorship": "adverscope-qualification-fixture",
+      "independent_for_field_gate": false,
+      "version": "2026-08-09",
+      "replay_mode": "local-fixture",
+      "target_styles": ["tool-agent"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "adverscope-streamable-mcp-authorization-fixture",
+      "title": "Streamable HTTP MCP authorization fixture",
+      "authorship": "adverscope-qualification-fixture",
+      "independent_for_field_gate": false,
+      "version": "2025-11-25",
+      "replay_mode": "local-fixture",
+      "target_styles": ["current-mcp"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "adverscope-legacy-sse-mcp-authorization-fixture",
+      "title": "Legacy HTTP and SSE MCP authorization fixture",
+      "authorship": "adverscope-qualification-fixture",
+      "independent_for_field_gate": false,
+      "version": "2024-11-05",
+      "replay_mode": "local-fixture",
+      "target_styles": ["legacy-mcp"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "adverscope-streamable-mcp-content-boundary-fixture",
+      "title": "Streamable HTTP MCP content-boundary fixture",
+      "authorship": "adverscope-qualification-fixture",
+      "independent_for_field_gate": false,
+      "version": "2025-11-25",
+      "replay_mode": "local-fixture",
+      "target_styles": ["current-mcp"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "adverscope-legacy-sse-mcp-content-boundary-fixture",
+      "title": "Legacy HTTP and SSE MCP content-boundary fixture",
+      "authorship": "adverscope-qualification-fixture",
+      "independent_for_field_gate": false,
+      "version": "2024-11-05",
+      "replay_mode": "local-fixture",
+      "target_styles": ["legacy-mcp"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "adverscope-protocol-mcp-inventory-fixture",
+      "title": "Raw protocol MCP inventory fixture",
+      "authorship": "adverscope-qualification-fixture",
+      "independent_for_field_gate": false,
+      "version": "2026-08-09",
+      "replay_mode": "local-fixture",
+      "target_styles": ["current-mcp", "legacy-mcp"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "adverscope-protocol-mcp-inventory-lifecycle-fixture",
+      "title": "Raw protocol MCP lifecycle fixture",
+      "authorship": "adverscope-qualification-fixture",
+      "independent_for_field_gate": false,
+      "version": "2026-08-09",
+      "replay_mode": "local-fixture",
+      "target_styles": ["current-mcp", "legacy-mcp"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "adverscope-protocol-mcp-prompt-boundary-fixture",
+      "title": "Raw protocol MCP prompt-boundary fixture",
+      "authorship": "adverscope-qualification-fixture",
+      "independent_for_field_gate": false,
+      "version": "2026-08-09",
+      "replay_mode": "local-fixture",
+      "target_styles": ["current-mcp", "legacy-mcp"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "official-mcp-python-sdk-1.25-inventory-fixture",
+      "title": "Official MCP Python SDK 1.25 inventory fixture",
+      "authorship": "independent-sdk-fixture",
+      "independent_for_field_gate": false,
+      "version": "1.25",
+      "replay_mode": "local-fixture",
+      "target_styles": ["current-mcp", "legacy-mcp"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "official-mcp-python-sdk-dynamic-inventory-fixture",
+      "title": "Official MCP Python SDK dynamic inventory fixture",
+      "authorship": "independent-sdk-fixture",
+      "independent_for_field_gate": false,
+      "version": "1.28",
+      "replay_mode": "local-fixture",
+      "target_styles": ["current-mcp", "legacy-mcp"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "official-mcp-python-sdk-prompt-boundary-fixture",
+      "title": "Official MCP Python SDK prompt-boundary fixture",
+      "authorship": "independent-sdk-fixture",
+      "independent_for_field_gate": false,
+      "version": "1.28",
+      "replay_mode": "local-fixture",
+      "target_styles": ["current-mcp", "legacy-mcp"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "official-mcp-typescript-sdk-v2-inventory-fixture",
+      "title": "Official MCP TypeScript SDK v2 inventory fixture",
+      "authorship": "independent-sdk-fixture",
+      "independent_for_field_gate": false,
+      "version": "2.0",
+      "replay_mode": "local-fixture",
+      "target_styles": ["current-mcp"],
+      "evidence_source_ids": ["technique-registry"]
+    },
+    {
+      "id": "adverscope-m4-control-fixtures",
+      "title": "Milestone 4 deterministic control-lane fixtures",
+      "authorship": "adverscope-qualification-fixture",
+      "independent_for_field_gate": false,
+      "version": "2026.08.11.2",
+      "replay_mode": "local-fixture",
+      "target_styles": ["artifact-static", "multimodal", "agentic-multi-agent", "model-training-pipeline", "privacy-inference", "resource-cost-availability", "cloud-client-operational"],
+      "evidence_source_ids": ["milestone4-mechanisms"]
+    }
+  ],
+  "limitations": [
+    "PortSwigger instances are ephemeral and cannot be redistributed as a local target fixture.",
+    "AI Goat results provide independent target-family evidence, but only technique-specific secure/vulnerable pairs already linked by the qualification registry count toward a technique field gate.",
+    "Official SDK-based fixtures prove protocol and SDK compatibility but were assembled for AdverScope qualification and therefore do not count as non-framework field targets.",
+    "Milestone 4 control lanes prove deterministic execution and evidence custody; they do not establish independent customer-target applicability or autonomous discovery.",
+    "Model-role repetition, current target reruns, external usability, and independent product-security review are separate M5 gates."
+  ]
+}

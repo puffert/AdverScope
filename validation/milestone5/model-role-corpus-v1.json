@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "corpus_id": "adverscope-m5-model-role-corpus",
+  "version": "2026.08.14.1",
+  "frozen_at": "2026-08-14T00:00:00Z",
+  "required_roles": ["planner", "generator", "evaluator", "adjudicator"],
+  "required_provider_families": ["local-openai-compatible", "openai", "zai"],
+  "gates": {
+    "minimum_model_families": 2
+  },
+  "sources": [
+    {
+      "id": "evaluator-corpus-v1",
+      "kind": "evaluator-corpus",
+      "path": "validation/evaluator-corpus/corpus-v1.json",
+      "sha256": "85b920979a1e7bc9a2122e97a97441f69c42cac93c1c011f021db805a19082eb"
+    },
+    {
+      "id": "local-qwen-evaluator-result",
+      "kind": "evaluator-result",
+      "provider_family": "local-openai-compatible",
+      "path": "validation/evaluator-corpus/multi-model-qualification-2026-08-08.json",
+      "sha256": "59dfe52df256202bac1bc81a3abc02747bf4680d0d441ce1cf2c1d809895575f"
+    },
+    {
+      "id": "generation-corpus-v1",
+      "kind": "attack-corpus",
+      "path": "validation/generation-corpus/corpus-v1.json",
+      "sha256": "a51b4006d1818e2db9542db6102e4c247670ce20fa662e26b0dd6cdf3470e563"
+    },
+    {
+      "id": "local-qwen-attack-result",
+      "kind": "attack-result",
+      "provider_family": "local-openai-compatible",
+      "path": "validation/generation-corpus/asus-attack-generation-qualification-2026-08-08.json",
+      "sha256": "ad600f735ac1fd050907d87fbb65dd6d20e11e37413829f0e94ee510b380060b"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "local-qwen-general",
+      "result_candidate_id": "asus-general-evaluator",
+      "model": "qwen3.6-27b",
+      "model_family": "Qwen",
+      "provider_family": "local-openai-compatible",
+      "roles": ["planner", "generator", "evaluator"],
+      "evidence": {
+        "planner": "local-qwen-attack-result",
+        "generator": "local-qwen-attack-result",
+        "evaluator": "local-qwen-evaluator-result"
+      }
+    }
+  ],
+  "limitations": [
+    "The retained local campaign used one Qwen model family; the optional small classifier is from the same family and was not qualified for planning or generation.",
+    "A separately assigned adjudicator role has not completed the frozen repeated corpus.",
+    "OpenAI and Z.AI transport contracts are tested without real keys, but no billable remote provider campaign is retained.",
+    "The local OpenAI-compatible server retained request latency but did not return standardized token-usage or provider-cost records."
+  ]
+}

@@ -1,0 +1,29 @@
+services:
+  adverscope-api:
+    build:
+      context: .
+    image: adverscope:local
+    environment:
+      AISEC_PORT: "8091"
+      AISEC_CONTAINER_API_ONLY: "1"
+      ADVERSCOPE_CONTAINER_PROVIDER: "${ADVERSCOPE_CONTAINER_PROVIDER:-local}"
+      ADVERSCOPE_CONTAINER_MODEL: "${ADVERSCOPE_CONTAINER_MODEL:-qwen3.8-27b}"
+      ADVERSCOPE_CONTAINER_MODEL_BASE_URL: "${ADVERSCOPE_CONTAINER_MODEL_BASE_URL:-http://host.docker.internal:8001/v1}"
+      ADVERSCOPE_CONTAINER_API_KEY_ENV: "${ADVERSCOPE_CONTAINER_API_KEY_ENV:-}"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "127.0.0.1:8091:8091"
+    volumes:
+      - adverscope-state:/state
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+volumes:
+  adverscope-state:

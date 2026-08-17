@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "suite_id": "aigoat-c1-c9",
+  "campaign_id": "aigoat-m1.1-post-fix-2026-08-06",
+  "recorded_at": "2026-08-06T13:51:58Z",
+  "framework_baseline": "cc57be1057b2-dirty",
+  "target_source": "https://github.com/AISecurityConsortium/AIGoat.git",
+  "target_version": "v0.3-12-g2513291",
+  "target_source_commit": "2513291262064ec91061aae9445accd85af2daf0",
+  "execution_method": "normal AdverScope GUI projects; post-run scoring uses only saved public API records",
+  "projects": {
+    "C1": {
+      "project_id": "proj_cba17a09045c",
+      "project_name": "[AI Goat] C1 · Prompt Injection",
+      "assessment_run_ids": ["run_a7acf49f87eb", "run_261c2eb0cdaf", "run_6d9bde12241a"],
+      "tool_run_ids": []
+    },
+    "C2": {
+      "project_id": "proj_e4c3b2e45e0e",
+      "project_name": "[AI Goat] C2 · System Prompt Extraction",
+      "assessment_run_ids": ["run_7feec45bf30c"],
+      "tool_run_ids": []
+    },
+    "C3": {
+      "project_id": "proj_c1366db5e769",
+      "project_name": "[AI Goat] C3 · RAG Knowledge Poisoning",
+      "assessment_run_ids": ["run_cba60b4ec824"],
+      "tool_run_ids": ["toolrun_37224d5d4551"]
+    },
+    "C4": {
+      "project_id": "proj_6d7e51f2b214",
+      "project_name": "[AI Goat] C4 · Context Override",
+      "assessment_run_ids": ["run_32558ec1acdc"],
+      "tool_run_ids": []
+    },
+    "C5": {
+      "project_id": "proj_f12ad464aa13",
+      "project_name": "[AI Goat] C5 · Multi-turn Escalation",
+      "assessment_run_ids": ["run_f7c1ea538044"],
+      "tool_run_ids": []
+    },
+    "C6": {
+      "project_id": "proj_dd721d4cf240",
+      "project_name": "[AI Goat] C6 · Identity Hijacking",
+      "assessment_run_ids": ["run_d251ac0cd6a2", "run_bba86f4ddd44", "run_d55393cf9c84", "run_e24cd7f8b302", "run_8ba45898c489"],
+      "tool_run_ids": ["toolrun_d122c8b0ba5c"]
+    },
+    "C7": {
+      "project_id": "proj_4252798c095a",
+      "project_name": "[AI Goat] C7 · Authoritative Context Poisoning",
+      "assessment_run_ids": ["run_ec3d310df1b1"],
+      "tool_run_ids": ["toolrun_5d20cf3d0ff0"]
+    },
+    "C8": {
+      "project_id": "proj_f26e85f5013e",
+      "project_name": "[AI Goat] C8 · Chained KB + Injection",
+      "assessment_run_ids": ["run_dda791be75db"],
+      "tool_run_ids": ["toolrun_5766d5487aac"]
+    },
+    "C9": {
+      "project_id": "proj_307ad5e50a28",
+      "project_name": "[AI Goat] C9 · Guardrail Erosion",
+      "assessment_run_ids": ["run_fbce51bba38a"],
+      "tool_run_ids": []
+    }
+  },
+  "excluded_historical_executions": [
+    {
+      "id": "run_acf3d1026002",
+      "project": "C4",
+      "reason": "Historical target-adapter run: 34 responses were retained but could not be extracted. It remains evidence but is not a current qualification execution."
+    },
+    {
+      "id": "run_36ee1426184c",
+      "project": "C4",
+      "reason": "Historical evaluator-interrupted run: one of 34 retained cases stopped during evaluation. It remains evidence but is not a current qualification execution."
+    },
+    {
+      "id": "run_2c00e9e47877",
+      "project": "C9",
+      "reason": "Pre-fix diagnostic execution used target state from an earlier account and did not carry objective-specific reproduction semantics. It remains evidence but is not a qualification execution."
+    },
+    {
+      "id": "run_7b1a45c84fd8",
+      "project": "C4",
+      "reason": "Cancelled ordering diagnostic used sticky target state from an earlier benchmark identity. It remains evidence but is not a qualification execution."
+    },
+    {
+      "id": "run_c6bded2db2a3",
+      "project": "C4",
+      "reason": "Cancelled objective-first diagnostic used sticky target state from an earlier benchmark identity. It remains evidence but is not a qualification execution."
+    }
+  ]
+}

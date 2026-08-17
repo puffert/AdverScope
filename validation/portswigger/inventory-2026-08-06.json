@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "campaign_date": "2026-08-06",
+  "source_url": "https://portswigger.net/web-security/all-labs#web-llm-attacks",
+  "topic_url": "https://portswigger.net/web-security/llm-attacks",
+  "inventory_method": "signed-in visible PortSwigger Web Security Academy lab inventory",
+  "lab_count": 8,
+  "labs": [
+    {
+      "id": "PS-LLM-01",
+      "title": "Exploiting LLM APIs with excessive agency",
+      "difficulty": "apprentice",
+      "family": "excessive-agency",
+      "official_url": "https://portswigger.net/web-security/llm-attacks/lab-exploiting-llm-apis-with-excessive-agency",
+      "scanner_telemetry_consent_required": false
+    },
+    {
+      "id": "PS-LLM-02",
+      "title": "Exploiting vulnerabilities in LLM APIs",
+      "difficulty": "practitioner",
+      "family": "llm-api-secondary-vulnerability",
+      "official_url": "https://portswigger.net/web-security/llm-attacks/lab-exploiting-vulnerabilities-in-llm-apis",
+      "scanner_telemetry_consent_required": false
+    },
+    {
+      "id": "PS-LLM-03",
+      "title": "Indirect prompt injection",
+      "difficulty": "practitioner",
+      "family": "indirect-prompt-injection",
+      "official_url": "https://portswigger.net/web-security/llm-attacks/lab-indirect-prompt-injection",
+      "scanner_telemetry_consent_required": false
+    },
+    {
+      "id": "PS-LLM-04",
+      "title": "Exploiting insecure output handling in LLMs",
+      "difficulty": "expert",
+      "family": "insecure-output-handling",
+      "official_url": "https://portswigger.net/web-security/llm-attacks/lab-exploiting-insecure-output-handling-in-llms",
+      "scanner_telemetry_consent_required": false
+    },
+    {
+      "id": "PS-LLM-05",
+      "title": "Exploiting AI agents to perform destructive actions",
+      "difficulty": "apprentice",
+      "family": "scanner-indirect-prompt-injection",
+      "official_url": "https://portswigger.net/web-security/llm-attacks/ai-powered-scanner-vulnerabilities/lab-indirect-prompt-injection-via-ai-powered-scan",
+      "scanner_telemetry_consent_required": true
+    },
+    {
+      "id": "PS-LLM-06",
+      "title": "Exploiting AI agents to exfiltrate sensitive information",
+      "difficulty": "apprentice",
+      "family": "scanner-data-exfiltration",
+      "official_url": "https://portswigger.net/web-security/llm-attacks/ai-powered-scanner-vulnerabilities/lab-sensitive-information-exfiltration",
+      "scanner_telemetry_consent_required": true
+    },
+    {
+      "id": "PS-LLM-07",
+      "title": "Exploiting AI agents to trigger secondary vulnerabilities",
+      "difficulty": "practitioner",
+      "family": "scanner-secondary-vulnerability",
+      "official_url": "https://portswigger.net/web-security/llm-attacks/ai-powered-scanner-vulnerabilities/lab-exploiting-target-website-vulnerabilities-to-bypass-restrictions",
+      "scanner_telemetry_consent_required": true
+    },
+    {
+      "id": "PS-LLM-08",
+      "title": "Bypassing AI scanner defenses to exfiltrate sensitive information",
+      "difficulty": "practitioner",
+      "family": "scanner-defense-bypass",
+      "official_url": "https://portswigger.net/web-security/llm-attacks/ai-powered-scanner-vulnerabilities/lab-bypassing-ai-scanner-defenses-to-exfiltrate-sensitive-information",
+      "scanner_telemetry_consent_required": true
+    }
+  ]
+}

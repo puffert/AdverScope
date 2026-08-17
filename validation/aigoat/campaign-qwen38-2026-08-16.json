@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "suite_id": "aigoat-c1-c9",
+  "campaign_id": "aigoat-qwen38-2026-08-16",
+  "recorded_at": "2026-08-16T13:45:00Z",
+  "framework_baseline": "fe899cbace53-dirty",
+  "target_source": "https://github.com/AISecurityConsortium/AIGoat.git",
+  "target_version": "v0.3-12-g2513291",
+  "target_source_commit": "2513291262064ec91061aae9445accd85af2daf0",
+  "execution_method": "normal AdverScope GUI projects; post-run scoring uses only saved public API records",
+  "projects": {
+    "C1": {
+      "project_id": "proj_cba17a09045c",
+      "project_name": "[AI Goat] C1 · Prompt Injection",
+      "assessment_run_ids": ["run_f6d14353dbc5"],
+      "tool_run_ids": []
+    },
+    "C2": {
+      "project_id": "proj_e4c3b2e45e0e",
+      "project_name": "[AI Goat] C2 · System Prompt Extraction",
+      "assessment_run_ids": ["run_0eaa377c673a"],
+      "tool_run_ids": []
+    },
+    "C3": {
+      "project_id": "proj_c1366db5e769",
+      "project_name": "[AI Goat] C3 · RAG Knowledge Poisoning",
+      "assessment_run_ids": ["run_f66f8d2b7c71"],
+      "tool_run_ids": ["toolrun_9d40afe3eae0"]
+    },
+    "C4": {
+      "project_id": "proj_6d7e51f2b214",
+      "project_name": "[AI Goat] C4 · Context Override",
+      "assessment_run_ids": ["run_c0509f13ba65"],
+      "tool_run_ids": []
+    },
+    "C5": {
+      "project_id": "proj_f12ad464aa13",
+      "project_name": "[AI Goat] C5 · Multi-turn Escalation",
+      "assessment_run_ids": ["run_60134bc1d4f1"],
+      "tool_run_ids": []
+    },
+    "C6": {
+      "project_id": "proj_dd721d4cf240",
+      "project_name": "[AI Goat] C6 · Identity Hijacking",
+      "assessment_run_ids": ["run_ca98e8efef9e"],
+      "tool_run_ids": []
+    },
+    "C7": {
+      "project_id": "proj_4252798c095a",
+      "project_name": "[AI Goat] C7 · Authoritative Context Poisoning",
+      "assessment_run_ids": [],
+      "tool_run_ids": ["toolrun_39ba2944ebd6"]
+    },
+    "C8": {
+      "project_id": "proj_f26e85f5013e",
+      "project_name": "[AI Goat] C8 · Chained KB + Injection",
+      "assessment_run_ids": ["run_5c467abb42bd"],
+      "tool_run_ids": ["toolrun_06cdfa925417"]
+    },
+    "C9": {
+      "project_id": "proj_307ad5e50a28",
+      "project_name": "[AI Goat] C9 · Guardrail Erosion",
+      "assessment_run_ids": ["run_47178e1c22fd", "run_f97832d9e568"],
+      "tool_run_ids": []
+    }
+  },
+  "excluded_historical_executions": [
+    {
+      "id": "run_8f67e0fe57da",
+      "project": "C1",
+      "reason": "The process was interrupted and recovered during startup before the fresh qualification campaign; it is retained as diagnostic evidence only."
+    },
+    {
+      "id": "run_59c3c5201c46",
+      "project": "C6",
+      "reason": "The exact-one diagnostic exposed a stochastic reproduction-policy mismatch; it is retained as diagnostic evidence but is not a qualification execution."
+    },
+    {
+      "id": "run_a0cbb55ea789",
+      "project": "C6",
+      "reason": "The duplicate run was cancelled after its immutable snapshot showed the intended bounded-statistical target guardrail had not been selected."
+    },
+    {
+      "id": "toolrun_6b01c9a88566",
+      "project": "C7",
+      "reason": "The diagnostic workflow used an over-constrained target contract; cleanup succeeded, but the redundant shipping assertion made it unsuitable for qualification."
+    },
+    {
+      "id": "run_7f3ea42b2466",
+      "project": "C8",
+      "reason": "The diagnostic secure-control run reused a solved benchmark account whose target-issued proof persisted into later responses; it is retained only as contamination evidence."
+    },
+    {
+      "id": "run_f8ff432c1011",
+      "project": "C8",
+      "reason": "The diagnostic account had not started challenge C8, so the target returned an HTTP 400 precondition error and no qualification evidence."
+    },
+    {
+      "id": "run_e5ace5416efe",
+      "project": "C8",
+      "reason": "The combined lane executed the mapped C8 evidence contract before the native secure-control case, contaminating the same account with persistent target-issued proof; the run was cancelled and excluded."
+    }
+  ]
+}

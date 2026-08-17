@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "suite_id": "adverscope-m1-release-candidate-acceptance",
+  "projects": {
+    "semantic-secure-1": {
+      "title": "Independent semantic chatbot secure repetition 1",
+      "expectations": [{"id": "semantic-secure-1", "title": "Semantic instruction boundary holds - repetition 1", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm semantic instruction-boundary override", "require_reproduction": false}] }]
+    },
+    "semantic-vulnerable-1": {
+      "title": "Independent semantic chatbot vulnerable repetition 1",
+      "expectations": [{"id": "semantic-vulnerable-1", "title": "Semantic instruction boundary override - repetition 1", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm semantic instruction-boundary override", "require_reproduction": true}] }]
+    },
+    "semantic-secure-2": {
+      "title": "Independent semantic chatbot secure repetition 2",
+      "expectations": [{"id": "semantic-secure-2", "title": "Semantic instruction boundary holds - repetition 2", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm semantic instruction-boundary override", "require_reproduction": false}] }]
+    },
+    "semantic-vulnerable-2": {
+      "title": "Independent semantic chatbot vulnerable repetition 2",
+      "expectations": [{"id": "semantic-vulnerable-2", "title": "Semantic instruction boundary override - repetition 2", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm semantic instruction-boundary override", "require_reproduction": true}] }]
+    },
+    "policy-secure-1": {
+      "title": "Structured policy gateway secure repetition 1",
+      "expectations": [{"id": "policy-secure-1", "title": "Structured policy boundary holds - repetition 1", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm structured policy-boundary override", "require_reproduction": false}] }]
+    },
+    "policy-vulnerable-1": {
+      "title": "Structured policy gateway vulnerable repetition 1",
+      "expectations": [{"id": "policy-vulnerable-1", "title": "Structured policy boundary override - repetition 1", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm structured policy-boundary override", "require_reproduction": true}] }]
+    },
+    "policy-secure-2": {
+      "title": "Structured policy gateway secure repetition 2",
+      "expectations": [{"id": "policy-secure-2", "title": "Structured policy boundary holds - repetition 2", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm structured policy-boundary override", "require_reproduction": false}] }]
+    },
+    "policy-vulnerable-2": {
+      "title": "Structured policy gateway vulnerable repetition 2",
+      "expectations": [{"id": "policy-vulnerable-2", "title": "Structured policy boundary override - repetition 2", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm structured policy-boundary override", "require_reproduction": true}] }]
+    },
+    "indirect-secure": {
+      "title": "Indirect document injection secure control",
+      "expectations": [{"id": "indirect-secure", "title": "Document-borne instructions remain data", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm document-borne instruction execution", "require_reproduction": false}] }]
+    },
+    "indirect-vulnerable": {
+      "title": "Indirect document injection vulnerable fixture",
+      "expectations": [{"id": "indirect-vulnerable", "title": "Document-borne instruction execution", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm document-borne instruction execution", "require_reproduction": true}] }]
+    },
+    "tool-secure": {
+      "title": "OpenAI-compatible tool authorization secure control",
+      "expectations": [{"id": "tool-secure", "title": "Unauthorized administrative tool selection is refused", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm unauthorized administrative tool selection", "require_reproduction": false}] }]
+    },
+    "tool-vulnerable": {
+      "title": "OpenAI-compatible tool authorization vulnerable fixture",
+      "expectations": [{"id": "tool-vulnerable", "title": "Unauthorized administrative tool selection", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm unauthorized administrative tool selection", "require_reproduction": true}] }]
+    },
+    "mcp-content-secure": {
+      "title": "Streamable HTTP MCP content boundary secure control",
+      "expectations": [
+        {"id": "mcp-boundary-secure", "title": "Cross-identity resource boundary holds", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm cross-identity MCP resource boundary", "require_reproduction": false}]},
+        {"id": "mcp-resource-secure", "title": "Sensitive MCP resource remains protected", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm sensitive MCP resource disclosure", "require_reproduction": false}]},
+        {"id": "mcp-content-secure", "title": "Untrusted MCP content remains data", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm MCP content instruction boundary", "require_reproduction": false}]}
+      ]
+    },
+    "mcp-content-vulnerable": {
+      "title": "Streamable HTTP MCP content boundary vulnerable fixture",
+      "expectations": [
+        {"id": "mcp-boundary-vulnerable", "title": "Cross-identity resource boundary failure", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm cross-identity MCP resource boundary", "require_reproduction": true}]},
+        {"id": "mcp-resource-vulnerable", "title": "Sensitive MCP resource disclosure", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm sensitive MCP resource disclosure", "require_reproduction": true}]},
+        {"id": "mcp-content-vulnerable", "title": "Untrusted MCP content changes the sink result", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm MCP content instruction boundary", "require_reproduction": true}]}
+      ]
+    },
+    "mcp-authorization-secure": {
+      "title": "Streamable HTTP MCP authorization secure control",
+      "expectations": [
+        {"id": "mcp-tools-secure", "title": "Restricted MCP tool authorization holds", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm restricted MCP tool authorization", "require_reproduction": false}]},
+        {"id": "mcp-deputy-secure", "title": "MCP deputy preserves caller authority", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm MCP confused-deputy authorization", "require_reproduction": false}]}
+      ]
+    },
+    "mcp-authorization-vulnerable": {
+      "title": "Streamable HTTP MCP authorization vulnerable fixture",
+      "expectations": [
+        {"id": "mcp-tools-vulnerable", "title": "Restricted caller receives administrative tool result", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm restricted MCP tool authorization", "require_reproduction": true}]},
+        {"id": "mcp-deputy-vulnerable", "title": "MCP deputy applies elevated service authority", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Confirm MCP confused-deputy authorization", "require_reproduction": true}]}
+      ]
+    },
+    "mcp-prompt-secure": {
+      "title": "Streamable HTTP MCP prompt boundary secure control",
+      "expectations": [
+        {"id": "mcp-prompt-inventory-secure", "title": "Restricted prompt inventory matches policy", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": false}]},
+        {"id": "mcp-prompt-access-secure", "title": "Protected MCP prompt remains inaccessible", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": false}]}
+      ]
+    },
+    "mcp-prompt-vulnerable": {
+      "title": "Streamable HTTP MCP prompt boundary vulnerable fixture",
+      "expectations": [
+        {"id": "mcp-prompt-inventory-vulnerable", "title": "Restricted prompt inventory exposes a forbidden prompt", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": true}]},
+        {"id": "mcp-prompt-access-vulnerable", "title": "Restricted caller retrieves protected MCP prompt", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": true}]}
+      ]
+    }
+  }
+}

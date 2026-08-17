@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "host": "127.0.0.1",
+  "port": 8080,
+  "database_path": "data/osai-security.sqlite3",
+  "evidence_root": "data/projects",
+  "training_root": "data/training",
+  "model_profiles_path": "data/model-providers.json",
+  "llm_provider": "local",
+  "llm_base_url": "http://127.0.0.1:18001/v1",
+  "llm_model": "qwen3.8-27b",
+  "browser_executable": "",
+  "ssh_tunnel": false,
+  "ssh_local_port": 18001,
+  "ssh_remote_port": 8001,
+  "gx10_user": "your-ssh-user",
+  "gx10_host": "your-gx10-host"
+}

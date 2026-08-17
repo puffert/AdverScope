@@ -1,0 +1,141 @@
+{
+  "candidates": [
+    {
+      "id": "local-qwen-general",
+      "model": "qwen3.6-27b",
+      "model_family": "Qwen",
+      "provider_family": "local-openai-compatible",
+      "roles": [
+        {
+          "role": "planner",
+          "source_id": "local-qwen-attack-result",
+          "status": "qualified"
+        },
+        {
+          "role": "generator",
+          "source_id": "local-qwen-attack-result",
+          "status": "qualified"
+        },
+        {
+          "role": "evaluator",
+          "source_id": "local-qwen-evaluator-result",
+          "status": "qualified"
+        }
+      ],
+      "status": "qualified",
+      "telemetry": {
+        "attempts": 30,
+        "cost_samples": 0,
+        "cost_usd": 0,
+        "latency_ms_p50": 40333.21,
+        "latency_ms_p95": 73415.64,
+        "latency_samples": 30,
+        "usage_samples": 0,
+        "usage_totals": {
+          "completion_tokens": 0,
+          "prompt_tokens": 0,
+          "total_tokens": 0
+        }
+      }
+    }
+  ],
+  "corpus_id": "adverscope-m5-model-role-corpus",
+  "corpus_version": "2026.08.14.1",
+  "frozen_at": "2026-08-14T00:00:00Z",
+  "gates": [
+    {
+      "id": "frozen-source-integrity",
+      "status": "passed",
+      "threshold": 4,
+      "value": 4
+    },
+    {
+      "id": "required-role-qualification",
+      "status": "open",
+      "threshold": 4,
+      "value": 3
+    },
+    {
+      "id": "provider-family-qualification",
+      "status": "open",
+      "threshold": 3,
+      "value": 1
+    },
+    {
+      "id": "distinct-model-family-qualification",
+      "status": "open",
+      "threshold": 2,
+      "value": 1
+    },
+    {
+      "id": "latency-telemetry",
+      "status": "passed",
+      "threshold": 1,
+      "value": 30
+    },
+    {
+      "id": "token-usage-telemetry",
+      "status": "open",
+      "threshold": 1,
+      "value": 0
+    },
+    {
+      "id": "provider-cost-telemetry",
+      "status": "open",
+      "threshold": 1,
+      "value": 0
+    }
+  ],
+  "limitations": [
+    "The retained local campaign used one Qwen model family; the optional small classifier is from the same family and was not qualified for planning or generation.",
+    "A separately assigned adjudicator role has not completed the frozen repeated corpus.",
+    "OpenAI and Z.AI transport contracts are tested without real keys, but no billable remote provider campaign is retained.",
+    "The local OpenAI-compatible server retained request latency but did not return standardized token-usage or provider-cost records."
+  ],
+  "missing_provider_families": [
+    "openai",
+    "zai"
+  ],
+  "missing_roles": [
+    "adjudicator"
+  ],
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "id": "evaluator-corpus-v1",
+      "kind": "evaluator-corpus",
+      "path": "validation/evaluator-corpus/corpus-v1.json",
+      "sha256": "85b920979a1e7bc9a2122e97a97441f69c42cac93c1c011f021db805a19082eb"
+    },
+    {
+      "id": "local-qwen-evaluator-result",
+      "kind": "evaluator-result",
+      "path": "validation/evaluator-corpus/multi-model-qualification-2026-08-08.json",
+      "sha256": "59dfe52df256202bac1bc81a3abc02747bf4680d0d441ce1cf2c1d809895575f"
+    },
+    {
+      "id": "generation-corpus-v1",
+      "kind": "attack-corpus",
+      "path": "validation/generation-corpus/corpus-v1.json",
+      "sha256": "a51b4006d1818e2db9542db6102e4c247670ce20fa662e26b0dd6cdf3470e563"
+    },
+    {
+      "id": "local-qwen-attack-result",
+      "kind": "attack-result",
+      "path": "validation/generation-corpus/asus-attack-generation-qualification-2026-08-08.json",
+      "sha256": "ad600f735ac1fd050907d87fbb65dd6d20e11e37413829f0e94ee510b380060b"
+    }
+  ],
+  "status": "in_progress",
+  "summary": {
+    "cost_samples": 0,
+    "latency_samples": 30,
+    "minimum_model_families": 2,
+    "qualified_model_families": 1,
+    "qualified_provider_families": 1,
+    "qualified_roles": 3,
+    "required_provider_families": 3,
+    "required_roles": 4,
+    "usage_samples": 0
+  }
+}

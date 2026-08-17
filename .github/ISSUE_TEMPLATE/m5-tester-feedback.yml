@@ -1,0 +1,149 @@
+name: Milestone 5 tester feedback
+description: Submit sanitized qualification, reliability, or usability feedback from an AdverScope preview session.
+title: "[M5 Preview] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form only for sanitized preview feedback. Do not include customer names, private targets, credentials, API keys, cookies, recovered values, hidden prompts, browser profiles, screenshots containing confidential data, or unredacted evidence bundles. Report an AdverScope security vulnerability through the repository's private security-advisory route.
+  - type: input
+    id: session_id
+    attributes:
+      label: Preview session ID
+      description: Use the opaque ID supplied by the coordinator; do not use a customer or target name.
+      placeholder: M5-T001
+    validations:
+      required: true
+  - type: dropdown
+    id: feedback_type
+    attributes:
+      label: Feedback type
+      options:
+        - Qualification result
+        - Product defect
+        - Usability or documentation problem
+        - Model variance
+        - Target or environment problem
+        - Unsupported or inapplicable control
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: AdverScope version and build revision
+      placeholder: 0.9.0 / commit abc1234
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows 11
+        - Ubuntu 24.04 LTS
+        - macOS 15 Apple Silicon
+        - API-only container
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: installation
+    attributes:
+      label: Installation method
+      options:
+        - Source checkout with uv
+        - Verified release wheel
+        - API-only container
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: model_profile
+    attributes:
+      label: Sanitized model profile
+      description: Provider kind, model ID, and role assignments only. Never include a key or credential-bearing URL.
+      placeholder: Local OpenAI-compatible / example-model / planner+generator+evaluator
+    validations:
+      required: true
+  - type: dropdown
+    id: target_category
+    attributes:
+      label: Authorized target category
+      options:
+        - Bundled synthetic tutorial
+        - Public training lab
+        - Owned synthetic fixture
+        - Authorized non-production implementation
+        - Other authorized target
+    validations:
+      required: true
+  - type: input
+    id: target_style
+    attributes:
+      label: Sanitized target style
+      description: State capabilities and adapter, not the target name or URL.
+      placeholder: Browser chatbot with indirect-content ingestion
+    validations:
+      required: true
+  - type: textarea
+    id: task_results
+    attributes:
+      label: Core task results
+      description: Record completed, blocked, or safely stopped plus assistance level 0-4 for each relevant task.
+      placeholder: |
+        Installation and doctor: completed / level 0 / 8 minutes
+        Tutorial project and run: completed / level 1 / 22 minutes
+        Exact request-response review: completed / level 0
+        Human adjudication: completed / level 0
+        Redacted export: completed / level 0
+        Backup verification: completed / level 0
+    validations:
+      required: true
+  - type: textarea
+    id: expected_actual
+    attributes:
+      label: Expected and actual security outcome
+      description: Keep the benchmark oracle separate from AdverScope's verdict. Include applicability and human adjudication.
+      placeholder: Applicable expected control; AdverScope verdict; TP/FP/FN/TN/inconclusive; rationale.
+    validations:
+      required: true
+  - type: textarea
+    id: execution_ids
+    attributes:
+      label: Sanitized execution references
+      description: Include run IDs, technique IDs, and failure stage. Do not paste confidential traffic.
+      placeholder: run_xxx; LLM01-INDIRECT; evaluation stage
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction, evidence, and cleanup
+      description: State initial/reproduction outcomes, evidence completeness, cleanup verification, and a minimal synthetic reproduction when available.
+    validations:
+      required: true
+  - type: textarea
+    id: usability
+    attributes:
+      label: Usability and assistance
+      description: Record elapsed time, unclear labels or controls, assistance level, and the first point of confusion.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact and suggested priority
+      description: State whether this blocked the session and why it affects a professional assessment.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Data safety confirmation
+      options:
+        - label: I removed secrets, customer evidence, private target identifiers, recovered values, session material, and confidential screenshots.
+          required: true
+        - label: This report contains no AdverScope vulnerability that requires private security reporting.
+          required: true
+        - label: I recorded uncertainty as inconclusive rather than secure or vulnerable.
+          required: true

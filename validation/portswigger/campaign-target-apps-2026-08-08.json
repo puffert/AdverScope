@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "suite_id": "portswigger-web-llm-target-apps",
+  "campaign_id": "portswigger-target-apps-2026-08-08",
+  "recorded_at": "2026-08-08T15:10:00Z",
+  "framework_baseline": "8a9b0ab-dirty",
+  "target_source": "https://portswigger.net/web-security/all-labs#web-llm-attacks",
+  "target_version": "live-ephemeral-instances-2026-08-06-to-2026-08-08",
+  "execution_method": "normal AdverScope GUI projects; post-run scoring uses only saved public API records",
+  "projects": {
+    "PS-LLM-01": {
+      "project_id": "proj_bb06d4e86e61",
+      "project_name": "[PortSwigger] 01 · Excessive Agency",
+      "assessment_run_ids": ["run_3d6ae42690e1"],
+      "tool_run_ids": []
+    },
+    "PS-LLM-02": {
+      "project_id": "proj_172efb31cb71",
+      "project_name": "[PortSwigger] 02 · LLM API Secondary Vulnerability",
+      "assessment_run_ids": ["run_13c362022276"],
+      "tool_run_ids": []
+    },
+    "PS-LLM-03": {
+      "project_id": "proj_cf20b884035d",
+      "project_name": "[PortSwigger] 03 · Indirect Prompt Injection",
+      "assessment_run_ids": ["run_a1f678ac4207"],
+      "tool_run_ids": []
+    },
+    "PS-LLM-04": {
+      "project_id": "proj_0ec6e5e0f4bd",
+      "project_name": "[PortSwigger] 04 · Insecure Output Handling",
+      "assessment_run_ids": ["run_a958b5331563"],
+      "tool_run_ids": []
+    }
+  },
+  "excluded_historical_executions": [
+    {
+      "project": "PS-LLM-01",
+      "reason": "Earlier runs were connection, browser-session, selector, and minimum-proof diagnostics rather than the retained qualification execution."
+    },
+    {
+      "project": "PS-LLM-02",
+      "reason": "Earlier runs were route-discovery, expired-instance, selector, and safe-boundary diagnostics rather than the retained qualification execution."
+    },
+    {
+      "project": "PS-LLM-03",
+      "reason": "Earlier runs were authentication, stored-carrier, completion-detection, and presentation diagnostics rather than the retained qualification execution."
+    },
+    {
+      "project": "PS-LLM-04",
+      "reason": "Earlier runs exposed and preserved transient-response and browser-proof evaluation defects; the selected run uses the generic post-fix implementation and confirmed reproduction."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "campaign_id": "indirect-document-assistant-qualification-2026-08-09",
+  "suite_id": "adverscope-indirect-document-assistant-fixtures",
+  "projects": {
+    "qwen-secure-1": {
+      "project_id": "proj_328ebbbb8de3",
+      "assessment_run_ids": [
+        "run_ea23a5b91fc1"
+      ],
+      "tool_run_ids": []
+    },
+    "qwen-secure-2": {
+      "project_id": "proj_6eabd03f8f25",
+      "assessment_run_ids": [
+        "run_a3ed02ab5c07"
+      ],
+      "tool_run_ids": []
+    },
+    "qwen-vulnerable-1": {
+      "project_id": "proj_9cf3e4f69757",
+      "assessment_run_ids": [
+        "run_5e5168fb6f97"
+      ],
+      "tool_run_ids": []
+    },
+    "qwen-vulnerable-2": {
+      "project_id": "proj_d5398c91d669",
+      "assessment_run_ids": [
+        "run_98923f4ea651"
+      ],
+      "tool_run_ids": []
+    }
+  }
+}

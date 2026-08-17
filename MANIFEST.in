@@ -1,0 +1,34 @@
+include CHANGELOG.md
+include CONTRIBUTING.md
+include LICENSE
+include README.md
+include RESPONSIBLE_USE.md
+include ROADMAP.md
+include SECURITY.md
+include SUPPORT.md
+include local-config.example.json
+include package.json
+include package-lock.json
+include run.py
+include uv.lock
+include Dockerfile
+include compose.yaml
+include .dockerignore
+include scripts/bootstrap.py
+include scripts/check_release_identity.py
+recursive-include scripts *.py
+recursive-include training *.json *.md
+recursive-include tests *.py
+recursive-include browser *.mjs
+recursive-include docs *.md
+include docs/milestone5/m5.0-preview-manifest.json
+recursive-include docs/images/manual *.jpg
+include .github/ISSUE_TEMPLATE/m5-tester-feedback.yml
+include .github/workflows/ci.yml
+include .github/workflows/release.yml
+exclude docs/AIGOAT_VALIDATION_BASELINE_2026-08-06.md
+prune data
+prune output
+prune tmp
+prune validation
+global-exclude *.sqlite3 *.sqlite3-* .env .env.* local-config.json

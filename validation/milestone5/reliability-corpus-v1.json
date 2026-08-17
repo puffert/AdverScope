@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "corpus_id": "adverscope-m5-reliability-custody-corpus",
+  "version": "2026.08.14.1",
+  "frozen_at": "2026-08-14T00:00:00Z",
+  "source_files": [
+    "osai_security/reliability_qualification.py",
+    "validation/milestone5/reliability-corpus-v1.json",
+    "osai_security/faults.py",
+    "osai_security/model_gateway.py",
+    "osai_security/transport_reliability.py",
+    "osai_security/recovery.py",
+    "osai_security/evidence_bundles.py",
+    "osai_security/http_app.py",
+    "tests/test_transport_reliability.py",
+    "tests/test_phase0_safety.py",
+    "tests/test_milestone3_recovery.py",
+    "tests/test_evidence_bundles.py",
+    "tests/test_runtime_and_model_providers.py",
+    "tests/test_milestone3_distribution.py",
+    "tests/test_vertical_slice.py",
+    "tests/test_rag_security.py",
+    "tests/test_mcp_stdio.py",
+    "tests/test_agentic_trace_security.py",
+    "tests/test_testing_tools.py"
+  ],
+  "workstreams": [
+    {
+      "id": "transport-fault-handling",
+      "title": "Target and model transport fault handling",
+      "controls": [
+        {"id": "transport-bounded-profile", "title": "Retry profile remains explicit and bounded", "test": "tests.test_transport_reliability.TransportReliabilityUnitTests.test_profile_is_opt_in_and_bounded"},
+        {"id": "transport-stream-completion", "title": "Incomplete streaming output is not accepted", "test": "tests.test_transport_reliability.TransportReliabilityUnitTests.test_incomplete_sse_is_never_a_success_when_completion_is_required"},
+        {"id": "transport-rate-limit", "title": "Rate-limit retry preserves the failed attempt", "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_rate_limit_retry_retains_fault_and_relationship"},
+        {"id": "transport-service-unavailable", "title": "HTTP 503 retry preserves exact evidence", "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_http_503_retry_retains_the_failed_response_before_recovery"},
+        {"id": "transport-timeout-reset", "title": "Timeout and reset recovery retain fault class", "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_timeout_and_connection_reset_recover_without_losing_fault_class"},
+        {"id": "transport-schema-fault", "title": "Malformed JSON remains a terminal schema fault", "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_malformed_json_is_a_terminal_schema_fault_with_raw_response_retained"},
+        {"id": "transport-replay-safety", "title": "Non-idempotent retries require explicit replay safety", "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_non_idempotent_retry_requires_explicit_replay_safety"},
+        {"id": "transport-stream-stall", "title": "Partial provider stream is classified as stalled", "test": "tests.test_runtime_and_model_providers.RuntimeAndProviderTests.test_partial_sse_timeout_is_classified_as_a_streaming_stall"},
+        {"id": "transport-model-reset", "title": "Model transport performs only the bounded transient retry", "test": "tests.test_vertical_slice.VerticalSliceTests.test_model_transport_retries_one_transient_connection_reset"}
+      ]
+    },
+    {
+      "id": "cancellation-and-stale-recovery",
+      "title": "Cancellation, interruption, and stale-run recovery",
+      "controls": [
+        {"id": "cancel-background-run", "title": "Background assessment cancellation releases target", "test": "tests.test_phase0_safety.Phase0SafetyTests.test_background_assessment_can_be_cancelled_and_releases_the_target"},
+        {"id": "recover-stale-runs", "title": "Startup reconciles stale assessments and tools", "test": "tests.test_phase0_safety.Phase0SafetyTests.test_application_startup_recovers_stale_assessment_and_tool_runs"},
+        {"id": "cancel-agentic-before-traffic", "title": "Pre-cancelled agent run sends no target traffic", "test": "tests.test_agentic_trace_security.AgenticTraceSecurityTests.test_pre_cancelled_run_sends_no_agentic_target_traffic"},
+        {"id": "cancel-mcp-process", "title": "MCP stdio cancellation closes child process", "test": "tests.test_mcp_stdio.MCPStdioQualificationTests.test_stdio_cancellation_closes_process_and_malformed_output_cannot_create_a_finding"},
+        {"id": "restart-post-attestation", "title": "Restart never replays unattested POST traffic", "test": "tests.test_runtime_and_model_providers.RuntimeAndProviderTests.test_restart_eligibility_never_replays_unattested_post_traffic"}
+      ]
+    },
+    {
+      "id": "cleanup-and-reproduction",
+      "title": "Reproduction, cleanup, and effect verification",
+      "controls": [
+        {"id": "stochastic-reproduction", "title": "Stochastic reproduction retains every sample", "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_stochastic_reproduction_records_all_samples"},
+        {"id": "stream-fault-not-finding", "title": "Incomplete stream cannot become a finding", "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_incomplete_stream_is_infrastructure_not_a_finding"},
+        {"id": "rag-cleanup-failure", "title": "Ineffective cleanup is detected and stops execution", "test": "tests.test_rag_security.RAGSecurityTests.test_success_status_without_effective_cleanup_is_detected_and_stops"},
+        {"id": "rag-no-broad-delete", "title": "Missing identifier never degrades into broad deletion", "test": "tests.test_rag_security.RAGSecurityTests.test_missing_document_id_never_degrades_into_a_broad_delete"},
+        {"id": "agentic-verifier-cleanup", "title": "Agentic effect requires verifier and cleanup", "test": "tests.test_agentic_trace_security.AgenticTraceSecurityTests.test_approval_bypass_requires_trace_and_verifier_then_runs_cleanup"},
+        {"id": "workflow-exact-events", "title": "Workflow polling and captures preserve exact events", "test": "tests.test_testing_tools.TestingToolsTests.test_workflow_captures_values_polls_and_preserves_exact_events"}
+      ]
+    },
+    {
+      "id": "transfer-backup-restore",
+      "title": "Project transfer, backup, migration, and restore",
+      "controls": [
+        {"id": "migration-verified-backup", "title": "Schema migration creates verified backup ledger", "test": "tests.test_milestone3_recovery.MigrationRecoveryTests.test_schema_upgrade_creates_verified_backup_and_ledger"},
+        {"id": "migration-interruption", "title": "Interrupted migration restores exact database", "test": "tests.test_milestone3_recovery.MigrationRecoveryTests.test_interrupted_upgrade_restores_the_exact_pre_upgrade_database"},
+        {"id": "project-transfer-isolation", "title": "Transfer contains only selected project evidence", "test": "tests.test_milestone3_recovery.ProjectTransferTests.test_project_transfer_preserves_only_the_selected_project_and_evidence"},
+        {"id": "project-transfer-tamper", "title": "Tampered transfer is rejected", "test": "tests.test_milestone3_recovery.ProjectTransferTests.test_project_transfer_rejects_tampering_and_requires_acknowledgement"},
+        {"id": "full-backup-restore", "title": "Full backup restores projects, evidence, and profiles", "test": "tests.test_milestone3_recovery.LocalBackupRestoreTests.test_full_assessment_backup_restores_projects_evidence_and_provider_profiles"},
+        {"id": "restore-interruption", "title": "Interrupted restore rolls back through journal", "test": "tests.test_milestone3_recovery.LocalBackupRestoreTests.test_recovery_journal_rolls_back_an_interrupted_restore"},
+        {"id": "restore-path-boundary", "title": "Restore journal rejects out-of-bound paths", "test": "tests.test_milestone3_recovery.LocalBackupRestoreTests.test_recovery_journal_rejects_paths_outside_the_rollback_directory"}
+      ]
+    },
+    {
+      "id": "evidence-integrity",
+      "title": "Evidence integrity, review freshness, and export custody",
+      "controls": [
+        {"id": "bundle-scoped-verifiable", "title": "Redacted and full bundles remain scoped and verifiable", "test": "tests.test_evidence_bundles.EvidenceBundleTests.test_redacted_and_full_bundles_are_scoped_and_verifiable"},
+        {"id": "bundle-tamper-detection", "title": "Tampering and missing assets are rejected", "test": "tests.test_evidence_bundles.EvidenceBundleTests.test_tampering_and_broken_assets_are_rejected"},
+        {"id": "review-freshness", "title": "Accepted report becomes stale after project change", "test": "tests.test_evidence_bundles.EvidenceBundleTests.test_report_acceptance_becomes_stale_after_project_change"},
+        {"id": "full-export-ack", "title": "Full export requires acknowledgement and run scope", "test": "tests.test_evidence_bundles.EvidenceBundleTests.test_application_requires_full_export_acknowledgement_and_enforces_run_scope"},
+        {"id": "browser-screenshot-hashes", "title": "Browser evidence stores paired hashed screenshots", "test": "tests.test_vertical_slice.VerticalSliceTests.test_browser_target_stores_paired_hashed_screenshots_and_reproduction"}
+      ]
+    },
+    {
+      "id": "secret-and-package-boundaries",
+      "title": "Secrets, provider configuration, and release-package boundaries",
+      "controls": [
+        {"id": "remote-key-memory-only", "title": "Remote API key remains memory-only and redacted", "test": "tests.test_runtime_and_model_providers.RuntimeAndProviderTests.test_remote_key_is_memory_only_redacted_from_public_and_persisted_state"},
+        {"id": "session-key-api-redaction", "title": "Runtime APIs never return submitted session key", "test": "tests.test_runtime_and_model_providers.RuntimeAndProviderTests.test_runtime_and_provider_apis_never_return_a_submitted_session_key"},
+        {"id": "provider-url-safety", "title": "Remote profiles reject insecure and credentialed URLs", "test": "tests.test_runtime_and_model_providers.RuntimeAndProviderTests.test_remote_profile_rejects_http_and_credentialed_urls"},
+        {"id": "release-denylist", "title": "Release archive excludes evidence, sessions, and keys", "test": "tests.test_milestone3_distribution.ReleaseIntegrityTests.test_release_archive_denylist_covers_evidence_sessions_secrets_and_keys"},
+        {"id": "release-clean-entries", "title": "Distribution verifier requires clean entries", "test": "tests.test_milestone3_distribution.ReleaseIntegrityTests.test_distribution_verifier_requires_license_version_and_clean_entries"},
+        {"id": "redaction-private-material", "title": "Evidence redaction removes secret headers and private keys", "test": "tests.test_vertical_slice.VerticalSliceTests.test_redaction_removes_headers_and_private_keys"}
+      ]
+    },
+    {
+      "id": "browser-session-and-callback-boundaries",
+      "title": "Browser sessions, redirects, and callback boundaries",
+      "controls": [
+        {"id": "browser-session-project-scope", "title": "Browser login session is project-scoped and audited", "test": "tests.test_vertical_slice.VerticalSliceTests.test_browser_login_session_route_is_project_scoped_and_audited"},
+        {"id": "browser-redirect-credentials", "title": "Persistent session does not forward cookies on redirect", "test": "tests.test_phase0_safety.Phase0SafetyTests.test_persistent_session_does_not_forward_credentials_or_cookies_on_redirect"},
+        {"id": "browser-cross-origin-block", "title": "Cross-origin passive exfiltration is blocked", "test": "tests.test_vertical_slice.VerticalSliceTests.test_browser_target_blocks_cross_origin_passive_resource_exfiltration"},
+        {"id": "redirect-route-boundary", "title": "Same-origin redirect cannot expand allowlist", "test": "tests.test_phase0_safety.Phase0SafetyTests.test_same_origin_redirect_cannot_expand_the_route_allowlist"},
+        {"id": "callback-project-isolation", "title": "Tool interactions remain project-isolated", "test": "tests.test_testing_tools.TestingToolsTests.test_tool_records_and_interactions_are_project_isolated"}
+      ]
+    }
+  ],
+  "open_gates": [
+    {
+      "id": "long-run-soak",
+      "title": "Long-duration soak and resource observation",
+      "reason": "Requires clock-time execution under representative target and model load; deterministic unit and integration tests cannot establish memory, handle, queue, or latency stability over long assessments."
+    },
+    {
+      "id": "independent-product-security-review",
+      "title": "Independent product-security review",
+      "reason": "Must be performed by a reviewer who did not author the covered workflow and must include triage and closure of all critical or high-severity product defects."
+    },
+    {
+      "id": "supported-platform-release-matrix",
+      "title": "Current release-candidate platform matrix",
+      "reason": "The CI platform workflow exists, but each release candidate still requires retained Windows, Ubuntu, and macOS evidence for the exact commit."
+    }
+  ]
+}

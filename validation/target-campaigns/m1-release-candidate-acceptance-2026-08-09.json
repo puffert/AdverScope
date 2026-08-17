@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "campaign_id": "m1-release-candidate-acceptance-2026-08-09",
+  "suite_id": "adverscope-m1-release-candidate-acceptance",
+  "projects": {
+    "semantic-secure-1": {"project_id": "proj_ee5904f02435", "assessment_run_ids": ["run_f14aa9bffe4f"], "tool_run_ids": []},
+    "semantic-vulnerable-1": {"project_id": "proj_0d8e290128a3", "assessment_run_ids": ["run_eb72df4f3503"], "tool_run_ids": []},
+    "semantic-secure-2": {"project_id": "proj_b2a24ec29fbc", "assessment_run_ids": ["run_aaf27049e428"], "tool_run_ids": []},
+    "semantic-vulnerable-2": {"project_id": "proj_16f84cb7f905", "assessment_run_ids": ["run_1862d69f0c4b"], "tool_run_ids": []},
+    "policy-secure-1": {"project_id": "proj_3c97d8def162", "assessment_run_ids": ["run_42c38b246262"], "tool_run_ids": []},
+    "policy-vulnerable-1": {"project_id": "proj_017820c2b2f0", "assessment_run_ids": ["run_b21d3dd656ac"], "tool_run_ids": []},
+    "policy-secure-2": {"project_id": "proj_9b0dc660e0ea", "assessment_run_ids": ["run_bce00f7c139d"], "tool_run_ids": []},
+    "policy-vulnerable-2": {"project_id": "proj_f6c2d6765938", "assessment_run_ids": ["run_2d8993d76385"], "tool_run_ids": []},
+    "indirect-secure": {"project_id": "proj_6f78651ba942", "assessment_run_ids": ["run_bc55e45248d8"], "tool_run_ids": []},
+    "indirect-vulnerable": {"project_id": "proj_4b5b2e497388", "assessment_run_ids": ["run_5f213306c3e8"], "tool_run_ids": []},
+    "tool-secure": {"project_id": "proj_6c8d12b22d0b", "assessment_run_ids": ["run_7b9ba2c54b5b"], "tool_run_ids": []},
+    "tool-vulnerable": {"project_id": "proj_06ef30bb7b94", "assessment_run_ids": ["run_ab300a644b19"], "tool_run_ids": []},
+    "mcp-content-secure": {"project_id": "proj_81a5105e27bb", "assessment_run_ids": ["run_a5bbc8905c69"], "tool_run_ids": []},
+    "mcp-content-vulnerable": {"project_id": "proj_a0ea91dff51d", "assessment_run_ids": ["run_543347c20442"], "tool_run_ids": []},
+    "mcp-authorization-secure": {"project_id": "proj_3dbfbaa286b2", "assessment_run_ids": ["run_a89acc15f137"], "tool_run_ids": []},
+    "mcp-authorization-vulnerable": {"project_id": "proj_9ce5f03c1d82", "assessment_run_ids": ["run_bcfa6ca4f63b"], "tool_run_ids": []},
+    "mcp-prompt-secure": {"project_id": "proj_e1ab1027b99a", "assessment_run_ids": ["run_7f773cfec6a1"], "tool_run_ids": []},
+    "mcp-prompt-vulnerable": {"project_id": "proj_c726d698ac15", "assessment_run_ids": ["run_7c74d726190c"], "tool_run_ids": []}
+  }
+}

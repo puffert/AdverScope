@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "dataset_id": "adverscope-8b-motor",
+  "dataset_version": "0.1.0-pilot",
+  "purpose": "Leakage-controlled supervised fine-tuning bootstrap for an 8B AdverScope planner, generator, objective attacker, and content-triage motor.",
+  "sources": [
+    {
+      "id": "adverscope-reviewed-catalog",
+      "max_records": 0
+    },
+    {
+      "id": "anthropic-hh-red-team",
+      "max_records": 0,
+      "options": {
+        "minimum_attack_rating": 3,
+        "maximum_attack_records": 2400,
+        "include_response_evaluations": true,
+        "maximum_evaluation_records": 2000,
+        "maximum_prompt_characters": 5000
+      }
+    },
+    {
+      "id": "deepset-prompt-injections",
+      "max_records": 0
+    },
+    {
+      "id": "injecagent",
+      "max_records": 0
+    },
+    {
+      "id": "adverscope-operator-reviewed",
+      "max_records": 0,
+      "options": {
+        "filename": "reviewed-records.jsonl",
+        "optional_if_missing": true
+      }
+    }
+  ],
+  "split": {
+    "train": 0.9,
+    "validation": 0.05,
+    "test": 0.05,
+    "salt": "adverscope-motor-v0.1-family-split-0003"
+  },
+  "deduplication": {
+    "exact": true,
+    "near_duplicate": true,
+    "simhash_hamming_distance": 3,
+    "minimum_tokens": 8
+  },
+  "quality": {
+    "required_tasks": [
+      "attack-generation",
+      "guided-planning",
+      "objective-attack-generation",
+      "content-triage",
+      "response-evaluation"
+    ],
+    "minimum_records": 5500,
+    "minimum_sources": 4,
+    "minimum_task_records": {
+      "attack-generation": 80,
+      "guided-planning": 1000,
+      "objective-attack-generation": 2300,
+      "content-triage": 500,
+      "response-evaluation": 1800
+    },
+    "minimum_split_records": {
+      "train": 5000,
+      "validation": 250,
+      "test": 250
+    },
+    "minimum_task_split_records": {
+      "attack-generation": {
+        "train": 70,
+        "validation": 3,
+        "test": 3
+      },
+      "content-triage": {
+        "train": 450,
+        "validation": 20,
+        "test": 20
+      },
+      "guided-planning": {
+        "train": 900,
+        "validation": 35,
+        "test": 35
+      },
+      "objective-attack-generation": {
+        "train": 2100,
+        "validation": 90,
+        "test": 90
+      },
+      "response-evaluation": {
+        "train": 1700,
+        "validation": 70,
+        "test": 70
+      }
+    },
+    "minimum_gold_records": 80,
+    "minimum_hard_negatives": 1200,
+    "minimum_techniques": 20,
+    "minimum_risks": 6,
+    "maximum_record_characters": 12000,
+    "maximum_single_source_fraction": 0.72,
+    "review_sample_per_source_task": 8
+  }
+}

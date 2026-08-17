@@ -1,0 +1,615 @@
+{
+  "schema_version": 1,
+  "suite_id": "adverscope-current-legacy-mcp-authorization-fixtures",
+  "campaign_id": "mcp-authorization-qualification-2026-08-09",
+  "summary": {
+    "projects": 8,
+    "gated_expectations": 16,
+    "classifications": {
+      "true_negative": 8,
+      "true_positive": 8
+    },
+    "precision": 1.0,
+    "recall": 1.0,
+    "infrastructure_errors": 0,
+    "inconclusive": 0,
+    "reproduction_required": 8,
+    "reproduction_confirmed": 8,
+    "reproduction_rate": 1.0
+  },
+  "rows": [
+    {
+      "label": "current-secure-1",
+      "project_id": "proj_7246277283a3",
+      "project_name": "[Qualification] MCP current · secure · 1",
+      "assessment_run_ids": [
+        "run_25972d32c3c2"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "current-tools-secure-1",
+          "title": "Restricted Streamable HTTP tool authorization remains enforced - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_25972d32c3c2",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_25972d32c3c2",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "current-deputy-secure-1",
+          "title": "Streamable HTTP service deputy preserves caller authorization - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_25972d32c3c2",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_25972d32c3c2",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "current-secure-2",
+      "project_id": "proj_b5033a850850",
+      "project_name": "[Qualification] MCP current · secure · 2",
+      "assessment_run_ids": [
+        "run_a990094173d9"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "current-tools-secure-2",
+          "title": "Restricted Streamable HTTP tool authorization remains enforced - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_a990094173d9",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_a990094173d9",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "current-deputy-secure-2",
+          "title": "Streamable HTTP service deputy preserves caller authorization - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_a990094173d9",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_a990094173d9",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "current-vulnerable-1",
+      "project_id": "proj_deb6a8f09792",
+      "project_name": "[Qualification] MCP current · vulnerable · 1",
+      "assessment_run_ids": [
+        "run_a1a909baba38"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "current-tools-vulnerable-1",
+          "title": "Restricted caller receives protected Streamable HTTP tool result - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_a1a909baba38",
+          "test_case_id": "case_ed8246c2848d",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_a1a909baba38",
+              "test_case_id": "case_ed8246c2848d",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "current-deputy-vulnerable-1",
+          "title": "Streamable HTTP deputy applies elevated service authority - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_a1a909baba38",
+          "test_case_id": "case_32e1e55f3c37",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_a1a909baba38",
+              "test_case_id": "case_32e1e55f3c37",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "current-vulnerable-2",
+      "project_id": "proj_c22e22c35f04",
+      "project_name": "[Qualification] MCP current · vulnerable · 2",
+      "assessment_run_ids": [
+        "run_856108816cc0"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "current-tools-vulnerable-2",
+          "title": "Restricted caller receives protected Streamable HTTP tool result - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_856108816cc0",
+          "test_case_id": "case_cc943df463f6",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_856108816cc0",
+              "test_case_id": "case_cc943df463f6",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "current-deputy-vulnerable-2",
+          "title": "Streamable HTTP deputy applies elevated service authority - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_856108816cc0",
+          "test_case_id": "case_09fa831d7a3c",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_856108816cc0",
+              "test_case_id": "case_09fa831d7a3c",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "legacy-secure-1",
+      "project_id": "proj_ec7336ae42f6",
+      "project_name": "[Qualification] MCP legacy · secure · 1",
+      "assessment_run_ids": [
+        "run_01bce1709010"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "legacy-tools-secure-1",
+          "title": "Restricted legacy MCP tool authorization remains enforced - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_01bce1709010",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_01bce1709010",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "legacy-deputy-secure-1",
+          "title": "Legacy MCP service deputy preserves caller authorization - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_01bce1709010",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_01bce1709010",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "legacy-secure-2",
+      "project_id": "proj_61fd17464f5d",
+      "project_name": "[Qualification] MCP legacy · secure · 2",
+      "assessment_run_ids": [
+        "run_c893bb29005e"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "legacy-tools-secure-2",
+          "title": "Restricted legacy MCP tool authorization remains enforced - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_c893bb29005e",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_c893bb29005e",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "legacy-deputy-secure-2",
+          "title": "Legacy MCP service deputy preserves caller authorization - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_c893bb29005e",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_c893bb29005e",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "legacy-vulnerable-1",
+      "project_id": "proj_4483c285bfb0",
+      "project_name": "[Qualification] MCP legacy · vulnerable · 1",
+      "assessment_run_ids": [
+        "run_4c7b9f7119ca"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "legacy-tools-vulnerable-1",
+          "title": "Restricted caller receives protected legacy MCP tool result - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_4c7b9f7119ca",
+          "test_case_id": "case_95d4c1b14578",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_4c7b9f7119ca",
+              "test_case_id": "case_95d4c1b14578",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "legacy-deputy-vulnerable-1",
+          "title": "Legacy MCP deputy applies elevated service authority - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_4c7b9f7119ca",
+          "test_case_id": "case_282e213ef289",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_4c7b9f7119ca",
+              "test_case_id": "case_282e213ef289",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "legacy-vulnerable-2",
+      "project_id": "proj_b38b36e6dfa8",
+      "project_name": "[Qualification] MCP legacy · vulnerable · 2",
+      "assessment_run_ids": [
+        "run_8d304ae8b104"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "legacy-tools-vulnerable-2",
+          "title": "Restricted caller receives protected legacy MCP tool result - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_8d304ae8b104",
+          "test_case_id": "case_0c512ce7e1ee",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_8d304ae8b104",
+              "test_case_id": "case_0c512ce7e1ee",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "legacy-deputy-vulnerable-2",
+          "title": "Legacy MCP deputy applies elevated service authority - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_8d304ae8b104",
+          "test_case_id": "case_b0dfc96f562f",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_8d304ae8b104",
+              "test_case_id": "case_b0dfc96f562f",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    }
+  ],
+  "generated_at": "2026-08-09T10:35:40+00:00"
+}

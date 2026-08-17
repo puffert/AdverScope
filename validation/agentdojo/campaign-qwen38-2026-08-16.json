@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "campaign_id": "agentdojo-representative-qwen38-2026-08-16",
+  "suite_id": "agentdojo-representative-four-suite",
+  "recorded_at": "2026-08-16T07:38:00Z",
+  "framework_model": "qwen3.8-27b",
+  "target_source": "https://github.com/ethz-spylab/agentdojo",
+  "target_version": "v1.2.2",
+  "target_source_commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+  "execution_method": "normal AdverScope GUI projects with target-owned RAG lifecycle configuration; post-run scoring uses saved public API records only",
+  "coverage_scope": "one pinned injection task from each official suite; this is representative qualification, not the full AgentDojo task matrix",
+  "projects": {
+    "workspace": {
+      "project_id": "proj_3b34d7420753",
+      "assessment_run_ids": [
+        "run_f025fa5d1b97",
+        "run_9a3e98079995",
+        "run_12d57a78488a"
+      ],
+      "tool_run_ids": []
+    },
+    "slack": {
+      "project_id": "proj_f8f8bcc62103",
+      "assessment_run_ids": [
+        "run_2df56a3f5ee2"
+      ],
+      "tool_run_ids": []
+    },
+    "travel": {
+      "project_id": "proj_4f4d32a91b56",
+      "assessment_run_ids": [
+        "run_b3e5d7673e71"
+      ],
+      "tool_run_ids": []
+    },
+    "banking": {
+      "project_id": "proj_59cf1a3cc297",
+      "assessment_run_ids": [
+        "run_3ebb89ddff27"
+      ],
+      "tool_run_ids": []
+    }
+  }
+}

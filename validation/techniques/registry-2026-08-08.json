@@ -1,0 +1,2778 @@
+{
+  "qualification_policy": {
+    "deprecated": "Retained for historical runs but no longer recommended for new qualification.",
+    "experimental": "Implemented or mapped, but missing a complete secure/vulnerable validation pair.",
+    "qualified": "Precision and supported recall gates pass with secure and vulnerable evidence from at least two independent target families.",
+    "validated": "At least one target family supplies both secure and vulnerable evidence."
+  },
+  "registry_id": "adverscope-technique-qualification",
+  "registry_version": "2026.08.09",
+  "schema_version": 1,
+  "taxonomy_id": "owasp-llm-top-10",
+  "taxonomy_version": "2025",
+  "techniques": [
+    {
+      "benchmark_evidence": [
+        {
+          "campaign_id": "fresh-multi-model-qualification-2026-08-08",
+          "date": "2026-08-08",
+          "expectation_ids": [
+            "27b-secure",
+            "27b-vulnerable",
+            "4b-secure",
+            "4b-vulnerable"
+          ],
+          "suite_id": "adverscope-independent-semantic-fixtures"
+        },
+        {
+          "campaign_id": "repeated-policy-gateway-qualification-2026-08-09",
+          "date": "2026-08-09",
+          "expectation_ids": [
+            "27b-secure-1",
+            "27b-secure-2",
+            "27b-vulnerable-1",
+            "27b-vulnerable-2",
+            "4b-secure-1",
+            "4b-secure-2",
+            "4b-vulnerable-1",
+            "4b-vulnerable-2"
+          ],
+          "suite_id": "adverscope-policy-decision-gateway-fixtures"
+        }
+      ],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [
+          {
+            "id": "independent-semantic-secure-qwen27b",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/fresh-multi-model-qualification-2026-08-08.json#27b-secure",
+            "target_family": "adverscope-independent-semantic-fixture"
+          },
+          {
+            "id": "independent-semantic-secure-qwen4b",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/fresh-multi-model-qualification-2026-08-08.json#4b-secure",
+            "target_family": "adverscope-independent-semantic-fixture"
+          },
+          {
+            "id": "policy-gateway-secure-qwen27b-repeated",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/repeated-policy-gateway-qualification-2026-08-09.json#27b-secure",
+            "target_family": "adverscope-policy-decision-gateway-fixture"
+          },
+          {
+            "id": "policy-gateway-secure-qwen4b-repeated",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/repeated-policy-gateway-qualification-2026-08-09.json#4b-secure",
+            "target_family": "adverscope-policy-decision-gateway-fixture"
+          }
+        ],
+        "vulnerable": [
+          {
+            "id": "independent-semantic-vulnerable-qwen27b",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/fresh-multi-model-qualification-2026-08-08.json#27b-vulnerable",
+            "target_family": "adverscope-independent-semantic-fixture"
+          },
+          {
+            "id": "independent-semantic-vulnerable-qwen4b",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/fresh-multi-model-qualification-2026-08-08.json#4b-vulnerable",
+            "target_family": "adverscope-independent-semantic-fixture"
+          },
+          {
+            "id": "policy-gateway-vulnerable-qwen27b-repeated",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/repeated-policy-gateway-qualification-2026-08-09.json#27b-vulnerable",
+            "target_family": "adverscope-policy-decision-gateway-fixture"
+          },
+          {
+            "id": "policy-gateway-vulnerable-qwen4b-repeated",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/repeated-policy-gateway-qualification-2026-08-09.json#4b-vulnerable",
+            "target_family": "adverscope-policy-decision-gateway-fixture"
+          }
+        ]
+      },
+      "id": "LLM01-DIRECT",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "prompt-injection",
+        "path": "native"
+      },
+      "known_limitations": [
+        "Qualification is limited to direct semantic instruction-boundary violations covered by LLM01-DIRECT; it does not qualify the other LLM01 techniques or the complete OWASP LLM Top 10.",
+        "The two target families are independent AdverScope fixtures. Additional external target families and future model versions should be added to detect generalization regressions."
+      ],
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "sample_scope": "two unrelated independent target families; repeated secure/vulnerable policy-gateway campaigns plus semantic-fixture campaigns with qwen3.6-27b and qwen3-4b-classifier evaluators",
+        "supported_recall": 1.0
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "qualified",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM01",
+      "title": "Direct instruction injection"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM01-PERSONA",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "prompt-injection",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM01",
+      "title": "Persona, role, and identity hijacking"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM01-TRANSFORM",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "prompt-injection",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM01",
+      "title": "Transformation and encoded injection"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM01-OBFUSCATED",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "prompt-injection",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM01",
+      "title": "Multilingual, spacing, and Unicode obfuscation"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM01-SUFFIX",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "prompt-injection",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM01",
+      "title": "Adversarial suffix and delimiter injection"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM01-TOKEN",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "token-context",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "token_context"
+        ],
+        "configuration": "",
+        "description": "Configured tokenizer and context-information endpoint roles"
+      },
+      "risk_id": "LLM01",
+      "title": "Tokenization and lexical-filter differential"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM01-CONTEXT",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "token-context",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "token_context"
+        ],
+        "configuration": "",
+        "description": "Configured tokenizer and context-information endpoint roles"
+      },
+      "risk_id": "LLM01",
+      "title": "Bounded context-pressure injection"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM01-INDIRECT",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "rag-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "external_content"
+        ],
+        "configuration": "rag_adapter",
+        "description": "Configured reversible external-content ingestion and retrieval adapter"
+      },
+      "risk_id": "LLM01",
+      "title": "Indirect external-content injection"
+    },
+    {
+      "benchmark_evidence": [
+        {
+          "campaign_id": "portswigger-target-apps-2026-08-08",
+          "date": "2026-08-08",
+          "expectation_ids": [
+            "ps-llm-03-stored-indirect-injection",
+            "ps-llm-03-negative-controls"
+          ],
+          "suite_id": "portswigger-web-llm-target-apps"
+        },
+        {
+          "campaign_id": "indirect-document-assistant-qualification-2026-08-09",
+          "date": "2026-08-09",
+          "expectation_ids": [
+            "indirect-doc-secure-1",
+            "indirect-doc-secure-2",
+            "indirect-doc-vulnerable-1",
+            "indirect-doc-vulnerable-2"
+          ],
+          "suite_id": "adverscope-indirect-document-assistant-fixtures"
+        }
+      ],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [
+          {
+            "id": "portswigger-ps-llm-03-negative-controls",
+            "kind": "independent-target-control",
+            "reference": "validation/portswigger/qualification-target-apps-2026-08-08.json#PS-LLM-03",
+            "target_family": "portswigger-web-llm"
+          },
+          {
+            "id": "document-assistant-secure-qwen27b-repetition-1",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/indirect-document-assistant-qualification-2026-08-09-results.json#qwen-secure-1",
+            "target_family": "adverscope-document-retrieval-assistant-fixture"
+          },
+          {
+            "id": "document-assistant-secure-qwen27b-repetition-2",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/indirect-document-assistant-qualification-2026-08-09-results.json#qwen-secure-2",
+            "target_family": "adverscope-document-retrieval-assistant-fixture"
+          }
+        ],
+        "vulnerable": [
+          {
+            "id": "portswigger-ps-llm-03-stored-indirect-injection",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/portswigger/qualification-target-apps-2026-08-08.json#PS-LLM-03",
+            "target_family": "portswigger-web-llm"
+          },
+          {
+            "id": "document-assistant-vulnerable-qwen27b-repetition-1",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/indirect-document-assistant-qualification-2026-08-09-results.json#qwen-vulnerable-1",
+            "target_family": "adverscope-document-retrieval-assistant-fixture"
+          },
+          {
+            "id": "document-assistant-vulnerable-qwen27b-repetition-2",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/indirect-document-assistant-qualification-2026-08-09-results.json#qwen-vulnerable-2",
+            "target_family": "adverscope-document-retrieval-assistant-fixture"
+          }
+        ]
+      },
+      "id": "LLM01-INDIRECT-WEB",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "rag-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "Qualification covers operator-prepared stored web or document carriers with a clean negative control and target-configured exact-response or browser-effect proof; it does not qualify every indirect, multimodal, email, RAG-poisoning, or cross-agent delivery channel.",
+        "The independent document-assistant fixture is deterministic, so repeated target verdicts validate AdverScope orchestration and evaluation rather than model stochasticity. Additional external target families should be retained as they become available."
+      ],
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "sample_scope": "two independent target families; PortSwigger stored-review workflow plus repeated secure/vulnerable document-retrieval-assistant runs through the visible GUI with qwen3.6-27b selected",
+        "supported_recall": 1.0
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "qualified",
+      "requirements": {
+        "capabilities": [
+          "external_content"
+        ],
+        "configuration": "stored_web_adapter",
+        "description": "Configured operator-prepared review, comment, ticket, profile, or other stored-web carrier with negative and positive retrieval controls"
+      },
+      "risk_id": "LLM01",
+      "title": "Stored web-content prompt injection"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM01-RAG",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "rag-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "rag"
+        ],
+        "configuration": "rag_adapter",
+        "description": "Configured reversible knowledge-source ingestion and retrieval adapter"
+      },
+      "risk_id": "LLM01",
+      "title": "RAG document injection"
+    },
+    {
+      "benchmark_evidence": [
+        {
+          "campaign_id": "mcp-content-boundary-qualification-2026-08-09",
+          "date": "2026-08-09",
+          "expectation_ids": [
+            "current-content-secure-1",
+            "current-content-secure-2",
+            "current-content-vulnerable-1",
+            "current-content-vulnerable-2",
+            "legacy-content-secure-1",
+            "legacy-content-secure-2",
+            "legacy-content-vulnerable-1",
+            "legacy-content-vulnerable-2"
+          ],
+          "suite_id": "adverscope-current-legacy-mcp-content-boundary-fixtures"
+        }
+      ],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [
+          {
+            "id": "current-mcp-content-secure-1",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#current-secure-1",
+            "target_family": "adverscope-streamable-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "current-mcp-content-secure-2",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#current-secure-2",
+            "target_family": "adverscope-streamable-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "legacy-mcp-content-secure-1",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#legacy-secure-1",
+            "target_family": "adverscope-legacy-sse-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "legacy-mcp-content-secure-2",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#legacy-secure-2",
+            "target_family": "adverscope-legacy-sse-mcp-content-boundary-fixture"
+          }
+        ],
+        "vulnerable": [
+          {
+            "id": "current-mcp-content-vulnerable-1",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#current-vulnerable-1",
+            "target_family": "adverscope-streamable-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "current-mcp-content-vulnerable-2",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#current-vulnerable-2",
+            "target_family": "adverscope-streamable-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "legacy-mcp-content-vulnerable-1",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#legacy-vulnerable-1",
+            "target_family": "adverscope-legacy-sse-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "legacy-mcp-content-vulnerable-2",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#legacy-vulnerable-2",
+            "target_family": "adverscope-legacy-sse-mcp-content-boundary-fixture"
+          }
+        ]
+      },
+      "id": "LLM01-MCP-CONTENT",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "mcp-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "Qualification covers target-configured untrusted MCP resource provenance and a read-only structured sink effect. Malicious instructions or metadata that are merely visible remain observations and do not satisfy this finding gate.",
+        "The two target families are sibling deterministic protocol fixtures. They qualify AdverScope protocol handling, source and identity preservation, exact assertion evaluation, evidence custody, and reproduction, not arbitrary third-party MCP implementations.",
+        "The finding gate is deterministic and provider-independent. Remote planners and evaluators, custom transports, opaque brokers, chained agents, callbacks, prompt access, and state-changing MCP effects remain outside this campaign."
+      ],
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "sample_scope": "two independent protocol families; repeated secure and vulnerable MCP content and resource-boundary runs over Streamable HTTP 2025-11-25 and legacy HTTP+SSE 2024-11-05 through the visible GUI",
+        "supported_recall": 1.0
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "qualified",
+      "requirements": {
+        "capabilities": [
+          "mcp"
+        ],
+        "configuration": "mcp_adapter",
+        "description": "Configured MCP identity and prohibited-content policy"
+      },
+      "risk_id": "LLM01",
+      "title": "MCP instruction and content injection"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM01-SPLIT",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "prompt-injection",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "multi_turn"
+        ],
+        "configuration": "",
+        "description": "Conversation-aware target with at least two approved adaptive turns"
+      },
+      "risk_id": "LLM01",
+      "title": "Payload splitting and multi-turn assembly"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM01-CRESCENDO",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "prompt-injection",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "multi_turn"
+        ],
+        "configuration": "",
+        "description": "Conversation-aware target with at least five approved adaptive turns"
+      },
+      "risk_id": "LLM01",
+      "title": "Gradual multi-turn escalation"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-owned deterministic evidence contract",
+          "separate approved reproduction",
+          "complete immutable request and response evidence"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM01-MULTIMODAL",
+      "implementation": {
+        "attack_catalog_version": "",
+        "contract_automatable": true,
+        "module_id": "",
+        "path": "contract"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "none",
+        "evaluation": "none"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "multimodal"
+        ],
+        "configuration": "assessment_contract",
+        "description": "Configured multimodal request workflow and deterministic output or effect assertion"
+      },
+      "risk_id": "LLM01",
+      "title": "Multimodal image or audio injection"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM02-SECRETS",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "sensitive-disclosure",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM02",
+      "title": "Synthetic secret and token extraction"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM02-PII",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "sensitive-disclosure",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM02",
+      "title": "Personal and customer data disclosure"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM02-CONTEXT",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "sensitive-disclosure",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM02",
+      "title": "Private context and configuration disclosure"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM02-CANONICAL",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "token-context",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "token_context"
+        ],
+        "configuration": "",
+        "description": "Configured tokenizer and context-information endpoint roles"
+      },
+      "risk_id": "LLM02",
+      "title": "Canonicalized secret reconstruction"
+    },
+    {
+      "benchmark_evidence": [
+        {
+          "campaign_id": "mcp-content-boundary-qualification-2026-08-09",
+          "date": "2026-08-09",
+          "expectation_ids": [
+            "current-resource-secure-1",
+            "current-resource-secure-2",
+            "current-resource-vulnerable-1",
+            "current-resource-vulnerable-2",
+            "legacy-resource-secure-1",
+            "legacy-resource-secure-2",
+            "legacy-resource-vulnerable-1",
+            "legacy-resource-vulnerable-2"
+          ],
+          "suite_id": "adverscope-current-legacy-mcp-content-boundary-fixtures"
+        }
+      ],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [
+          {
+            "id": "current-mcp-resource-secure-1",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#current-secure-1",
+            "target_family": "adverscope-streamable-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "current-mcp-resource-secure-2",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#current-secure-2",
+            "target_family": "adverscope-streamable-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "legacy-mcp-resource-secure-1",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#legacy-secure-1",
+            "target_family": "adverscope-legacy-sse-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "legacy-mcp-resource-secure-2",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#legacy-secure-2",
+            "target_family": "adverscope-legacy-sse-mcp-content-boundary-fixture"
+          }
+        ],
+        "vulnerable": [
+          {
+            "id": "current-mcp-resource-vulnerable-1",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#current-vulnerable-1",
+            "target_family": "adverscope-streamable-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "current-mcp-resource-vulnerable-2",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#current-vulnerable-2",
+            "target_family": "adverscope-streamable-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "legacy-mcp-resource-vulnerable-1",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#legacy-vulnerable-1",
+            "target_family": "adverscope-legacy-sse-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "legacy-mcp-resource-vulnerable-2",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#legacy-vulnerable-2",
+            "target_family": "adverscope-legacy-sse-mcp-content-boundary-fixture"
+          }
+        ]
+      },
+      "id": "LLM02-MCP-RESOURCE",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "mcp-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "Qualification covers unauthorized resources/read disclosure proved by exact resource URI, restricted caller identity, protected classification, data category, and a target-configured synthetic marker. Prose and non-empty content alone do not qualify.",
+        "The two target families are sibling deterministic protocol fixtures. They qualify AdverScope protocol handling, source and identity preservation, exact assertion evaluation, evidence custody, and reproduction, not arbitrary third-party MCP implementations.",
+        "The finding gate is deterministic and provider-independent. Remote planners and evaluators, custom transports, opaque brokers, chained agents, callbacks, prompt access, and state-changing MCP effects remain outside this campaign."
+      ],
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "sample_scope": "two independent protocol families; repeated secure and vulnerable MCP content and resource-boundary runs over Streamable HTTP 2025-11-25 and legacy HTTP+SSE 2024-11-05 through the visible GUI",
+        "supported_recall": 1.0
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "qualified",
+      "requirements": {
+        "capabilities": [
+          "mcp"
+        ],
+        "configuration": "mcp_adapter",
+        "description": "Configured MCP protected-resource policy and restricted identity"
+      },
+      "risk_id": "LLM02",
+      "title": "Sensitive MCP resource disclosure"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM03-MODEL",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": true,
+        "module_id": "artifact-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "artifact_inventory"
+        ],
+        "configuration": "artifact_adapter",
+        "description": "Uploaded model or adapter artifact plus target-owned digest, serialization, provenance, or signature-metadata policy"
+      },
+      "risk_id": "LLM03",
+      "title": "Model and adapter provenance"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM03-DEPS",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": true,
+        "module_id": "artifact-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "artifact_inventory"
+        ],
+        "configuration": "artifact_adapter",
+        "description": "Uploaded dependency, deployment, SBOM, or AI-BOM evidence plus target-owned integrity policy"
+      },
+      "risk_id": "LLM03",
+      "title": "Dependency and deployment integrity"
+    },
+    {
+      "benchmark_evidence": [
+        {
+          "campaign_id": "mcp-inventory-qualification-2026-08-09",
+          "date": "2026-08-09",
+          "expectation_ids": [
+            "native-current-secure-1-inventory-integrity",
+            "native-current-secure-2-inventory-integrity",
+            "native-current-vulnerable-1-inventory-integrity",
+            "native-current-vulnerable-2-inventory-integrity",
+            "native-legacy-secure-1-inventory-integrity",
+            "native-legacy-secure-2-inventory-integrity",
+            "native-legacy-vulnerable-1-inventory-integrity",
+            "native-legacy-vulnerable-2-inventory-integrity",
+            "sdk-current-secure-1-inventory-integrity",
+            "sdk-current-secure-2-inventory-integrity",
+            "sdk-current-vulnerable-1-inventory-integrity",
+            "sdk-current-vulnerable-2-inventory-integrity",
+            "sdk-legacy-secure-1-inventory-integrity",
+            "sdk-legacy-secure-2-inventory-integrity",
+            "sdk-legacy-vulnerable-1-inventory-integrity",
+            "sdk-legacy-vulnerable-2-inventory-integrity"
+          ],
+          "suite_id": "adverscope-independent-current-legacy-mcp-inventory-fixtures"
+        }
+      ],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [
+          {
+            "id": "native-current-secure-1-mcp-inventory",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#native-current-secure-1",
+            "target_family": "adverscope-protocol-mcp-inventory-fixture"
+          },
+          {
+            "id": "native-current-secure-2-mcp-inventory",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#native-current-secure-2",
+            "target_family": "adverscope-protocol-mcp-inventory-fixture"
+          },
+          {
+            "id": "native-legacy-secure-1-mcp-inventory",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#native-legacy-secure-1",
+            "target_family": "adverscope-protocol-mcp-inventory-fixture"
+          },
+          {
+            "id": "native-legacy-secure-2-mcp-inventory",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#native-legacy-secure-2",
+            "target_family": "adverscope-protocol-mcp-inventory-fixture"
+          },
+          {
+            "id": "sdk-current-secure-1-mcp-inventory",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#sdk-current-secure-1",
+            "target_family": "official-mcp-python-sdk-1.25-inventory-fixture"
+          },
+          {
+            "id": "sdk-current-secure-2-mcp-inventory",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#sdk-current-secure-2",
+            "target_family": "official-mcp-python-sdk-1.25-inventory-fixture"
+          },
+          {
+            "id": "sdk-legacy-secure-1-mcp-inventory",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#sdk-legacy-secure-1",
+            "target_family": "official-mcp-python-sdk-1.25-inventory-fixture"
+          },
+          {
+            "id": "sdk-legacy-secure-2-mcp-inventory",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#sdk-legacy-secure-2",
+            "target_family": "official-mcp-python-sdk-1.25-inventory-fixture"
+          }
+        ],
+        "vulnerable": [
+          {
+            "id": "native-current-vulnerable-1-mcp-inventory",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#native-current-vulnerable-1",
+            "target_family": "adverscope-protocol-mcp-inventory-fixture"
+          },
+          {
+            "id": "native-current-vulnerable-2-mcp-inventory",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#native-current-vulnerable-2",
+            "target_family": "adverscope-protocol-mcp-inventory-fixture"
+          },
+          {
+            "id": "native-legacy-vulnerable-1-mcp-inventory",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#native-legacy-vulnerable-1",
+            "target_family": "adverscope-protocol-mcp-inventory-fixture"
+          },
+          {
+            "id": "native-legacy-vulnerable-2-mcp-inventory",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#native-legacy-vulnerable-2",
+            "target_family": "adverscope-protocol-mcp-inventory-fixture"
+          },
+          {
+            "id": "sdk-current-vulnerable-1-mcp-inventory",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#sdk-current-vulnerable-1",
+            "target_family": "official-mcp-python-sdk-1.25-inventory-fixture"
+          },
+          {
+            "id": "sdk-current-vulnerable-2-mcp-inventory",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#sdk-current-vulnerable-2",
+            "target_family": "official-mcp-python-sdk-1.25-inventory-fixture"
+          },
+          {
+            "id": "sdk-legacy-vulnerable-1-mcp-inventory",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#sdk-legacy-vulnerable-1",
+            "target_family": "official-mcp-python-sdk-1.25-inventory-fixture"
+          },
+          {
+            "id": "sdk-legacy-vulnerable-2-mcp-inventory",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-inventory-qualification-2026-08-09-results.json#sdk-legacy-vulnerable-2",
+            "target_family": "official-mcp-python-sdk-1.25-inventory-fixture"
+          }
+        ]
+      },
+      "id": "LLM03-MCP-INVENTORY",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "mcp-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "Qualification covers complete normalized inventory SHA-256 comparison, required and forbidden tool names, and optional per-tool description and input-schema digests supplied by the target owner.",
+        "The campaign qualifies initial read-only inventory listing for an AdverScope raw-protocol fixture and an unrelated official MCP Python SDK 1.25 implementation. It does not qualify arbitrary registries, remote brokers, custom transports, every SDK, or dynamic inventory changes after initialization.",
+        "MCP listChanged notifications, prompt and resource semantic integrity, state-changing tool effects, and the newest sessionless protocol paths require separate qualification. The finding gate is deterministic and provider-independent; model-generated confidence or prose cannot satisfy it."
+      ],
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "sample_scope": "two unrelated server implementation families; repeated secure and vulnerable inventory-integrity runs over Streamable HTTP 2025-11-25 and legacy HTTP+SSE 2024-11-05 through the visible GUI",
+        "supported_recall": 1.0
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "qualified",
+      "requirements": {
+        "capabilities": [
+          "mcp"
+        ],
+        "configuration": "mcp_adapter",
+        "description": "Approved MCP tool inventory or schema digests"
+      },
+      "risk_id": "LLM03",
+      "title": "MCP tool and schema integrity drift"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-owned deterministic evidence contract",
+          "separate approved reproduction",
+          "complete immutable request and response evidence"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM04-DATA",
+      "implementation": {
+        "attack_catalog_version": "",
+        "contract_automatable": true,
+        "module_id": "",
+        "path": "contract"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "none",
+        "evaluation": "none"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "training_pipeline"
+        ],
+        "configuration": "assessment_contract",
+        "description": "Authorized dataset or training-pipeline evidence with deterministic integrity or differential assertions"
+      },
+      "risk_id": "LLM04",
+      "title": "Training or fine-tuning data poisoning"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-owned deterministic evidence contract",
+          "separate approved reproduction",
+          "complete immutable request and response evidence"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM04-BACKDOOR",
+      "implementation": {
+        "attack_catalog_version": "",
+        "contract_automatable": true,
+        "module_id": "",
+        "path": "contract"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "none",
+        "evaluation": "none"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "model_evaluation"
+        ],
+        "configuration": "assessment_contract",
+        "description": "Controlled baseline and trigger evaluation with a target-owned activation oracle"
+      },
+      "risk_id": "LLM04",
+      "title": "Model backdoor and trigger testing"
+    },
+    {
+      "benchmark_evidence": [
+        {
+          "campaign_id": "portswigger-target-apps-2026-08-08",
+          "date": "2026-08-08",
+          "expectation_ids": [
+            "ps-llm-04-active-output-effect"
+          ],
+          "suite_id": "portswigger-web-llm-target-apps"
+        }
+      ],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": [
+          {
+            "id": "portswigger-ps-llm-04-active-output-effect",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/portswigger/qualification-target-apps-2026-08-08.json#PS-LLM-04",
+            "target_family": "portswigger-web-llm"
+          }
+        ]
+      },
+      "id": "LLM05-ACTIVE",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "unsafe-output",
+        "path": "native"
+      },
+      "known_limitations": [
+        "Independent secure-control target evidence is still required before validation status can be granted."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM05",
+      "title": "Active markup and URI output"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM05-COMMAND",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "unsafe-output",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM05",
+      "title": "Command and query output"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM05-FORMAT",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "unsafe-output",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM05",
+      "title": "Data-format injection"
+    },
+    {
+      "benchmark_evidence": [
+        {
+          "campaign_id": "portswigger-target-apps-2026-08-08",
+          "date": "2026-08-08",
+          "expectation_ids": [
+            "ps-llm-01-excessive-agency",
+            "ps-llm-01-direct-control"
+          ],
+          "suite_id": "portswigger-web-llm-target-apps"
+        },
+        {
+          "campaign_id": "tool-authorization-qualification-2026-08-09",
+          "date": "2026-08-09",
+          "expectation_ids": [
+            "tool-auth-secure-1",
+            "tool-auth-secure-2",
+            "tool-auth-vulnerable-1",
+            "tool-auth-vulnerable-2"
+          ],
+          "suite_id": "adverscope-workspace-tool-authorization-fixtures"
+        }
+      ],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [
+          {
+            "id": "portswigger-ps-llm-01-direct-control",
+            "kind": "independent-target-control",
+            "reference": "validation/portswigger/qualification-target-apps-2026-08-08.json#PS-LLM-01",
+            "target_family": "portswigger-web-llm"
+          },
+          {
+            "id": "workspace-tool-authorization-secure-qwen27b-repetition-1",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/tool-authorization-qualification-2026-08-09-results.json#qwen-secure-1",
+            "target_family": "adverscope-workspace-tool-authorization-fixture"
+          },
+          {
+            "id": "workspace-tool-authorization-secure-qwen27b-repetition-2",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/tool-authorization-qualification-2026-08-09-results.json#qwen-secure-2",
+            "target_family": "adverscope-workspace-tool-authorization-fixture"
+          }
+        ],
+        "vulnerable": [
+          {
+            "id": "portswigger-ps-llm-01-excessive-agency",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/portswigger/qualification-target-apps-2026-08-08.json#PS-LLM-01",
+            "target_family": "portswigger-web-llm"
+          },
+          {
+            "id": "workspace-tool-authorization-vulnerable-qwen27b-repetition-1",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/tool-authorization-qualification-2026-08-09-results.json#qwen-vulnerable-1",
+            "target_family": "adverscope-workspace-tool-authorization-fixture"
+          },
+          {
+            "id": "workspace-tool-authorization-vulnerable-qwen27b-repetition-2",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/tool-authorization-qualification-2026-08-09-results.json#qwen-vulnerable-2",
+            "target_family": "adverscope-workspace-tool-authorization-fixture"
+          }
+        ]
+      },
+      "id": "LLM06-TOOLS",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "excessive-agency",
+        "path": "native"
+      },
+      "known_limitations": [
+        "Qualification covers structured OpenAI-compatible proposed tool calls evaluated against a target-configured identity, allow/deny, approval, schema, and iteration policy. It does not qualify arbitrary agent protocols, implicit side effects, every callback pattern, or the remaining LLM06 techniques.",
+        "AdverScope never dispatched the target-proposed administrative tool. The independent fixture is deterministic, so repetition validates generation, protocol evidence, policy evaluation, objective binding, and reproduction rather than stochastic target-model variance.",
+        "The local Qwen provider generated attack wording and model-review context, while the finding gate remained the target-owned structured policy assertion. Remote providers remain unqualified until separate campaigns pass."
+      ],
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "sample_scope": "two independent target families; PortSwigger excessive-agency evidence plus repeated secure/vulnerable workspace-authorization runs through the visible GUI with qwen3.6-27b selected",
+        "supported_recall": 1.0
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "qualified",
+      "requirements": {
+        "capabilities": [
+          "tools"
+        ],
+        "configuration": "agency_evaluator",
+        "description": "Structured action evidence or an authorized verifier route"
+      },
+      "risk_id": "LLM06",
+      "title": "Unauthorized tool or function invocation"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM06-PRIVILEGE",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "excessive-agency",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "tools"
+        ],
+        "configuration": "agency_evaluator",
+        "description": "Structured action evidence or an authorized verifier route"
+      },
+      "risk_id": "LLM06",
+      "title": "Excessive tool permissions"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM06-APPROVAL",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "excessive-agency",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "agents"
+        ],
+        "configuration": "agency_evaluator",
+        "description": "Structured approval evidence or an authorized verifier route"
+      },
+      "risk_id": "LLM06",
+      "title": "Human-approval bypass"
+    },
+    {
+      "benchmark_evidence": [
+        {
+          "campaign_id": "mcp-authorization-qualification-2026-08-09",
+          "date": "2026-08-09",
+          "expectation_ids": [
+            "current-tools-secure-1",
+            "current-tools-secure-2",
+            "current-tools-vulnerable-1",
+            "current-tools-vulnerable-2",
+            "legacy-tools-secure-1",
+            "legacy-tools-secure-2",
+            "legacy-tools-vulnerable-1",
+            "legacy-tools-vulnerable-2"
+          ],
+          "suite_id": "adverscope-current-legacy-mcp-authorization-fixtures"
+        }
+      ],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [
+          {
+            "id": "streamable-mcp-tool-authorization-secure-1",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#current-secure-1",
+            "target_family": "adverscope-streamable-mcp-authorization-fixture"
+          },
+          {
+            "id": "streamable-mcp-tool-authorization-secure-2",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#current-secure-2",
+            "target_family": "adverscope-streamable-mcp-authorization-fixture"
+          },
+          {
+            "id": "legacy-sse-mcp-tool-authorization-secure-1",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#legacy-secure-1",
+            "target_family": "adverscope-legacy-sse-mcp-authorization-fixture"
+          },
+          {
+            "id": "legacy-sse-mcp-tool-authorization-secure-2",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#legacy-secure-2",
+            "target_family": "adverscope-legacy-sse-mcp-authorization-fixture"
+          }
+        ],
+        "vulnerable": [
+          {
+            "id": "streamable-mcp-tool-authorization-vulnerable-1",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#current-vulnerable-1",
+            "target_family": "adverscope-streamable-mcp-authorization-fixture"
+          },
+          {
+            "id": "streamable-mcp-tool-authorization-vulnerable-2",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#current-vulnerable-2",
+            "target_family": "adverscope-streamable-mcp-authorization-fixture"
+          },
+          {
+            "id": "legacy-sse-mcp-tool-authorization-vulnerable-1",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#legacy-vulnerable-1",
+            "target_family": "adverscope-legacy-sse-mcp-authorization-fixture"
+          },
+          {
+            "id": "legacy-sse-mcp-tool-authorization-vulnerable-2",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#legacy-vulnerable-2",
+            "target_family": "adverscope-legacy-sse-mcp-authorization-fixture"
+          }
+        ]
+      },
+      "id": "LLM06-MCP-TOOLS",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "mcp-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "Qualification covers read-only tools/call authorization proved by target-owned structured result assertions. State-changing MCP calls require a separately authorized reversible action, verifier, cleanup contract, and guardrail before they can be qualified.",
+        "The two target families are sibling deterministic authorization fixtures using different MCP transports. They qualify AdverScope protocol handling, identity enforcement, exact assertion evaluation, evidence custody, and reproduction, not arbitrary third-party MCP implementations.",
+        "The finding gate is deterministic and does not depend on a model provider. Remote planners and evaluators, custom transports, callbacks, and non-JSON tool result formats remain outside this campaign."
+      ],
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "sample_scope": "two independent protocol families; repeated secure and vulnerable MCP authorization runs over Streamable HTTP 2025-11-25 and legacy HTTP+SSE 2024-11-05 through the visible GUI",
+        "supported_recall": 1.0
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "qualified",
+      "requirements": {
+        "capabilities": [
+          "mcp"
+        ],
+        "configuration": "mcp_adapter",
+        "description": "Configured MCP identity and read-only tool policy"
+      },
+      "risk_id": "LLM06",
+      "title": "Unauthorized MCP tool exposure or invocation"
+    },
+    {
+      "benchmark_evidence": [
+        {
+          "campaign_id": "mcp-authorization-qualification-2026-08-09",
+          "date": "2026-08-09",
+          "expectation_ids": [
+            "current-deputy-secure-1",
+            "current-deputy-secure-2",
+            "current-deputy-vulnerable-1",
+            "current-deputy-vulnerable-2",
+            "legacy-deputy-secure-1",
+            "legacy-deputy-secure-2",
+            "legacy-deputy-vulnerable-1",
+            "legacy-deputy-vulnerable-2"
+          ],
+          "suite_id": "adverscope-current-legacy-mcp-authorization-fixtures"
+        }
+      ],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [
+          {
+            "id": "streamable-mcp-deputy-authorization-secure-1",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#current-secure-1",
+            "target_family": "adverscope-streamable-mcp-authorization-fixture"
+          },
+          {
+            "id": "streamable-mcp-deputy-authorization-secure-2",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#current-secure-2",
+            "target_family": "adverscope-streamable-mcp-authorization-fixture"
+          },
+          {
+            "id": "legacy-sse-mcp-deputy-authorization-secure-1",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#legacy-secure-1",
+            "target_family": "adverscope-legacy-sse-mcp-authorization-fixture"
+          },
+          {
+            "id": "legacy-sse-mcp-deputy-authorization-secure-2",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#legacy-secure-2",
+            "target_family": "adverscope-legacy-sse-mcp-authorization-fixture"
+          }
+        ],
+        "vulnerable": [
+          {
+            "id": "streamable-mcp-deputy-authorization-vulnerable-1",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#current-vulnerable-1",
+            "target_family": "adverscope-streamable-mcp-authorization-fixture"
+          },
+          {
+            "id": "streamable-mcp-deputy-authorization-vulnerable-2",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#current-vulnerable-2",
+            "target_family": "adverscope-streamable-mcp-authorization-fixture"
+          },
+          {
+            "id": "legacy-sse-mcp-deputy-authorization-vulnerable-1",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#legacy-vulnerable-1",
+            "target_family": "adverscope-legacy-sse-mcp-authorization-fixture"
+          },
+          {
+            "id": "legacy-sse-mcp-deputy-authorization-vulnerable-2",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json#legacy-vulnerable-2",
+            "target_family": "adverscope-legacy-sse-mcp-authorization-fixture"
+          }
+        ]
+      },
+      "id": "LLM06-MCP-DEPUTY",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "mcp-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "Qualification covers read-only confused-deputy cases where the target exposes caller identity, effective authority, decision source, and resource classification in a structured MCP result. Inferences from prose or caller-supplied fields do not satisfy the gate.",
+        "The two target families are sibling deterministic authorization fixtures using different MCP transports. They qualify AdverScope protocol handling, identity preservation, exact assertion evaluation, evidence custody, and reproduction, not arbitrary third-party MCP implementations.",
+        "The finding gate is deterministic and does not depend on a model provider. Remote planners and evaluators, custom brokers, chained agents, callbacks, and opaque authorization layers remain outside this campaign."
+      ],
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "sample_scope": "two independent protocol families; repeated secure and vulnerable confused-deputy authorization runs over Streamable HTTP 2025-11-25 and legacy HTTP+SSE 2024-11-05 through the visible GUI",
+        "supported_recall": 1.0
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "qualified",
+      "requirements": {
+        "capabilities": [
+          "mcp"
+        ],
+        "configuration": "mcp_adapter",
+        "description": "Separate environment-backed MCP identities and target-owned denial policy"
+      },
+      "risk_id": "LLM06",
+      "title": "MCP confused-deputy authorization boundary"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM07-VERBATIM",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "prompt-injection",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM07",
+      "title": "Verbatim prompt extraction"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM07-TRANSFORM",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "prompt-injection",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM07",
+      "title": "Transformed or encoded prompt extraction"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM07-INFERENCE",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "prompt-injection",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "",
+        "description": "No target-specific capability beyond the configured chatbot adapter."
+      },
+      "risk_id": "LLM07",
+      "title": "Prompt reconstruction and inference"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "hybrid",
+        "proof_requirements": [
+          "direct target-response evidence",
+          "refusal and request-echo exclusions",
+          "separate approved reproduction for confirmation"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM07-CONTEXT",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "token-context",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional supplement to reviewed catalog",
+        "evaluation": "hybrid model review with deterministic target-proof override"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "token_context"
+        ],
+        "configuration": "",
+        "description": "Configured tokenizer and context-information endpoint roles"
+      },
+      "risk_id": "LLM07",
+      "title": "Context-pressure prompt extraction"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM08-POISON",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "rag-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "rag"
+        ],
+        "configuration": "rag_adapter",
+        "description": "Configured reversible RAG ingestion, query, and cleanup adapter"
+      },
+      "risk_id": "LLM08",
+      "title": "Retrieval corpus poisoning"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM08-TENANT",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "rag-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "multi_identity"
+        ],
+        "configuration": "rag_adapter",
+        "description": "Configured owner and restricted retrieval identities"
+      },
+      "risk_id": "LLM08",
+      "title": "Cross-tenant retrieval"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM08-ACCESS",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "rag-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "rag"
+        ],
+        "configuration": "rag_adapter",
+        "description": "Configured vector-store identities and reversible document workflow"
+      },
+      "risk_id": "LLM08",
+      "title": "Retrieval access-control bypass"
+    },
+    {
+      "benchmark_evidence": [
+        {
+          "campaign_id": "mcp-content-boundary-qualification-2026-08-09",
+          "date": "2026-08-09",
+          "expectation_ids": [
+            "current-boundary-secure-1",
+            "current-boundary-secure-2",
+            "current-boundary-vulnerable-1",
+            "current-boundary-vulnerable-2",
+            "legacy-boundary-secure-1",
+            "legacy-boundary-secure-2",
+            "legacy-boundary-vulnerable-1",
+            "legacy-boundary-vulnerable-2"
+          ],
+          "suite_id": "adverscope-current-legacy-mcp-content-boundary-fixtures"
+        }
+      ],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [
+          {
+            "id": "current-mcp-boundary-secure-1",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#current-secure-1",
+            "target_family": "adverscope-streamable-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "current-mcp-boundary-secure-2",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#current-secure-2",
+            "target_family": "adverscope-streamable-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "legacy-mcp-boundary-secure-1",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#legacy-secure-1",
+            "target_family": "adverscope-legacy-sse-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "legacy-mcp-boundary-secure-2",
+            "kind": "independent-target-control",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#legacy-secure-2",
+            "target_family": "adverscope-legacy-sse-mcp-content-boundary-fixture"
+          }
+        ],
+        "vulnerable": [
+          {
+            "id": "current-mcp-boundary-vulnerable-1",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#current-vulnerable-1",
+            "target_family": "adverscope-streamable-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "current-mcp-boundary-vulnerable-2",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#current-vulnerable-2",
+            "target_family": "adverscope-streamable-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "legacy-mcp-boundary-vulnerable-1",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#legacy-vulnerable-1",
+            "target_family": "adverscope-legacy-sse-mcp-content-boundary-fixture"
+          },
+          {
+            "id": "legacy-mcp-boundary-vulnerable-2",
+            "kind": "independent-target-vulnerability",
+            "reference": "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json#legacy-vulnerable-2",
+            "target_family": "adverscope-legacy-sse-mcp-content-boundary-fixture"
+          }
+        ]
+      },
+      "id": "LLM08-MCP-BOUNDARY",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "mcp-security",
+        "path": "native"
+      },
+      "known_limitations": [
+        "Qualification covers cross-identity resources/read boundaries proved by exact caller, owner, authorization outcome, resource URI, and tenant-private classification. Other vector, embedding, and RAG boundaries are separate techniques.",
+        "The two target families are sibling deterministic protocol fixtures. They qualify AdverScope protocol handling, source and identity preservation, exact assertion evaluation, evidence custody, and reproduction, not arbitrary third-party MCP implementations.",
+        "The finding gate is deterministic and provider-independent. Remote planners and evaluators, custom transports, opaque brokers, chained agents, callbacks, prompt access, and state-changing MCP effects remain outside this campaign."
+      ],
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "sample_scope": "two independent protocol families; repeated secure and vulnerable MCP content and resource-boundary runs over Streamable HTTP 2025-11-25 and legacy HTTP+SSE 2024-11-05 through the visible GUI",
+        "supported_recall": 1.0
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "qualified",
+      "requirements": {
+        "capabilities": [
+          "mcp"
+        ],
+        "configuration": "mcp_adapter",
+        "description": "Configured MCP identities and protected resource URI"
+      },
+      "risk_id": "LLM08",
+      "title": "Cross-identity MCP resource boundary"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM09-FACT",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "misinformation",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "misinformation_evaluator",
+        "description": "Approved factual oracle cases"
+      },
+      "risk_id": "LLM09",
+      "title": "Factual and domain misinformation"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM09-CITATION",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "misinformation",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [],
+        "configuration": "misinformation_evaluator",
+        "description": "Approved citation/source allowlist"
+      },
+      "risk_id": "LLM09",
+      "title": "Fabricated sources and citations"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM09-DECISION",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "misinformation",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "high_impact_domain"
+        ],
+        "configuration": "misinformation_evaluator",
+        "description": "Authorized domain decision oracle or required-refusal rule"
+      },
+      "risk_id": "LLM09",
+      "title": "High-impact decision manipulation"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-owned deterministic evidence contract",
+          "separate approved reproduction",
+          "complete immutable request and response evidence"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM10-TOKEN",
+      "implementation": {
+        "attack_catalog_version": "",
+        "contract_automatable": true,
+        "module_id": "",
+        "path": "contract"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "none",
+        "evaluation": "none"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "resource_telemetry"
+        ],
+        "configuration": "assessment_contract",
+        "description": "Explicit bounded input-size authorization plus target-owned limit or resource telemetry"
+      },
+      "risk_id": "LLM10",
+      "title": "Token and context exhaustion"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-owned deterministic evidence contract",
+          "separate approved reproduction",
+          "complete immutable request and response evidence"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM10-COST",
+      "implementation": {
+        "attack_catalog_version": "",
+        "contract_automatable": true,
+        "module_id": "",
+        "path": "contract"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "none",
+        "evaluation": "none"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "resource_telemetry"
+        ],
+        "configuration": "assessment_contract",
+        "description": "Explicit request and cost budget plus deterministic quota, throttling, or spend telemetry"
+      },
+      "risk_id": "LLM10",
+      "title": "Denial-of-wallet and rate-limit testing"
+    },
+    {
+      "benchmark_evidence": [],
+      "evaluator": {
+        "kind": "deterministic",
+        "proof_requirements": [
+          "target-configured assertion or effect verifier",
+          "negative or positive control where applicable",
+          "separate approved reproduction or an explicit one-time-effect exception"
+        ]
+      },
+      "fixtures": {
+        "secure": [],
+        "vulnerable": []
+      },
+      "id": "LLM10-LOOP",
+      "implementation": {
+        "attack_catalog_version": "2026.08.14",
+        "contract_automatable": false,
+        "module_id": "excessive-agency",
+        "path": "native"
+      },
+      "known_limitations": [
+        "No professional qualification claim is made until both secure and vulnerable fixtures and repeated model-role evidence are linked."
+      ],
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "sample_scope": "No technique-specific qualification sample recorded.",
+        "supported_recall": null
+      },
+      "model_dependence": {
+        "attack_generation": "optional wording or planning supplement",
+        "evaluation": "target-configured deterministic validator"
+      },
+      "qualification_status": "experimental",
+      "requirements": {
+        "capabilities": [
+          "agents"
+        ],
+        "configuration": "tool_agent_adapter",
+        "description": "Configured OpenAI-compatible tool-agent adapter and iteration boundary"
+      },
+      "risk_id": "LLM10",
+      "title": "Uncontrolled agent iteration"
+    }
+  ]
+}

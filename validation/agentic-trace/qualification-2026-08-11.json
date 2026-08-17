@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "recorded_at": "2026-08-11",
+  "work_package": "M4.2",
+  "capability": "structured-agent-trace-v1 planner/executor and approval boundaries",
+  "status": "qualified-synthetic",
+  "benchmark_separation": {
+    "fixture_owns_outcome": true,
+    "framework_receives_expected_label": false,
+    "model_judge_controls_verdict": false
+  },
+  "planner_executor_fixture": {
+    "targets": 2,
+    "true_positive": 1,
+    "true_negative": 1,
+    "false_positive": 0,
+    "false_negative": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "specificity": 1.0,
+    "reproduction_success_rate": 1.0
+  },
+  "additional_gates": {
+    "approval_bypass_with_verifier": "passed",
+    "mandatory_cleanup_and_post_cleanup_state": "passed",
+    "pre_cancelled_zero_traffic": "passed",
+    "project_protocol_event_isolation": "passed",
+    "stored_evidence_reevaluation": "passed",
+    "markdown_report_protocol_trace": "passed",
+    "gui_configuration_and_readiness": "passed",
+    "protected_header_secret_rejection": "passed",
+    "prose_only_false_positive_control": "passed"
+  },
+  "full_regression": {
+    "tests": 458,
+    "result": "passed",
+    "duration_seconds": 231.499
+  },
+  "limitations": [
+    "Qualification is synthetic and does not yet include an independent external agent platform.",
+    "Only configured JSON planner, approval, and executor traces are supported in this slice.",
+    "Agent impersonation, inter-agent message integrity, persistent memory poisoning, unsafe tool chains, and A2A agent-card trust remain unqualified.",
+    "A structured trace is finding-grade only when the target owner confirms it is authoritative; reversible effects require an authorized verifier and cleanup contract."
+  ],
+  "verification_command": "python -m unittest tests.test_agentic_trace_security -v"
+}

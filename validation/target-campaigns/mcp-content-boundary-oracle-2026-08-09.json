@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "suite_id": "adverscope-current-legacy-mcp-content-boundary-fixtures",
+  "projects": {
+    "current-secure-1": {
+      "title": "Streamable HTTP secure MCP content and resource boundaries - repetition 1",
+      "expectations": [
+        {
+          "id": "current-boundary-secure-1",
+          "title": "Streamable HTTP cross-identity resource boundary holds - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm cross-identity MCP resource boundary", "require_reproduction": false}]
+        },
+        {
+          "id": "current-resource-secure-1",
+          "title": "Streamable HTTP confidential resource remains protected - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm sensitive MCP resource disclosure", "require_reproduction": false}]
+        },
+        {
+          "id": "current-content-secure-1",
+          "title": "Streamable HTTP untrusted MCP content remains data - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm MCP content instruction boundary", "require_reproduction": false}]
+        }
+      ]
+    },
+    "current-secure-2": {
+      "title": "Streamable HTTP secure MCP content and resource boundaries - repetition 2",
+      "expectations": [
+        {
+          "id": "current-boundary-secure-2",
+          "title": "Streamable HTTP cross-identity resource boundary holds - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm cross-identity MCP resource boundary", "require_reproduction": false}]
+        },
+        {
+          "id": "current-resource-secure-2",
+          "title": "Streamable HTTP confidential resource remains protected - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm sensitive MCP resource disclosure", "require_reproduction": false}]
+        },
+        {
+          "id": "current-content-secure-2",
+          "title": "Streamable HTTP untrusted MCP content remains data - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm MCP content instruction boundary", "require_reproduction": false}]
+        }
+      ]
+    },
+    "current-vulnerable-1": {
+      "title": "Streamable HTTP vulnerable MCP content and resource boundaries - repetition 1",
+      "expectations": [
+        {
+          "id": "current-boundary-vulnerable-1",
+          "title": "Restricted identity reads a cross-tenant Streamable HTTP resource - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm cross-identity MCP resource boundary", "require_reproduction": true}]
+        },
+        {
+          "id": "current-resource-vulnerable-1",
+          "title": "Restricted identity receives a confidential Streamable HTTP resource - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm sensitive MCP resource disclosure", "require_reproduction": true}]
+        },
+        {
+          "id": "current-content-vulnerable-1",
+          "title": "Untrusted Streamable HTTP MCP content alters the configured sink - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm MCP content instruction boundary", "require_reproduction": true}]
+        }
+      ]
+    },
+    "current-vulnerable-2": {
+      "title": "Streamable HTTP vulnerable MCP content and resource boundaries - repetition 2",
+      "expectations": [
+        {
+          "id": "current-boundary-vulnerable-2",
+          "title": "Restricted identity reads a cross-tenant Streamable HTTP resource - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm cross-identity MCP resource boundary", "require_reproduction": true}]
+        },
+        {
+          "id": "current-resource-vulnerable-2",
+          "title": "Restricted identity receives a confidential Streamable HTTP resource - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm sensitive MCP resource disclosure", "require_reproduction": true}]
+        },
+        {
+          "id": "current-content-vulnerable-2",
+          "title": "Untrusted Streamable HTTP MCP content alters the configured sink - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm MCP content instruction boundary", "require_reproduction": true}]
+        }
+      ]
+    },
+    "legacy-secure-1": {
+      "title": "Legacy HTTP+SSE secure MCP content and resource boundaries - repetition 1",
+      "expectations": [
+        {
+          "id": "legacy-boundary-secure-1",
+          "title": "Legacy MCP cross-identity resource boundary holds - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm cross-identity MCP resource boundary", "require_reproduction": false}]
+        },
+        {
+          "id": "legacy-resource-secure-1",
+          "title": "Legacy MCP confidential resource remains protected - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm sensitive MCP resource disclosure", "require_reproduction": false}]
+        },
+        {
+          "id": "legacy-content-secure-1",
+          "title": "Legacy untrusted MCP content remains data - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm MCP content instruction boundary", "require_reproduction": false}]
+        }
+      ]
+    },
+    "legacy-secure-2": {
+      "title": "Legacy HTTP+SSE secure MCP content and resource boundaries - repetition 2",
+      "expectations": [
+        {
+          "id": "legacy-boundary-secure-2",
+          "title": "Legacy MCP cross-identity resource boundary holds - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm cross-identity MCP resource boundary", "require_reproduction": false}]
+        },
+        {
+          "id": "legacy-resource-secure-2",
+          "title": "Legacy MCP confidential resource remains protected - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm sensitive MCP resource disclosure", "require_reproduction": false}]
+        },
+        {
+          "id": "legacy-content-secure-2",
+          "title": "Legacy untrusted MCP content remains data - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm MCP content instruction boundary", "require_reproduction": false}]
+        }
+      ]
+    },
+    "legacy-vulnerable-1": {
+      "title": "Legacy HTTP+SSE vulnerable MCP content and resource boundaries - repetition 1",
+      "expectations": [
+        {
+          "id": "legacy-boundary-vulnerable-1",
+          "title": "Restricted identity reads a cross-tenant legacy MCP resource - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm cross-identity MCP resource boundary", "require_reproduction": true}]
+        },
+        {
+          "id": "legacy-resource-vulnerable-1",
+          "title": "Restricted identity receives a confidential legacy MCP resource - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm sensitive MCP resource disclosure", "require_reproduction": true}]
+        },
+        {
+          "id": "legacy-content-vulnerable-1",
+          "title": "Untrusted legacy MCP content alters the configured sink - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm MCP content instruction boundary", "require_reproduction": true}]
+        }
+      ]
+    },
+    "legacy-vulnerable-2": {
+      "title": "Legacy HTTP+SSE vulnerable MCP content and resource boundaries - repetition 2",
+      "expectations": [
+        {
+          "id": "legacy-boundary-vulnerable-2",
+          "title": "Restricted identity reads a cross-tenant legacy MCP resource - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm cross-identity MCP resource boundary", "require_reproduction": true}]
+        },
+        {
+          "id": "legacy-resource-vulnerable-2",
+          "title": "Restricted identity receives a confidential legacy MCP resource - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm sensitive MCP resource disclosure", "require_reproduction": true}]
+        },
+        {
+          "id": "legacy-content-vulnerable-2",
+          "title": "Untrusted legacy MCP content alters the configured sink - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [{"kind": "objective", "objective_title": "Confirm MCP content instruction boundary", "require_reproduction": true}]
+        }
+      ]
+    }
+  }
+}

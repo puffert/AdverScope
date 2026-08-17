@@ -1,0 +1,636 @@
+{
+  "corpus_id": "adverscope-m5-reliability-custody-corpus",
+  "corpus_version": "2026.08.14.1",
+  "frozen_at": "2026-08-14T00:00:00Z",
+  "open_gates": [
+    {
+      "id": "long-run-soak",
+      "reason": "Requires clock-time execution under representative target and model load; deterministic unit and integration tests cannot establish memory, handle, queue, or latency stability over long assessments.",
+      "status": "open",
+      "title": "Long-duration soak and resource observation"
+    },
+    {
+      "id": "independent-product-security-review",
+      "reason": "Must be performed by a reviewer who did not author the covered workflow and must include triage and closure of all critical or high-severity product defects.",
+      "status": "open",
+      "title": "Independent product-security review"
+    },
+    {
+      "id": "supported-platform-release-matrix",
+      "reason": "The CI platform workflow exists, but each release candidate still requires retained Windows, Ubuntu, and macOS evidence for the exact commit.",
+      "status": "open",
+      "title": "Current release-candidate platform matrix"
+    }
+  ],
+  "schema_version": "1.0",
+  "source_integrity": [
+    {
+      "path": "osai_security/reliability_qualification.py",
+      "sha256": "6cc401833523f47a9615a1dc4b17505fa8c806175c0de116465b7caedaa34d30"
+    },
+    {
+      "path": "validation/milestone5/reliability-corpus-v1.json",
+      "sha256": "cdb8c41974c2a3deffb665dde8f1f20ce000563903283c22b7194a121a992f21"
+    },
+    {
+      "path": "osai_security/faults.py",
+      "sha256": "1c3cc1085a145e23132233e6e06afbd8f88cd7551da48c8fc3f1f4d8627c9faf"
+    },
+    {
+      "path": "osai_security/model_gateway.py",
+      "sha256": "8990ff71a807d903680c65095ab78f9756386c36cabb610e6532ffeb6e0bcc80"
+    },
+    {
+      "path": "osai_security/transport_reliability.py",
+      "sha256": "11c07d69a0458d95af59aedbf597245e3aca4cf7d76202c59a486755d99be063"
+    },
+    {
+      "path": "osai_security/recovery.py",
+      "sha256": "7b4eb5818c407f8c1d398d93087b47450141efca7319e2030872fc4ae5964cb2"
+    },
+    {
+      "path": "osai_security/evidence_bundles.py",
+      "sha256": "e719f2fdc1637df7577970c4b8e60f534ec57b78993b6edd8d9f70c7e0200734"
+    },
+    {
+      "path": "osai_security/http_app.py",
+      "sha256": "c3fe645de59a6ff80241bc3f42a8ef87ecdc77ca638d1d6b065a2be48cdc4132"
+    },
+    {
+      "path": "tests/test_transport_reliability.py",
+      "sha256": "7828eb2df89631fcff3e1bf7ac43fff651ecaf91d51eff27cc0f42bfd3f3f78c"
+    },
+    {
+      "path": "tests/test_phase0_safety.py",
+      "sha256": "106b39c3135f0a97501dd08d824b498c2e7a1db1d2e002dbc748e0e104194904"
+    },
+    {
+      "path": "tests/test_milestone3_recovery.py",
+      "sha256": "95e44795fe656eeb4061c1e79163b7e5b133429cdf352bb8c4f16ae366cc6093"
+    },
+    {
+      "path": "tests/test_evidence_bundles.py",
+      "sha256": "e890a7891f9c396dfe2d3c3efd9e57f4da8622f36987da227285805c5b36fb4e"
+    },
+    {
+      "path": "tests/test_runtime_and_model_providers.py",
+      "sha256": "62d29c6b61d8b39b5fafe0ca05a808d576ff4f8913b4d303904f9088c076ac21"
+    },
+    {
+      "path": "tests/test_milestone3_distribution.py",
+      "sha256": "e3358a016adf4e981fd00bbcc5bb4b79a73a50fb6c803914d2ba64e7de6a5d15"
+    },
+    {
+      "path": "tests/test_vertical_slice.py",
+      "sha256": "a65f9700148309ceaf54b528293c7b803d964179db752586a8268ab54a6bd8a0"
+    },
+    {
+      "path": "tests/test_rag_security.py",
+      "sha256": "352a249ed5e060492e9d4e4f25cb1b306158ea9807eab5cee3b87b5e3c0381ca"
+    },
+    {
+      "path": "tests/test_mcp_stdio.py",
+      "sha256": "59e65a99e440bf66268c9996930e30adcf016a6a0dc3ab88007e05bfb4c6fe6d"
+    },
+    {
+      "path": "tests/test_agentic_trace_security.py",
+      "sha256": "5bb26acef2aa7c002a95510cfb08bde9e066ebdafdb837ca5db3c97ca5daefb9"
+    },
+    {
+      "path": "tests/test_testing_tools.py",
+      "sha256": "2929d401b3f76b7a3210c8c4d840e64cd4e91c96f053f802aa3d0ad8f92b9960"
+    }
+  ],
+  "status": "in_progress",
+  "summary": {
+    "controls_passed": 43,
+    "controls_total": 43,
+    "open_gates": 3,
+    "workstreams_passed": 7,
+    "workstreams_total": 7
+  },
+  "workstreams": [
+    {
+      "controls": [
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "transport-bounded-profile",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_transport_reliability.TransportReliabilityUnitTests.test_profile_is_opt_in_and_bounded",
+          "test_cases": 1,
+          "title": "Retry profile remains explicit and bounded"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "transport-stream-completion",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_transport_reliability.TransportReliabilityUnitTests.test_incomplete_sse_is_never_a_success_when_completion_is_required",
+          "test_cases": 1,
+          "title": "Incomplete streaming output is not accepted"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "transport-rate-limit",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_rate_limit_retry_retains_fault_and_relationship",
+          "test_cases": 1,
+          "title": "Rate-limit retry preserves the failed attempt"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "transport-service-unavailable",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_http_503_retry_retains_the_failed_response_before_recovery",
+          "test_cases": 1,
+          "title": "HTTP 503 retry preserves exact evidence"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "transport-timeout-reset",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_timeout_and_connection_reset_recover_without_losing_fault_class",
+          "test_cases": 1,
+          "title": "Timeout and reset recovery retain fault class"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "transport-schema-fault",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_malformed_json_is_a_terminal_schema_fault_with_raw_response_retained",
+          "test_cases": 1,
+          "title": "Malformed JSON remains a terminal schema fault"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "transport-replay-safety",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_non_idempotent_retry_requires_explicit_replay_safety",
+          "test_cases": 1,
+          "title": "Non-idempotent retries require explicit replay safety"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "transport-stream-stall",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_runtime_and_model_providers.RuntimeAndProviderTests.test_partial_sse_timeout_is_classified_as_a_streaming_stall",
+          "test_cases": 1,
+          "title": "Partial provider stream is classified as stalled"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "transport-model-reset",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_vertical_slice.VerticalSliceTests.test_model_transport_retries_one_transient_connection_reset",
+          "test_cases": 1,
+          "title": "Model transport performs only the bounded transient retry"
+        }
+      ],
+      "id": "transport-fault-handling",
+      "status": "passed",
+      "title": "Target and model transport fault handling"
+    },
+    {
+      "controls": [
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "cancel-background-run",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_phase0_safety.Phase0SafetyTests.test_background_assessment_can_be_cancelled_and_releases_the_target",
+          "test_cases": 1,
+          "title": "Background assessment cancellation releases target"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "recover-stale-runs",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_phase0_safety.Phase0SafetyTests.test_application_startup_recovers_stale_assessment_and_tool_runs",
+          "test_cases": 1,
+          "title": "Startup reconciles stale assessments and tools"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "cancel-agentic-before-traffic",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_agentic_trace_security.AgenticTraceSecurityTests.test_pre_cancelled_run_sends_no_agentic_target_traffic",
+          "test_cases": 1,
+          "title": "Pre-cancelled agent run sends no target traffic"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "cancel-mcp-process",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_mcp_stdio.MCPStdioQualificationTests.test_stdio_cancellation_closes_process_and_malformed_output_cannot_create_a_finding",
+          "test_cases": 1,
+          "title": "MCP stdio cancellation closes child process"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "restart-post-attestation",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_runtime_and_model_providers.RuntimeAndProviderTests.test_restart_eligibility_never_replays_unattested_post_traffic",
+          "test_cases": 1,
+          "title": "Restart never replays unattested POST traffic"
+        }
+      ],
+      "id": "cancellation-and-stale-recovery",
+      "status": "passed",
+      "title": "Cancellation, interruption, and stale-run recovery"
+    },
+    {
+      "controls": [
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "stochastic-reproduction",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_stochastic_reproduction_records_all_samples",
+          "test_cases": 1,
+          "title": "Stochastic reproduction retains every sample"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "stream-fault-not-finding",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_transport_reliability.IndependentFixtureCampaignTests.test_incomplete_stream_is_infrastructure_not_a_finding",
+          "test_cases": 1,
+          "title": "Incomplete stream cannot become a finding"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "rag-cleanup-failure",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_rag_security.RAGSecurityTests.test_success_status_without_effective_cleanup_is_detected_and_stops",
+          "test_cases": 1,
+          "title": "Ineffective cleanup is detected and stops execution"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "rag-no-broad-delete",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_rag_security.RAGSecurityTests.test_missing_document_id_never_degrades_into_a_broad_delete",
+          "test_cases": 1,
+          "title": "Missing identifier never degrades into broad deletion"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "agentic-verifier-cleanup",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_agentic_trace_security.AgenticTraceSecurityTests.test_approval_bypass_requires_trace_and_verifier_then_runs_cleanup",
+          "test_cases": 1,
+          "title": "Agentic effect requires verifier and cleanup"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "workflow-exact-events",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_testing_tools.TestingToolsTests.test_workflow_captures_values_polls_and_preserves_exact_events",
+          "test_cases": 1,
+          "title": "Workflow polling and captures preserve exact events"
+        }
+      ],
+      "id": "cleanup-and-reproduction",
+      "status": "passed",
+      "title": "Reproduction, cleanup, and effect verification"
+    },
+    {
+      "controls": [
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "migration-verified-backup",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_milestone3_recovery.MigrationRecoveryTests.test_schema_upgrade_creates_verified_backup_and_ledger",
+          "test_cases": 1,
+          "title": "Schema migration creates verified backup ledger"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "migration-interruption",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_milestone3_recovery.MigrationRecoveryTests.test_interrupted_upgrade_restores_the_exact_pre_upgrade_database",
+          "test_cases": 1,
+          "title": "Interrupted migration restores exact database"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "project-transfer-isolation",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_milestone3_recovery.ProjectTransferTests.test_project_transfer_preserves_only_the_selected_project_and_evidence",
+          "test_cases": 1,
+          "title": "Transfer contains only selected project evidence"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "project-transfer-tamper",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_milestone3_recovery.ProjectTransferTests.test_project_transfer_rejects_tampering_and_requires_acknowledgement",
+          "test_cases": 1,
+          "title": "Tampered transfer is rejected"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "full-backup-restore",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_milestone3_recovery.LocalBackupRestoreTests.test_full_assessment_backup_restores_projects_evidence_and_provider_profiles",
+          "test_cases": 1,
+          "title": "Full backup restores projects, evidence, and profiles"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "restore-interruption",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_milestone3_recovery.LocalBackupRestoreTests.test_recovery_journal_rolls_back_an_interrupted_restore",
+          "test_cases": 1,
+          "title": "Interrupted restore rolls back through journal"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "restore-path-boundary",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_milestone3_recovery.LocalBackupRestoreTests.test_recovery_journal_rejects_paths_outside_the_rollback_directory",
+          "test_cases": 1,
+          "title": "Restore journal rejects out-of-bound paths"
+        }
+      ],
+      "id": "transfer-backup-restore",
+      "status": "passed",
+      "title": "Project transfer, backup, migration, and restore"
+    },
+    {
+      "controls": [
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "bundle-scoped-verifiable",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_evidence_bundles.EvidenceBundleTests.test_redacted_and_full_bundles_are_scoped_and_verifiable",
+          "test_cases": 1,
+          "title": "Redacted and full bundles remain scoped and verifiable"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "bundle-tamper-detection",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_evidence_bundles.EvidenceBundleTests.test_tampering_and_broken_assets_are_rejected",
+          "test_cases": 1,
+          "title": "Tampering and missing assets are rejected"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "review-freshness",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_evidence_bundles.EvidenceBundleTests.test_report_acceptance_becomes_stale_after_project_change",
+          "test_cases": 1,
+          "title": "Accepted report becomes stale after project change"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "full-export-ack",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_evidence_bundles.EvidenceBundleTests.test_application_requires_full_export_acknowledgement_and_enforces_run_scope",
+          "test_cases": 1,
+          "title": "Full export requires acknowledgement and run scope"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "browser-screenshot-hashes",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_vertical_slice.VerticalSliceTests.test_browser_target_stores_paired_hashed_screenshots_and_reproduction",
+          "test_cases": 1,
+          "title": "Browser evidence stores paired hashed screenshots"
+        }
+      ],
+      "id": "evidence-integrity",
+      "status": "passed",
+      "title": "Evidence integrity, review freshness, and export custody"
+    },
+    {
+      "controls": [
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "remote-key-memory-only",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_runtime_and_model_providers.RuntimeAndProviderTests.test_remote_key_is_memory_only_redacted_from_public_and_persisted_state",
+          "test_cases": 1,
+          "title": "Remote API key remains memory-only and redacted"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "session-key-api-redaction",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_runtime_and_model_providers.RuntimeAndProviderTests.test_runtime_and_provider_apis_never_return_a_submitted_session_key",
+          "test_cases": 1,
+          "title": "Runtime APIs never return submitted session key"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "provider-url-safety",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_runtime_and_model_providers.RuntimeAndProviderTests.test_remote_profile_rejects_http_and_credentialed_urls",
+          "test_cases": 1,
+          "title": "Remote profiles reject insecure and credentialed URLs"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "release-denylist",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_milestone3_distribution.ReleaseIntegrityTests.test_release_archive_denylist_covers_evidence_sessions_secrets_and_keys",
+          "test_cases": 1,
+          "title": "Release archive excludes evidence, sessions, and keys"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "release-clean-entries",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_milestone3_distribution.ReleaseIntegrityTests.test_distribution_verifier_requires_license_version_and_clean_entries",
+          "test_cases": 1,
+          "title": "Distribution verifier requires clean entries"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "redaction-private-material",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_vertical_slice.VerticalSliceTests.test_redaction_removes_headers_and_private_keys",
+          "test_cases": 1,
+          "title": "Evidence redaction removes secret headers and private keys"
+        }
+      ],
+      "id": "secret-and-package-boundaries",
+      "status": "passed",
+      "title": "Secrets, provider configuration, and release-package boundaries"
+    },
+    {
+      "controls": [
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "browser-session-project-scope",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_vertical_slice.VerticalSliceTests.test_browser_login_session_route_is_project_scoped_and_audited",
+          "test_cases": 1,
+          "title": "Browser login session is project-scoped and audited"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "browser-redirect-credentials",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_phase0_safety.Phase0SafetyTests.test_persistent_session_does_not_forward_credentials_or_cookies_on_redirect",
+          "test_cases": 1,
+          "title": "Persistent session does not forward cookies on redirect"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "browser-cross-origin-block",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_vertical_slice.VerticalSliceTests.test_browser_target_blocks_cross_origin_passive_resource_exfiltration",
+          "test_cases": 1,
+          "title": "Cross-origin passive exfiltration is blocked"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "redirect-route-boundary",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_phase0_safety.Phase0SafetyTests.test_same_origin_redirect_cannot_expand_the_route_allowlist",
+          "test_cases": 1,
+          "title": "Same-origin redirect cannot expand allowlist"
+        },
+        {
+          "diagnostic": "",
+          "errors": 0,
+          "failures": 0,
+          "id": "callback-project-isolation",
+          "skipped": 0,
+          "status": "passed",
+          "test": "tests.test_testing_tools.TestingToolsTests.test_tool_records_and_interactions_are_project_isolated",
+          "test_cases": 1,
+          "title": "Tool interactions remain project-isolated"
+        }
+      ],
+      "id": "browser-session-and-callback-boundaries",
+      "status": "passed",
+      "title": "Browser sessions, redirects, and callback boundaries"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">AdverScope</title>
+  <desc id="desc">A bounded targeting reticle surrounding a stylized letter A and evidence point.</desc>
+  <defs>
+    <linearGradient id="signal" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60E8FF"/>
+      <stop offset="1" stop-color="#2F8FFF"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g fill="none" stroke="url(#signal)" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M7 23V9h14M43 9h14v14M57 41v14H43M21 55H7V41" stroke-width="2" opacity=".8"/>
+    <path d="M18 46 32 17l14 29M23 36h18" stroke-width="3"/>
+    <path d="M32 7v6M32 51v6M7 32h7M50 32h7" stroke-width="1.5" opacity=".55"/>
+  </g>
+  <circle cx="32" cy="32" r="3.25" fill="#40E0B8" filter="url(#glow)"/>
+  <circle cx="32" cy="32" r="1.15" fill="#EDF3F6"/>
+</svg>

@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "suite_id": "adverscope-independent-current-legacy-mcp-inventory-fixtures",
+  "projects": {
+    "native-current-secure-1": {
+      "title": "AdverScope raw-protocol Streamable HTTP secure inventory - repetition 1",
+      "expectations": [
+        {
+          "id": "native-current-secure-1-inventory-integrity",
+          "title": "AdverScope raw-protocol Streamable HTTP approved inventory remains exact - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": false
+            }
+          ]
+        }
+      ]
+    },
+    "native-current-secure-2": {
+      "title": "AdverScope raw-protocol Streamable HTTP secure inventory - repetition 2",
+      "expectations": [
+        {
+          "id": "native-current-secure-2-inventory-integrity",
+          "title": "AdverScope raw-protocol Streamable HTTP approved inventory remains exact - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": false
+            }
+          ]
+        }
+      ]
+    },
+    "native-current-vulnerable-1": {
+      "title": "AdverScope raw-protocol Streamable HTTP vulnerable inventory - repetition 1",
+      "expectations": [
+        {
+          "id": "native-current-vulnerable-1-inventory-integrity",
+          "title": "AdverScope raw-protocol Streamable HTTP inventory drift is confirmed - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": true
+            }
+          ]
+        }
+      ]
+    },
+    "native-current-vulnerable-2": {
+      "title": "AdverScope raw-protocol Streamable HTTP vulnerable inventory - repetition 2",
+      "expectations": [
+        {
+          "id": "native-current-vulnerable-2-inventory-integrity",
+          "title": "AdverScope raw-protocol Streamable HTTP inventory drift is confirmed - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": true
+            }
+          ]
+        }
+      ]
+    },
+    "native-legacy-secure-1": {
+      "title": "AdverScope raw-protocol legacy HTTP+SSE secure inventory - repetition 1",
+      "expectations": [
+        {
+          "id": "native-legacy-secure-1-inventory-integrity",
+          "title": "AdverScope raw-protocol legacy HTTP+SSE approved inventory remains exact - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": false
+            }
+          ]
+        }
+      ]
+    },
+    "native-legacy-secure-2": {
+      "title": "AdverScope raw-protocol legacy HTTP+SSE secure inventory - repetition 2",
+      "expectations": [
+        {
+          "id": "native-legacy-secure-2-inventory-integrity",
+          "title": "AdverScope raw-protocol legacy HTTP+SSE approved inventory remains exact - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": false
+            }
+          ]
+        }
+      ]
+    },
+    "native-legacy-vulnerable-1": {
+      "title": "AdverScope raw-protocol legacy HTTP+SSE vulnerable inventory - repetition 1",
+      "expectations": [
+        {
+          "id": "native-legacy-vulnerable-1-inventory-integrity",
+          "title": "AdverScope raw-protocol legacy HTTP+SSE inventory drift is confirmed - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": true
+            }
+          ]
+        }
+      ]
+    },
+    "native-legacy-vulnerable-2": {
+      "title": "AdverScope raw-protocol legacy HTTP+SSE vulnerable inventory - repetition 2",
+      "expectations": [
+        {
+          "id": "native-legacy-vulnerable-2-inventory-integrity",
+          "title": "AdverScope raw-protocol legacy HTTP+SSE inventory drift is confirmed - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": true
+            }
+          ]
+        }
+      ]
+    },
+    "sdk-current-secure-1": {
+      "title": "Official MCP Python SDK 1.25 Streamable HTTP secure inventory - repetition 1",
+      "expectations": [
+        {
+          "id": "sdk-current-secure-1-inventory-integrity",
+          "title": "Official MCP Python SDK 1.25 Streamable HTTP approved inventory remains exact - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": false
+            }
+          ]
+        }
+      ]
+    },
+    "sdk-current-secure-2": {
+      "title": "Official MCP Python SDK 1.25 Streamable HTTP secure inventory - repetition 2",
+      "expectations": [
+        {
+          "id": "sdk-current-secure-2-inventory-integrity",
+          "title": "Official MCP Python SDK 1.25 Streamable HTTP approved inventory remains exact - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": false
+            }
+          ]
+        }
+      ]
+    },
+    "sdk-current-vulnerable-1": {
+      "title": "Official MCP Python SDK 1.25 Streamable HTTP vulnerable inventory - repetition 1",
+      "expectations": [
+        {
+          "id": "sdk-current-vulnerable-1-inventory-integrity",
+          "title": "Official MCP Python SDK 1.25 Streamable HTTP inventory drift is confirmed - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": true
+            }
+          ]
+        }
+      ]
+    },
+    "sdk-current-vulnerable-2": {
+      "title": "Official MCP Python SDK 1.25 Streamable HTTP vulnerable inventory - repetition 2",
+      "expectations": [
+        {
+          "id": "sdk-current-vulnerable-2-inventory-integrity",
+          "title": "Official MCP Python SDK 1.25 Streamable HTTP inventory drift is confirmed - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": true
+            }
+          ]
+        }
+      ]
+    },
+    "sdk-legacy-secure-1": {
+      "title": "Official MCP Python SDK 1.25 legacy HTTP+SSE secure inventory - repetition 1",
+      "expectations": [
+        {
+          "id": "sdk-legacy-secure-1-inventory-integrity",
+          "title": "Official MCP Python SDK 1.25 legacy HTTP+SSE approved inventory remains exact - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": false
+            }
+          ]
+        }
+      ]
+    },
+    "sdk-legacy-secure-2": {
+      "title": "Official MCP Python SDK 1.25 legacy HTTP+SSE secure inventory - repetition 2",
+      "expectations": [
+        {
+          "id": "sdk-legacy-secure-2-inventory-integrity",
+          "title": "Official MCP Python SDK 1.25 legacy HTTP+SSE approved inventory remains exact - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": false
+            }
+          ]
+        }
+      ]
+    },
+    "sdk-legacy-vulnerable-1": {
+      "title": "Official MCP Python SDK 1.25 legacy HTTP+SSE vulnerable inventory - repetition 1",
+      "expectations": [
+        {
+          "id": "sdk-legacy-vulnerable-1-inventory-integrity",
+          "title": "Official MCP Python SDK 1.25 legacy HTTP+SSE inventory drift is confirmed - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": true
+            }
+          ]
+        }
+      ]
+    },
+    "sdk-legacy-vulnerable-2": {
+      "title": "Official MCP Python SDK 1.25 legacy HTTP+SSE vulnerable inventory - repetition 2",
+      "expectations": [
+        {
+          "id": "sdk-legacy-vulnerable-2-inventory-integrity",
+          "title": "Official MCP Python SDK 1.25 legacy HTTP+SSE inventory drift is confirmed - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP inventory integrity drift",
+              "require_reproduction": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

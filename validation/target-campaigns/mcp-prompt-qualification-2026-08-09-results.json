@@ -1,0 +1,1207 @@
+{
+  "schema_version": 1,
+  "suite_id": "adverscope-mcp-prompt-current-legacy-raw-sdk",
+  "campaign_id": "mcp-prompt-qualification-2026-08-09",
+  "summary": {
+    "projects": 16,
+    "gated_expectations": 32,
+    "classifications": {
+      "true_negative": 16,
+      "true_positive": 16
+    },
+    "precision": 1.0,
+    "recall": 1.0,
+    "infrastructure_errors": 0,
+    "inconclusive": 0,
+    "reproduction_required": 16,
+    "reproduction_confirmed": 16,
+    "reproduction_rate": 1.0
+  },
+  "rows": [
+    {
+      "label": "raw-current-secure-1",
+      "project_id": "proj_1eb8195f17c3",
+      "project_name": "[Qualification] MCP prompt raw - current - secure - 1",
+      "assessment_run_ids": [
+        "run_a7da90c3464d"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-current-secure-1-inventory",
+          "title": "Protected prompt is absent from restricted inventory",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_a7da90c3464d",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_a7da90c3464d",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "raw-current-secure-1-get",
+          "title": "Protected prompt retrieval is denied",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_a7da90c3464d",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_a7da90c3464d",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-current-vulnerable-1",
+      "project_id": "proj_9a9f6ea4663d",
+      "project_name": "[Qualification] MCP prompt raw - current - vulnerable - 1",
+      "assessment_run_ids": [
+        "run_9ac0c0f83ea7"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-current-vulnerable-1-inventory",
+          "title": "Protected prompt is advertised to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_9ac0c0f83ea7",
+          "test_case_id": "case_a78ef06a7c50",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_9ac0c0f83ea7",
+              "test_case_id": "case_a78ef06a7c50",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "raw-current-vulnerable-1-get",
+          "title": "Protected prompt is returned to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_9ac0c0f83ea7",
+          "test_case_id": "case_2c757b511cc4",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_9ac0c0f83ea7",
+              "test_case_id": "case_2c757b511cc4",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-current-secure-2",
+      "project_id": "proj_9d5bb49268c7",
+      "project_name": "[Qualification] MCP prompt raw - current - secure - 2",
+      "assessment_run_ids": [
+        "run_14f133b266d6"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-current-secure-2-inventory",
+          "title": "Protected prompt is absent from restricted inventory",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_14f133b266d6",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_14f133b266d6",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "raw-current-secure-2-get",
+          "title": "Protected prompt retrieval is denied",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_14f133b266d6",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_14f133b266d6",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-current-vulnerable-2",
+      "project_id": "proj_a38f5492dc70",
+      "project_name": "[Qualification] MCP prompt raw - current - vulnerable - 2",
+      "assessment_run_ids": [
+        "run_e6b6ba1d8361"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-current-vulnerable-2-inventory",
+          "title": "Protected prompt is advertised to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_e6b6ba1d8361",
+          "test_case_id": "case_ac26bab2990c",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_e6b6ba1d8361",
+              "test_case_id": "case_ac26bab2990c",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "raw-current-vulnerable-2-get",
+          "title": "Protected prompt is returned to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_e6b6ba1d8361",
+          "test_case_id": "case_1d30d174bd60",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_e6b6ba1d8361",
+              "test_case_id": "case_1d30d174bd60",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-legacy-secure-1",
+      "project_id": "proj_0969122c4d5e",
+      "project_name": "[Qualification] MCP prompt raw - legacy - secure - 1",
+      "assessment_run_ids": [
+        "run_ec8426bcb1ca"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-legacy-secure-1-inventory",
+          "title": "Protected prompt is absent from restricted inventory",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_ec8426bcb1ca",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_ec8426bcb1ca",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "raw-legacy-secure-1-get",
+          "title": "Protected prompt retrieval is denied",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_ec8426bcb1ca",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_ec8426bcb1ca",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-legacy-vulnerable-1",
+      "project_id": "proj_e5a7bd442c25",
+      "project_name": "[Qualification] MCP prompt raw - legacy - vulnerable - 1",
+      "assessment_run_ids": [
+        "run_8205442dbb05"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-legacy-vulnerable-1-inventory",
+          "title": "Protected prompt is advertised to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_8205442dbb05",
+          "test_case_id": "case_6e9a4d0ef5bb",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_8205442dbb05",
+              "test_case_id": "case_6e9a4d0ef5bb",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "raw-legacy-vulnerable-1-get",
+          "title": "Protected prompt is returned to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_8205442dbb05",
+          "test_case_id": "case_7a53dbb95e3c",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_8205442dbb05",
+              "test_case_id": "case_7a53dbb95e3c",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-legacy-secure-2",
+      "project_id": "proj_d93b95658c42",
+      "project_name": "[Qualification] MCP prompt raw - legacy - secure - 2",
+      "assessment_run_ids": [
+        "run_f0f49dee07f4"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-legacy-secure-2-inventory",
+          "title": "Protected prompt is absent from restricted inventory",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_f0f49dee07f4",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_f0f49dee07f4",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "raw-legacy-secure-2-get",
+          "title": "Protected prompt retrieval is denied",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_f0f49dee07f4",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_f0f49dee07f4",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-legacy-vulnerable-2",
+      "project_id": "proj_a6c2e173a104",
+      "project_name": "[Qualification] MCP prompt raw - legacy - vulnerable - 2",
+      "assessment_run_ids": [
+        "run_d0d5e55481f7"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-legacy-vulnerable-2-inventory",
+          "title": "Protected prompt is advertised to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_d0d5e55481f7",
+          "test_case_id": "case_c4d009a2f0cc",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_d0d5e55481f7",
+              "test_case_id": "case_c4d009a2f0cc",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "raw-legacy-vulnerable-2-get",
+          "title": "Protected prompt is returned to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_d0d5e55481f7",
+          "test_case_id": "case_41a7e1737733",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_d0d5e55481f7",
+              "test_case_id": "case_41a7e1737733",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-current-secure-1",
+      "project_id": "proj_c93a7a690585",
+      "project_name": "[Qualification] MCP prompt SDK - current - secure - 1",
+      "assessment_run_ids": [
+        "run_7a7597e38ca7"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-current-secure-1-inventory",
+          "title": "SDK protected prompt is absent from restricted inventory",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_7a7597e38ca7",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_7a7597e38ca7",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "sdk-current-secure-1-get",
+          "title": "SDK protected prompt retrieval is denied",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_7a7597e38ca7",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_7a7597e38ca7",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-current-vulnerable-1",
+      "project_id": "proj_6c74560a12df",
+      "project_name": "[Qualification] MCP prompt SDK - current - vulnerable - 1",
+      "assessment_run_ids": [
+        "run_5beab7d580f8"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-current-vulnerable-1-inventory",
+          "title": "SDK protected prompt is advertised to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_5beab7d580f8",
+          "test_case_id": "case_b9e477b66088",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_5beab7d580f8",
+              "test_case_id": "case_b9e477b66088",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "sdk-current-vulnerable-1-get",
+          "title": "SDK protected prompt is returned to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_5beab7d580f8",
+          "test_case_id": "case_38546fd64424",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_5beab7d580f8",
+              "test_case_id": "case_38546fd64424",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-current-secure-2",
+      "project_id": "proj_5e6ead3d2546",
+      "project_name": "[Qualification] MCP prompt SDK - current - secure - 2",
+      "assessment_run_ids": [
+        "run_adf5abaf4b42"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-current-secure-2-inventory",
+          "title": "SDK protected prompt is absent from restricted inventory",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_adf5abaf4b42",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_adf5abaf4b42",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "sdk-current-secure-2-get",
+          "title": "SDK protected prompt retrieval is denied",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_adf5abaf4b42",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_adf5abaf4b42",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-current-vulnerable-2",
+      "project_id": "proj_e2f02c4b0337",
+      "project_name": "[Qualification] MCP prompt SDK - current - vulnerable - 2",
+      "assessment_run_ids": [
+        "run_a94319a0bd71"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-current-vulnerable-2-inventory",
+          "title": "SDK protected prompt is advertised to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_a94319a0bd71",
+          "test_case_id": "case_e0da805d0cd7",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_a94319a0bd71",
+              "test_case_id": "case_e0da805d0cd7",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "sdk-current-vulnerable-2-get",
+          "title": "SDK protected prompt is returned to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_a94319a0bd71",
+          "test_case_id": "case_e1890b192707",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_a94319a0bd71",
+              "test_case_id": "case_e1890b192707",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-legacy-secure-1",
+      "project_id": "proj_208a709d3e89",
+      "project_name": "[Qualification] MCP prompt SDK - legacy - secure - 1",
+      "assessment_run_ids": [
+        "run_cf7f606d4849"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-legacy-secure-1-inventory",
+          "title": "SDK protected prompt is absent from restricted inventory",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_cf7f606d4849",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_cf7f606d4849",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "sdk-legacy-secure-1-get",
+          "title": "SDK protected prompt retrieval is denied",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_cf7f606d4849",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_cf7f606d4849",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-legacy-vulnerable-1",
+      "project_id": "proj_b3390101d0c6",
+      "project_name": "[Qualification] MCP prompt SDK - legacy - vulnerable - 1",
+      "assessment_run_ids": [
+        "run_c8952a5321c6"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-legacy-vulnerable-1-inventory",
+          "title": "SDK protected prompt is advertised to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_c8952a5321c6",
+          "test_case_id": "case_c57d399f0a1d",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_c8952a5321c6",
+              "test_case_id": "case_c57d399f0a1d",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "sdk-legacy-vulnerable-1-get",
+          "title": "SDK protected prompt is returned to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_c8952a5321c6",
+          "test_case_id": "case_a7358d6e1ab1",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_c8952a5321c6",
+              "test_case_id": "case_a7358d6e1ab1",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-legacy-secure-2",
+      "project_id": "proj_286efd7f16bc",
+      "project_name": "[Qualification] MCP prompt SDK - legacy - secure - 2",
+      "assessment_run_ids": [
+        "run_570c077e9299"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-legacy-secure-2-inventory",
+          "title": "SDK protected prompt is absent from restricted inventory",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_570c077e9299",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_570c077e9299",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "sdk-legacy-secure-2-get",
+          "title": "SDK protected prompt retrieval is denied",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_570c077e9299",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_570c077e9299",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-legacy-vulnerable-2",
+      "project_id": "proj_856c320c0bd3",
+      "project_name": "[Qualification] MCP prompt SDK - legacy - vulnerable - 2",
+      "assessment_run_ids": [
+        "run_24e6a227d3b1"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-legacy-vulnerable-2-inventory",
+          "title": "SDK protected prompt is advertised to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_24e6a227d3b1",
+          "test_case_id": "case_1070ebb9f6b6",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_24e6a227d3b1",
+              "test_case_id": "case_1070ebb9f6b6",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "sdk-legacy-vulnerable-2-get",
+          "title": "SDK protected prompt is returned to a restricted identity",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_24e6a227d3b1",
+          "test_case_id": "case_d6287cba06fd",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_24e6a227d3b1",
+              "test_case_id": "case_d6287cba06fd",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 2,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    }
+  ],
+  "generated_at": "2026-08-09T15:21:11+00:00"
+}

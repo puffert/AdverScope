@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "suite_id": "adverscope-mcp-prompt-current-legacy-raw-sdk",
+  "projects": {
+    "raw-current-secure-1": {"title": "Raw Streamable HTTP prompt boundary secure repetition 1", "expectations": [
+      {"id": "raw-current-secure-1-inventory", "title": "Protected prompt is absent from restricted inventory", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": false}]},
+      {"id": "raw-current-secure-1-get", "title": "Protected prompt retrieval is denied", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": false}]}
+    ]},
+    "raw-current-vulnerable-1": {"title": "Raw Streamable HTTP prompt boundary vulnerable repetition 1", "expectations": [
+      {"id": "raw-current-vulnerable-1-inventory", "title": "Protected prompt is advertised to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": true}]},
+      {"id": "raw-current-vulnerable-1-get", "title": "Protected prompt is returned to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": true}]}
+    ]},
+    "raw-current-secure-2": {"title": "Raw Streamable HTTP prompt boundary secure repetition 2", "expectations": [
+      {"id": "raw-current-secure-2-inventory", "title": "Protected prompt is absent from restricted inventory", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": false}]},
+      {"id": "raw-current-secure-2-get", "title": "Protected prompt retrieval is denied", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": false}]}
+    ]},
+    "raw-current-vulnerable-2": {"title": "Raw Streamable HTTP prompt boundary vulnerable repetition 2", "expectations": [
+      {"id": "raw-current-vulnerable-2-inventory", "title": "Protected prompt is advertised to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": true}]},
+      {"id": "raw-current-vulnerable-2-get", "title": "Protected prompt is returned to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": true}]}
+    ]},
+    "raw-legacy-secure-1": {"title": "Raw legacy HTTP+SSE prompt boundary secure repetition 1", "expectations": [
+      {"id": "raw-legacy-secure-1-inventory", "title": "Protected prompt is absent from restricted inventory", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": false}]},
+      {"id": "raw-legacy-secure-1-get", "title": "Protected prompt retrieval is denied", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": false}]}
+    ]},
+    "raw-legacy-vulnerable-1": {"title": "Raw legacy HTTP+SSE prompt boundary vulnerable repetition 1", "expectations": [
+      {"id": "raw-legacy-vulnerable-1-inventory", "title": "Protected prompt is advertised to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": true}]},
+      {"id": "raw-legacy-vulnerable-1-get", "title": "Protected prompt is returned to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": true}]}
+    ]},
+    "raw-legacy-secure-2": {"title": "Raw legacy HTTP+SSE prompt boundary secure repetition 2", "expectations": [
+      {"id": "raw-legacy-secure-2-inventory", "title": "Protected prompt is absent from restricted inventory", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": false}]},
+      {"id": "raw-legacy-secure-2-get", "title": "Protected prompt retrieval is denied", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": false}]}
+    ]},
+    "raw-legacy-vulnerable-2": {"title": "Raw legacy HTTP+SSE prompt boundary vulnerable repetition 2", "expectations": [
+      {"id": "raw-legacy-vulnerable-2-inventory", "title": "Protected prompt is advertised to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": true}]},
+      {"id": "raw-legacy-vulnerable-2-get", "title": "Protected prompt is returned to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": true}]}
+    ]},
+    "sdk-current-secure-1": {"title": "Official Python SDK Streamable HTTP prompt boundary secure repetition 1", "expectations": [
+      {"id": "sdk-current-secure-1-inventory", "title": "SDK protected prompt is absent from restricted inventory", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": false}]},
+      {"id": "sdk-current-secure-1-get", "title": "SDK protected prompt retrieval is denied", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": false}]}
+    ]},
+    "sdk-current-vulnerable-1": {"title": "Official Python SDK Streamable HTTP prompt boundary vulnerable repetition 1", "expectations": [
+      {"id": "sdk-current-vulnerable-1-inventory", "title": "SDK protected prompt is advertised to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": true}]},
+      {"id": "sdk-current-vulnerable-1-get", "title": "SDK protected prompt is returned to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": true}]}
+    ]},
+    "sdk-current-secure-2": {"title": "Official Python SDK Streamable HTTP prompt boundary secure repetition 2", "expectations": [
+      {"id": "sdk-current-secure-2-inventory", "title": "SDK protected prompt is absent from restricted inventory", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": false}]},
+      {"id": "sdk-current-secure-2-get", "title": "SDK protected prompt retrieval is denied", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": false}]}
+    ]},
+    "sdk-current-vulnerable-2": {"title": "Official Python SDK Streamable HTTP prompt boundary vulnerable repetition 2", "expectations": [
+      {"id": "sdk-current-vulnerable-2-inventory", "title": "SDK protected prompt is advertised to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": true}]},
+      {"id": "sdk-current-vulnerable-2-get", "title": "SDK protected prompt is returned to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": true}]}
+    ]},
+    "sdk-legacy-secure-1": {"title": "Official Python SDK legacy HTTP+SSE prompt boundary secure repetition 1", "expectations": [
+      {"id": "sdk-legacy-secure-1-inventory", "title": "SDK protected prompt is absent from restricted inventory", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": false}]},
+      {"id": "sdk-legacy-secure-1-get", "title": "SDK protected prompt retrieval is denied", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": false}]}
+    ]},
+    "sdk-legacy-vulnerable-1": {"title": "Official Python SDK legacy HTTP+SSE prompt boundary vulnerable repetition 1", "expectations": [
+      {"id": "sdk-legacy-vulnerable-1-inventory", "title": "SDK protected prompt is advertised to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": true}]},
+      {"id": "sdk-legacy-vulnerable-1-get", "title": "SDK protected prompt is returned to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": true}]}
+    ]},
+    "sdk-legacy-secure-2": {"title": "Official Python SDK legacy HTTP+SSE prompt boundary secure repetition 2", "expectations": [
+      {"id": "sdk-legacy-secure-2-inventory", "title": "SDK protected prompt is absent from restricted inventory", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": false}]},
+      {"id": "sdk-legacy-secure-2-get", "title": "SDK protected prompt retrieval is denied", "expected_outcome": "secure", "qualification_role": "secure-control", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": false}]}
+    ]},
+    "sdk-legacy-vulnerable-2": {"title": "Official Python SDK legacy HTTP+SSE prompt boundary vulnerable repetition 2", "expectations": [
+      {"id": "sdk-legacy-vulnerable-2-inventory", "title": "SDK protected prompt is advertised to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect unauthorized MCP prompt inventory", "require_reproduction": true}]},
+      {"id": "sdk-legacy-vulnerable-2-get", "title": "SDK protected prompt is returned to a restricted identity", "expected_outcome": "vulnerable", "qualification_role": "vulnerability", "required_for_gate": true, "supported": true, "observations": [{"kind": "objective", "objective_title": "Detect protected MCP prompt disclosure", "require_reproduction": true}]}
+    ]}
+  }
+}

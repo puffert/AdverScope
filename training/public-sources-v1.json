@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "registry_id": "adverscope-public-training-sources",
+  "registry_version": "2026.08.14.2",
+  "policy": {
+    "default_usage": "benchmark-only",
+    "require_pinned_remote_revision": true,
+    "require_verified_license_for_training": true,
+    "raw_sources_are_local_only": true,
+    "benchmark_sources_must_not_enter_training_splits": true
+  },
+  "sources": [
+    {
+      "id": "adverscope-reviewed-catalog",
+      "title": "AdverScope reviewed attack catalog",
+      "adapter": "adverscope-catalog",
+      "usage": "training",
+      "quality_tier": "gold",
+      "license": {
+        "spdx": "Apache-2.0",
+        "verified": true,
+        "url": "../LICENSE"
+      },
+      "revision": "repository-source",
+      "homepage": "https://github.com/puffert/AdverScope",
+      "citation": "AdverScope contributors, reviewed attack catalog",
+      "download": {
+        "type": "local",
+        "files": [
+          "osai_security/modules.py",
+          "osai_security/owasp.py"
+        ]
+      }
+    },
+    {
+      "id": "anthropic-hh-red-team",
+      "title": "Anthropic HH-RLHF red-team attempts",
+      "adapter": "anthropic-hh-red-team",
+      "usage": "training",
+      "quality_tier": "silver",
+      "license": {
+        "spdx": "MIT",
+        "verified": true,
+        "url": "https://huggingface.co/datasets/Anthropic/hh-rlhf"
+      },
+      "revision": "09be8c5bbc57cb3887f3a9732ad6aa7ec602a1fa",
+      "homepage": "https://huggingface.co/datasets/Anthropic/hh-rlhf",
+      "citation": "Bai et al. and Ganguli et al., HH-RLHF red-team attempts",
+      "download": {
+        "type": "http-files",
+        "maximum_bytes": 30000000,
+        "files": [
+          {
+            "path": "red_team_attempts.jsonl.gz",
+            "url": "https://huggingface.co/datasets/Anthropic/hh-rlhf/resolve/09be8c5bbc57cb3887f3a9732ad6aa7ec602a1fa/red-team-attempts/red_team_attempts.jsonl.gz",
+            "sha256": "4c7b0069991460f0064f279fd400b51f3f0095697d14d7793c49b0925f80814f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "deepset-prompt-injections",
+      "title": "deepset prompt-injection classifier corpus",
+      "adapter": "deepset-prompt-injections",
+      "usage": "training",
+      "quality_tier": "silver",
+      "license": {
+        "spdx": "Apache-2.0",
+        "verified": true,
+        "url": "https://huggingface.co/datasets/deepset/prompt-injections"
+      },
+      "revision": "4f61ecb038e9c3fb77e21034b22511b523772cdd",
+      "homepage": "https://huggingface.co/datasets/deepset/prompt-injections",
+      "citation": "deepset prompt-injections dataset",
+      "download": {
+        "type": "huggingface-rows",
+        "dataset": "deepset/prompt-injections",
+        "config": "default",
+        "split": "train",
+        "expected_rows": 546,
+        "expected_sha256": "50983a11afb4fd0c276d0de3b1ff1b102e551c68c2cdf8dede0c133b8daed477",
+        "maximum_bytes": 2000000,
+        "page_size": 100,
+        "path": "rows.jsonl"
+      }
+    },
+    {
+      "id": "injecagent",
+      "title": "InjecAgent indirect prompt-injection benchmark cases",
+      "adapter": "injecagent",
+      "usage": "training",
+      "quality_tier": "silver",
+      "license": {
+        "spdx": "MIT",
+        "verified": true,
+        "url": "https://github.com/uiuc-kang-lab/InjecAgent/blob/f19c9f2c79a41046eb13c03c51a24c567a8ffa07/LICENCE"
+      },
+      "revision": "f19c9f2c79a41046eb13c03c51a24c567a8ffa07",
+      "homepage": "https://github.com/uiuc-kang-lab/InjecAgent",
+      "citation": "Zhan et al., InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated LLM Agents",
+      "download": {
+        "type": "http-files",
+        "maximum_bytes": 5000000,
+        "files": [
+          {
+            "path": "test_cases_dh_base.json",
+            "url": "https://raw.githubusercontent.com/uiuc-kang-lab/InjecAgent/f19c9f2c79a41046eb13c03c51a24c567a8ffa07/data/test_cases_dh_base.json",
+            "sha256": "0a8186468d21389af432e8c7b399ae42264d1b93a07b65c7a489468508604305"
+          },
+          {
+            "path": "test_cases_ds_base.json",
+            "url": "https://raw.githubusercontent.com/uiuc-kang-lab/InjecAgent/f19c9f2c79a41046eb13c03c51a24c567a8ffa07/data/test_cases_ds_base.json",
+            "sha256": "4daab35c62a3845e8b9400f4dca58b9c9f37e57cd33b2337552557fbb26282e9"
+          },
+          {
+            "path": "tools.json",
+            "url": "https://raw.githubusercontent.com/uiuc-kang-lab/InjecAgent/f19c9f2c79a41046eb13c03c51a24c567a8ffa07/data/tools.json",
+            "sha256": "e21a8f70b1d5de4677d6d52642936a322655d79b17a72c84f600550384083a1e"
+          },
+          {
+            "path": "LICENCE",
+            "url": "https://raw.githubusercontent.com/uiuc-kang-lab/InjecAgent/f19c9f2c79a41046eb13c03c51a24c567a8ffa07/LICENCE",
+            "sha256": "b48589499dbb84caa796b00b4ea652b0443e49660282c44d890fd473b8c0674e"
+          }
+        ]
+      }
+    },
+    {
+      "id": "adverscope-operator-reviewed",
+      "title": "Sanitized operator-reviewed AdverScope trajectories",
+      "adapter": "operator-reviewed-jsonl",
+      "usage": "training",
+      "quality_tier": "gold",
+      "license": {
+        "spdx": "Apache-2.0",
+        "verified": true,
+        "url": "../LICENSE"
+      },
+      "revision": "installation-review-journal",
+      "homepage": "https://github.com/puffert/AdverScope",
+      "citation": "AdverScope contributors, operator-reviewed non-benchmark trajectories",
+      "download": {
+        "type": "local",
+        "files": [
+          "reviewed-records.jsonl",
+          "source-manifest.json"
+        ]
+      }
+    },
+    {
+      "id": "wildjailbreak",
+      "title": "AI2 WildJailbreak training set",
+      "adapter": "wildjailbreak",
+      "usage": "gated-training",
+      "quality_tier": "silver",
+      "license": {
+        "spdx": "ODC-By-1.0",
+        "verified": true,
+        "url": "https://huggingface.co/datasets/allenai/wildjailbreak"
+      },
+      "revision": "5ddc12a7894f842b0619b8e1c7ee496b198af009",
+      "homepage": "https://huggingface.co/datasets/allenai/wildjailbreak",
+      "citation": "Jiang et al., WildTeaming at Scale",
+      "download": {
+        "type": "manual-gated",
+        "required_files": [
+          "train.tsv"
+        ],
+        "instructions": "Accept the AI2 Responsible Use Guidelines, download train/train.tsv, and place it at the cache path shown by the build command."
+      }
+    },
+    {
+      "id": "tensor-trust",
+      "title": "Tensor Trust prompt-injection corpus",
+      "adapter": "reserved-benchmark",
+      "usage": "benchmark-only",
+      "quality_tier": "benchmark",
+      "license": {
+        "spdx": "NOASSERTION",
+        "verified": false,
+        "url": "https://github.com/HumanCompatibleAI/tensor-trust-data"
+      },
+      "revision": "747a75e096761ebc01bd3970158827326b4add23",
+      "homepage": "https://tensortrust.ai/paper/",
+      "citation": "Toyer et al., Tensor Trust",
+      "download": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "bipia",
+      "title": "Microsoft BIPIA",
+      "adapter": "reserved-benchmark",
+      "usage": "benchmark-only",
+      "quality_tier": "benchmark",
+      "license": {
+        "spdx": "NOASSERTION",
+        "verified": false,
+        "url": "https://github.com/microsoft/BIPIA"
+      },
+      "revision": "external-reserved",
+      "homepage": "https://github.com/microsoft/BIPIA",
+      "citation": "Yi et al., Benchmarking and Defending Against Indirect Prompt Injection Attacks",
+      "download": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "agentdojo",
+      "title": "AgentDojo",
+      "adapter": "reserved-benchmark",
+      "usage": "benchmark-only",
+      "quality_tier": "benchmark",
+      "license": {
+        "spdx": "MIT",
+        "verified": true,
+        "url": "https://github.com/ethz-spylab/agentdojo/blob/main/LICENSE"
+      },
+      "revision": "external-reserved",
+      "homepage": "https://github.com/ethz-spylab/agentdojo",
+      "citation": "Debenedetti et al., AgentDojo",
+      "download": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "jailbreakbench",
+      "title": "JailbreakBench",
+      "adapter": "reserved-benchmark",
+      "usage": "benchmark-only",
+      "quality_tier": "benchmark",
+      "license": {
+        "spdx": "NOASSERTION",
+        "verified": false,
+        "url": "https://github.com/JailbreakBench/jailbreakbench"
+      },
+      "revision": "external-reserved",
+      "homepage": "https://github.com/JailbreakBench/jailbreakbench",
+      "citation": "Chao et al., JailbreakBench",
+      "download": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "cyberseceval-prompt-injection",
+      "title": "Meta CyberSecEval prompt-injection benchmark",
+      "adapter": "reserved-benchmark",
+      "usage": "benchmark-only",
+      "quality_tier": "benchmark",
+      "license": {
+        "spdx": "LicenseRef-Meta-PurpleLlama",
+        "verified": true,
+        "url": "https://github.com/meta-llama/PurpleLlama/blob/main/LICENSE"
+      },
+      "revision": "external-reserved",
+      "homepage": "https://github.com/meta-llama/PurpleLlama",
+      "citation": "Meta PurpleLlama CyberSecEval",
+      "download": {
+        "type": "none"
+      }
+    }
+  ]
+}

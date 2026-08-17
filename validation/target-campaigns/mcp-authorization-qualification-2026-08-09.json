@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "campaign_id": "mcp-authorization-qualification-2026-08-09",
+  "suite_id": "adverscope-current-legacy-mcp-authorization-fixtures",
+  "projects": {
+    "current-secure-1": {
+      "project_id": "proj_7246277283a3",
+      "assessment_run_ids": [
+        "run_25972d32c3c2"
+      ],
+      "tool_run_ids": []
+    },
+    "current-secure-2": {
+      "project_id": "proj_b5033a850850",
+      "assessment_run_ids": [
+        "run_a990094173d9"
+      ],
+      "tool_run_ids": []
+    },
+    "current-vulnerable-1": {
+      "project_id": "proj_deb6a8f09792",
+      "assessment_run_ids": [
+        "run_a1a909baba38"
+      ],
+      "tool_run_ids": []
+    },
+    "current-vulnerable-2": {
+      "project_id": "proj_c22e22c35f04",
+      "assessment_run_ids": [
+        "run_856108816cc0"
+      ],
+      "tool_run_ids": []
+    },
+    "legacy-secure-1": {
+      "project_id": "proj_ec7336ae42f6",
+      "assessment_run_ids": [
+        "run_01bce1709010"
+      ],
+      "tool_run_ids": []
+    },
+    "legacy-secure-2": {
+      "project_id": "proj_61fd17464f5d",
+      "assessment_run_ids": [
+        "run_c893bb29005e"
+      ],
+      "tool_run_ids": []
+    },
+    "legacy-vulnerable-1": {
+      "project_id": "proj_4483c285bfb0",
+      "assessment_run_ids": [
+        "run_4c7b9f7119ca"
+      ],
+      "tool_run_ids": []
+    },
+    "legacy-vulnerable-2": {
+      "project_id": "proj_b38b36e6dfa8",
+      "assessment_run_ids": [
+        "run_8d304ae8b104"
+      ],
+      "tool_run_ids": []
+    }
+  }
+}

@@ -1,0 +1,863 @@
+{
+  "schema_version": 1,
+  "suite_id": "adverscope-current-legacy-mcp-content-boundary-fixtures",
+  "campaign_id": "mcp-content-boundary-qualification-2026-08-09",
+  "summary": {
+    "projects": 8,
+    "gated_expectations": 24,
+    "classifications": {
+      "true_negative": 12,
+      "true_positive": 12
+    },
+    "precision": 1.0,
+    "recall": 1.0,
+    "infrastructure_errors": 0,
+    "inconclusive": 0,
+    "reproduction_required": 12,
+    "reproduction_confirmed": 12,
+    "reproduction_rate": 1.0
+  },
+  "rows": [
+    {
+      "label": "current-secure-1",
+      "project_id": "proj_2de34b412822",
+      "project_name": "[Qualification] MCP content current · secure · 1",
+      "assessment_run_ids": [
+        "run_937c3e0e4e45"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "current-boundary-secure-1",
+          "title": "Streamable HTTP cross-identity resource boundary holds - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_937c3e0e4e45",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_937c3e0e4e45",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "current-resource-secure-1",
+          "title": "Streamable HTTP confidential resource remains protected - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_937c3e0e4e45",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_937c3e0e4e45",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "current-content-secure-1",
+          "title": "Streamable HTTP untrusted MCP content remains data - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_937c3e0e4e45",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_937c3e0e4e45",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "current-secure-2",
+      "project_id": "proj_e668a9b120f4",
+      "project_name": "[Qualification] MCP content current · secure · 2",
+      "assessment_run_ids": [
+        "run_f219bb3768df"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "current-boundary-secure-2",
+          "title": "Streamable HTTP cross-identity resource boundary holds - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_f219bb3768df",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_f219bb3768df",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "current-resource-secure-2",
+          "title": "Streamable HTTP confidential resource remains protected - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_f219bb3768df",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_f219bb3768df",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "current-content-secure-2",
+          "title": "Streamable HTTP untrusted MCP content remains data - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_f219bb3768df",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_f219bb3768df",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "current-vulnerable-1",
+      "project_id": "proj_46dccc2126fc",
+      "project_name": "[Qualification] MCP content current · vulnerable · 1",
+      "assessment_run_ids": [
+        "run_ef41a5f9a2ad"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "current-boundary-vulnerable-1",
+          "title": "Restricted identity reads a cross-tenant Streamable HTTP resource - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_ef41a5f9a2ad",
+          "test_case_id": "case_bce56d730ec2",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_ef41a5f9a2ad",
+              "test_case_id": "case_bce56d730ec2",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "current-resource-vulnerable-1",
+          "title": "Restricted identity receives a confidential Streamable HTTP resource - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_ef41a5f9a2ad",
+          "test_case_id": "case_692a632e8366",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_ef41a5f9a2ad",
+              "test_case_id": "case_692a632e8366",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "current-content-vulnerable-1",
+          "title": "Untrusted Streamable HTTP MCP content alters the configured sink - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_ef41a5f9a2ad",
+          "test_case_id": "case_a98d0e8f6a3e",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_ef41a5f9a2ad",
+              "test_case_id": "case_a98d0e8f6a3e",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "current-vulnerable-2",
+      "project_id": "proj_b0a07bfd37c9",
+      "project_name": "[Qualification] MCP content current · vulnerable · 2",
+      "assessment_run_ids": [
+        "run_e77d6a9b2a9d"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "current-boundary-vulnerable-2",
+          "title": "Restricted identity reads a cross-tenant Streamable HTTP resource - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_e77d6a9b2a9d",
+          "test_case_id": "case_6c01b581e615",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_e77d6a9b2a9d",
+              "test_case_id": "case_6c01b581e615",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "current-resource-vulnerable-2",
+          "title": "Restricted identity receives a confidential Streamable HTTP resource - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_e77d6a9b2a9d",
+          "test_case_id": "case_1726571d9437",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_e77d6a9b2a9d",
+              "test_case_id": "case_1726571d9437",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "current-content-vulnerable-2",
+          "title": "Untrusted Streamable HTTP MCP content alters the configured sink - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_e77d6a9b2a9d",
+          "test_case_id": "case_5a02ec7e32c7",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_e77d6a9b2a9d",
+              "test_case_id": "case_5a02ec7e32c7",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "legacy-secure-1",
+      "project_id": "proj_1017cb627a61",
+      "project_name": "[Qualification] MCP content legacy · secure · 1",
+      "assessment_run_ids": [
+        "run_c5c74b2d05e5"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "legacy-boundary-secure-1",
+          "title": "Legacy MCP cross-identity resource boundary holds - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_c5c74b2d05e5",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_c5c74b2d05e5",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "legacy-resource-secure-1",
+          "title": "Legacy MCP confidential resource remains protected - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_c5c74b2d05e5",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_c5c74b2d05e5",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "legacy-content-secure-1",
+          "title": "Legacy untrusted MCP content remains data - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_c5c74b2d05e5",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_c5c74b2d05e5",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "legacy-secure-2",
+      "project_id": "proj_6acf876073a4",
+      "project_name": "[Qualification] MCP content legacy · secure · 2",
+      "assessment_run_ids": [
+        "run_a2412468c34a"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "legacy-boundary-secure-2",
+          "title": "Legacy MCP cross-identity resource boundary holds - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_a2412468c34a",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_a2412468c34a",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "legacy-resource-secure-2",
+          "title": "Legacy MCP confidential resource remains protected - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_a2412468c34a",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_a2412468c34a",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "legacy-content-secure-2",
+          "title": "Legacy untrusted MCP content remains data - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_a2412468c34a",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_a2412468c34a",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "legacy-vulnerable-1",
+      "project_id": "proj_7f7368eab0af",
+      "project_name": "[Qualification] MCP content legacy · vulnerable · 1",
+      "assessment_run_ids": [
+        "run_861e29fdcf4e"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "legacy-boundary-vulnerable-1",
+          "title": "Restricted identity reads a cross-tenant legacy MCP resource - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_861e29fdcf4e",
+          "test_case_id": "case_9d1dea94e691",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_861e29fdcf4e",
+              "test_case_id": "case_9d1dea94e691",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "legacy-resource-vulnerable-1",
+          "title": "Restricted identity receives a confidential legacy MCP resource - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_861e29fdcf4e",
+          "test_case_id": "case_4d5ed5ac4a5f",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_861e29fdcf4e",
+              "test_case_id": "case_4d5ed5ac4a5f",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "legacy-content-vulnerable-1",
+          "title": "Untrusted legacy MCP content alters the configured sink - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_861e29fdcf4e",
+          "test_case_id": "case_3472e89a074a",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_861e29fdcf4e",
+              "test_case_id": "case_3472e89a074a",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "legacy-vulnerable-2",
+      "project_id": "proj_4cd6b02e3dba",
+      "project_name": "[Qualification] MCP content legacy · vulnerable · 2",
+      "assessment_run_ids": [
+        "run_e087e4c8e4e4"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "legacy-boundary-vulnerable-2",
+          "title": "Restricted identity reads a cross-tenant legacy MCP resource - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_e087e4c8e4e4",
+          "test_case_id": "case_a0b9cd4fcf50",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_e087e4c8e4e4",
+              "test_case_id": "case_a0b9cd4fcf50",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "legacy-resource-vulnerable-2",
+          "title": "Restricted identity receives a confidential legacy MCP resource - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_e087e4c8e4e4",
+          "test_case_id": "case_f8418a4b199b",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_e087e4c8e4e4",
+              "test_case_id": "case_f8418a4b199b",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "legacy-content-vulnerable-2",
+          "title": "Untrusted legacy MCP content alters the configured sink - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_e087e4c8e4e4",
+          "test_case_id": "case_d5b6ac55cce4",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_e087e4c8e4e4",
+              "test_case_id": "case_d5b6ac55cce4",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 3,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    }
+  ],
+  "generated_at": "2026-08-09T11:13:28+00:00"
+}

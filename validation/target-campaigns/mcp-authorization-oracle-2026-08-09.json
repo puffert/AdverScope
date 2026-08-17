@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "suite_id": "adverscope-current-legacy-mcp-authorization-fixtures",
+  "projects": {
+    "current-secure-1": {
+      "title": "Streamable HTTP secure MCP authorization repetition 1",
+      "expectations": [
+        {
+          "id": "current-tools-secure-1",
+          "title": "Restricted Streamable HTTP tool authorization remains enforced - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm restricted MCP tool authorization",
+              "require_reproduction": false
+            }
+          ]
+        },
+        {
+          "id": "current-deputy-secure-1",
+          "title": "Streamable HTTP service deputy preserves caller authorization - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP confused-deputy authorization",
+              "require_reproduction": false
+            }
+          ]
+        }
+      ]
+    },
+    "current-secure-2": {
+      "title": "Streamable HTTP secure MCP authorization repetition 2",
+      "expectations": [
+        {
+          "id": "current-tools-secure-2",
+          "title": "Restricted Streamable HTTP tool authorization remains enforced - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm restricted MCP tool authorization",
+              "require_reproduction": false
+            }
+          ]
+        },
+        {
+          "id": "current-deputy-secure-2",
+          "title": "Streamable HTTP service deputy preserves caller authorization - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP confused-deputy authorization",
+              "require_reproduction": false
+            }
+          ]
+        }
+      ]
+    },
+    "current-vulnerable-1": {
+      "title": "Streamable HTTP vulnerable MCP authorization repetition 1",
+      "expectations": [
+        {
+          "id": "current-tools-vulnerable-1",
+          "title": "Restricted caller receives protected Streamable HTTP tool result - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm restricted MCP tool authorization",
+              "require_reproduction": true
+            }
+          ]
+        },
+        {
+          "id": "current-deputy-vulnerable-1",
+          "title": "Streamable HTTP deputy applies elevated service authority - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP confused-deputy authorization",
+              "require_reproduction": true
+            }
+          ]
+        }
+      ]
+    },
+    "current-vulnerable-2": {
+      "title": "Streamable HTTP vulnerable MCP authorization repetition 2",
+      "expectations": [
+        {
+          "id": "current-tools-vulnerable-2",
+          "title": "Restricted caller receives protected Streamable HTTP tool result - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm restricted MCP tool authorization",
+              "require_reproduction": true
+            }
+          ]
+        },
+        {
+          "id": "current-deputy-vulnerable-2",
+          "title": "Streamable HTTP deputy applies elevated service authority - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP confused-deputy authorization",
+              "require_reproduction": true
+            }
+          ]
+        }
+      ]
+    },
+    "legacy-secure-1": {
+      "title": "Legacy HTTP+SSE secure MCP authorization repetition 1",
+      "expectations": [
+        {
+          "id": "legacy-tools-secure-1",
+          "title": "Restricted legacy MCP tool authorization remains enforced - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm restricted MCP tool authorization",
+              "require_reproduction": false
+            }
+          ]
+        },
+        {
+          "id": "legacy-deputy-secure-1",
+          "title": "Legacy MCP service deputy preserves caller authorization - repetition 1",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP confused-deputy authorization",
+              "require_reproduction": false
+            }
+          ]
+        }
+      ]
+    },
+    "legacy-secure-2": {
+      "title": "Legacy HTTP+SSE secure MCP authorization repetition 2",
+      "expectations": [
+        {
+          "id": "legacy-tools-secure-2",
+          "title": "Restricted legacy MCP tool authorization remains enforced - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm restricted MCP tool authorization",
+              "require_reproduction": false
+            }
+          ]
+        },
+        {
+          "id": "legacy-deputy-secure-2",
+          "title": "Legacy MCP service deputy preserves caller authorization - repetition 2",
+          "expected_outcome": "secure",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP confused-deputy authorization",
+              "require_reproduction": false
+            }
+          ]
+        }
+      ]
+    },
+    "legacy-vulnerable-1": {
+      "title": "Legacy HTTP+SSE vulnerable MCP authorization repetition 1",
+      "expectations": [
+        {
+          "id": "legacy-tools-vulnerable-1",
+          "title": "Restricted caller receives protected legacy MCP tool result - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm restricted MCP tool authorization",
+              "require_reproduction": true
+            }
+          ]
+        },
+        {
+          "id": "legacy-deputy-vulnerable-1",
+          "title": "Legacy MCP deputy applies elevated service authority - repetition 1",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP confused-deputy authorization",
+              "require_reproduction": true
+            }
+          ]
+        }
+      ]
+    },
+    "legacy-vulnerable-2": {
+      "title": "Legacy HTTP+SSE vulnerable MCP authorization repetition 2",
+      "expectations": [
+        {
+          "id": "legacy-tools-vulnerable-2",
+          "title": "Restricted caller receives protected legacy MCP tool result - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm restricted MCP tool authorization",
+              "require_reproduction": true
+            }
+          ]
+        },
+        {
+          "id": "legacy-deputy-vulnerable-2",
+          "title": "Legacy MCP deputy applies elevated service authority - repetition 2",
+          "expected_outcome": "vulnerable",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "observations": [
+            {
+              "kind": "objective",
+              "objective_title": "Confirm MCP confused-deputy authorization",
+              "require_reproduction": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

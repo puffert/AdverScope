@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "campaign_id": "mcp-inventory-qualification-2026-08-09",
+  "suite_id": "adverscope-independent-current-legacy-mcp-inventory-fixtures",
+  "projects": {
+    "native-current-secure-1": {
+      "project_id": "proj_8f2acc1b36cf",
+      "assessment_run_ids": [
+        "run_6e2b0bccc8e6"
+      ],
+      "tool_run_ids": []
+    },
+    "native-current-secure-2": {
+      "project_id": "proj_7f011e601ad1",
+      "assessment_run_ids": [
+        "run_d7ed4990d036"
+      ],
+      "tool_run_ids": []
+    },
+    "native-current-vulnerable-1": {
+      "project_id": "proj_cfc3a6b19b28",
+      "assessment_run_ids": [
+        "run_59ddc5b29912"
+      ],
+      "tool_run_ids": []
+    },
+    "native-current-vulnerable-2": {
+      "project_id": "proj_8abfc359cd3c",
+      "assessment_run_ids": [
+        "run_e304182b96de"
+      ],
+      "tool_run_ids": []
+    },
+    "native-legacy-secure-1": {
+      "project_id": "proj_c87ce22df98f",
+      "assessment_run_ids": [
+        "run_64fb962e71f7"
+      ],
+      "tool_run_ids": []
+    },
+    "native-legacy-secure-2": {
+      "project_id": "proj_1940c59e57e7",
+      "assessment_run_ids": [
+        "run_6aef8815e866"
+      ],
+      "tool_run_ids": []
+    },
+    "native-legacy-vulnerable-1": {
+      "project_id": "proj_0c66e05b8ae2",
+      "assessment_run_ids": [
+        "run_33967b384238"
+      ],
+      "tool_run_ids": []
+    },
+    "native-legacy-vulnerable-2": {
+      "project_id": "proj_97074d3c5dad",
+      "assessment_run_ids": [
+        "run_7705f63cd72b"
+      ],
+      "tool_run_ids": []
+    },
+    "sdk-current-secure-1": {
+      "project_id": "proj_4e52fa5a1470",
+      "assessment_run_ids": [
+        "run_e732e67bb925"
+      ],
+      "tool_run_ids": []
+    },
+    "sdk-current-secure-2": {
+      "project_id": "proj_3475ac660162",
+      "assessment_run_ids": [
+        "run_54f856f2ca5a"
+      ],
+      "tool_run_ids": []
+    },
+    "sdk-current-vulnerable-1": {
+      "project_id": "proj_5fef51486d4a",
+      "assessment_run_ids": [
+        "run_e59b048ee2cd"
+      ],
+      "tool_run_ids": []
+    },
+    "sdk-current-vulnerable-2": {
+      "project_id": "proj_e526b402bcbf",
+      "assessment_run_ids": [
+        "run_f7c17f75e969"
+      ],
+      "tool_run_ids": []
+    },
+    "sdk-legacy-secure-1": {
+      "project_id": "proj_cf34b4f499c3",
+      "assessment_run_ids": [
+        "run_783cdf27be7b"
+      ],
+      "tool_run_ids": []
+    },
+    "sdk-legacy-secure-2": {
+      "project_id": "proj_da8fbeebf603",
+      "assessment_run_ids": [
+        "run_260bf50cffeb"
+      ],
+      "tool_run_ids": []
+    },
+    "sdk-legacy-vulnerable-1": {
+      "project_id": "proj_589e403b92fc",
+      "assessment_run_ids": [
+        "run_8ec133f4635a"
+      ],
+      "tool_run_ids": []
+    },
+    "sdk-legacy-vulnerable-2": {
+      "project_id": "proj_5c3ded172b88",
+      "assessment_run_ids": [
+        "run_7bf8d7d7a07d"
+      ],
+      "tool_run_ids": []
+    }
+  }
+}

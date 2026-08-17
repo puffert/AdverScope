@@ -1,0 +1,44 @@
+name: Bug report
+description: Report reproducible AdverScope behavior without client data.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include API keys, credentials, private targets, customer names, assessment evidence, recovered values, browser profiles, or unredacted logs. Security vulnerabilities belong in a private security advisory, not an issue."
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behavior
+      description: Use only synthetic or fully redacted examples.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: AdverScope version
+      placeholder: "0.8.3"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options: [Windows 11, Ubuntu 24.04 LTS, macOS 15, API-only container, Other]
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Data safety confirmation
+      options:
+        - label: I removed secrets, client evidence, target identifiers, recovered values, and session material.
+          required: true
+        - label: This is not a private vulnerability report.
+          required: true

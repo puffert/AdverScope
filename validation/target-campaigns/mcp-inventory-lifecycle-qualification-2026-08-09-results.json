@@ -1,0 +1,711 @@
+{
+  "schema_version": 1,
+  "suite_id": "adverscope-mcp-inventory-lifecycle-current-legacy-modern",
+  "campaign_id": "mcp-inventory-lifecycle-qualification-2026-08-09",
+  "summary": {
+    "projects": 16,
+    "gated_expectations": 16,
+    "classifications": {
+      "true_negative": 8,
+      "true_positive": 8
+    },
+    "precision": 1.0,
+    "recall": 1.0,
+    "infrastructure_errors": 0,
+    "inconclusive": 0,
+    "reproduction_required": 8,
+    "reproduction_confirmed": 8,
+    "reproduction_rate": 1.0
+  },
+  "rows": [
+    {
+      "label": "raw-stateless-secure-1",
+      "project_id": "proj_20dbb32a1fdd",
+      "project_name": "[Qualification] MCP lifecycle raw · stateless · secure · 1",
+      "assessment_run_ids": [
+        "run_be94d2132532"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-stateless-secure-1-inventory-lifecycle",
+          "title": "Approved stateless inventory remains stable after initialization - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_be94d2132532",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_be94d2132532",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-stateless-secure-2",
+      "project_id": "proj_4f8d77db2d3f",
+      "project_name": "[Qualification] MCP lifecycle raw - stateless - secure - 2",
+      "assessment_run_ids": [
+        "run_7530bef4fcc3"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-stateless-secure-2-inventory-lifecycle",
+          "title": "Approved stateless inventory remains stable after initialization - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_7530bef4fcc3",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_7530bef4fcc3",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-stateless-vulnerable-1",
+      "project_id": "proj_5205b5d924bd",
+      "project_name": "[Qualification] MCP lifecycle raw - stateless - vulnerable - 1",
+      "assessment_run_ids": [
+        "run_f0a2ca1b5b3f"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-stateless-vulnerable-1-inventory-lifecycle",
+          "title": "Unapproved stateless inventory drift is detected with notification custody - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_f0a2ca1b5b3f",
+          "test_case_id": "case_49f04d645e7a",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_f0a2ca1b5b3f",
+              "test_case_id": "case_49f04d645e7a",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-stateless-vulnerable-2",
+      "project_id": "proj_0e3edbcb273b",
+      "project_name": "[Qualification] MCP lifecycle raw - stateless - vulnerable - 2",
+      "assessment_run_ids": [
+        "run_c3d3e5bcaba4"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-stateless-vulnerable-2-inventory-lifecycle",
+          "title": "Unapproved stateless inventory drift is detected with notification custody - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_c3d3e5bcaba4",
+          "test_case_id": "case_c842d0249f0f",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_c3d3e5bcaba4",
+              "test_case_id": "case_c842d0249f0f",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-streamable-secure-1",
+      "project_id": "proj_60d183648a03",
+      "project_name": "[Qualification] MCP lifecycle raw - streamable - secure - 1",
+      "assessment_run_ids": [
+        "run_2715a75e3cdb"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-streamable-secure-1-inventory-lifecycle",
+          "title": "Approved Streamable HTTP inventory remains stable after initialization - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_2715a75e3cdb",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_2715a75e3cdb",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-streamable-secure-2",
+      "project_id": "proj_2426c67c4500",
+      "project_name": "[Qualification] MCP lifecycle raw - streamable - secure - 2",
+      "assessment_run_ids": [
+        "run_816c2334f948"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-streamable-secure-2-inventory-lifecycle",
+          "title": "Approved Streamable HTTP inventory remains stable after initialization - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_816c2334f948",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_816c2334f948",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-streamable-vulnerable-1",
+      "project_id": "proj_54d0e5f81c8c",
+      "project_name": "[Qualification] MCP lifecycle raw - streamable - vulnerable - 1",
+      "assessment_run_ids": [
+        "run_a701f487a83d"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-streamable-vulnerable-1-inventory-lifecycle",
+          "title": "Unapproved Streamable HTTP inventory drift is detected with notification custody - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_a701f487a83d",
+          "test_case_id": "case_d3be676de2ad",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_a701f487a83d",
+              "test_case_id": "case_d3be676de2ad",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-streamable-vulnerable-2",
+      "project_id": "proj_d2b177f3ef7c",
+      "project_name": "[Qualification] MCP lifecycle raw - streamable - vulnerable - 2",
+      "assessment_run_ids": [
+        "run_a513a47fb5ae"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-streamable-vulnerable-2-inventory-lifecycle",
+          "title": "Unapproved Streamable HTTP inventory drift is detected with notification custody - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_a513a47fb5ae",
+          "test_case_id": "case_bbe7fb98a4e9",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_a513a47fb5ae",
+              "test_case_id": "case_bbe7fb98a4e9",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-legacy-secure-1",
+      "project_id": "proj_2da27fdcd3c6",
+      "project_name": "[Qualification] MCP lifecycle raw - legacy - secure - 1",
+      "assessment_run_ids": [
+        "run_9f0600a4f742"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-legacy-secure-1-inventory-lifecycle",
+          "title": "Approved legacy inventory remains stable after initialization - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_9f0600a4f742",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_9f0600a4f742",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-legacy-secure-2",
+      "project_id": "proj_76b23d76aad7",
+      "project_name": "[Qualification] MCP lifecycle raw - legacy - secure - 2",
+      "assessment_run_ids": [
+        "run_149297998038"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-legacy-secure-2-inventory-lifecycle",
+          "title": "Approved legacy inventory remains stable after initialization - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_149297998038",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_149297998038",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-legacy-vulnerable-1",
+      "project_id": "proj_2018b1516957",
+      "project_name": "[Qualification] MCP lifecycle raw - legacy - vulnerable - 1",
+      "assessment_run_ids": [
+        "run_e297ff976e94"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-legacy-vulnerable-1-inventory-lifecycle",
+          "title": "Unapproved legacy inventory drift is detected with notification custody - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_e297ff976e94",
+          "test_case_id": "case_316273d60a5a",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_e297ff976e94",
+              "test_case_id": "case_316273d60a5a",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "raw-legacy-vulnerable-2",
+      "project_id": "proj_91ea10ff7eef",
+      "project_name": "[Qualification] MCP lifecycle raw - legacy - vulnerable - 2",
+      "assessment_run_ids": [
+        "run_03d96b4a8e0f"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "raw-legacy-vulnerable-2-inventory-lifecycle",
+          "title": "Unapproved legacy inventory drift is detected with notification custody - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_03d96b4a8e0f",
+          "test_case_id": "case_97e1a14ae14c",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_03d96b4a8e0f",
+              "test_case_id": "case_97e1a14ae14c",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-v2-stateless-secure-1",
+      "project_id": "proj_41947e6717ba",
+      "project_name": "[Qualification] MCP lifecycle SDK v2 - stateless - secure - 1",
+      "assessment_run_ids": [
+        "run_cc4c8ae5bd2b"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-v2-stateless-secure-1-inventory-lifecycle",
+          "title": "Official SDK approved stateless inventory remains stable - repetition 1",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_cc4c8ae5bd2b",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_cc4c8ae5bd2b",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-v2-stateless-secure-2",
+      "project_id": "proj_2516e8f55025",
+      "project_name": "[Qualification] MCP lifecycle SDK v2 - stateless - secure - 2",
+      "assessment_run_ids": [
+        "run_14193ffb6947"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-v2-stateless-secure-2-inventory-lifecycle",
+          "title": "Official SDK approved stateless inventory remains stable - repetition 2",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_14193ffb6947",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_14193ffb6947",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-v2-stateless-vulnerable-1",
+      "project_id": "proj_2b935e6947ee",
+      "project_name": "[Qualification] MCP lifecycle SDK v2 - stateless - vulnerable - 1",
+      "assessment_run_ids": [
+        "run_093895ec767c"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-v2-stateless-vulnerable-1-inventory-lifecycle",
+          "title": "Official SDK unapproved stateless inventory drift is detected - repetition 1",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_093895ec767c",
+          "test_case_id": "case_b29d88bc5b32",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_093895ec767c",
+              "test_case_id": "case_b29d88bc5b32",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-v2-stateless-vulnerable-2",
+      "project_id": "proj_2109f4ca658d",
+      "project_name": "[Qualification] MCP lifecycle SDK v2 - stateless - vulnerable - 2",
+      "assessment_run_ids": [
+        "run_8ac6fd545cba"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-v2-stateless-vulnerable-2-inventory-lifecycle",
+          "title": "Official SDK unapproved stateless inventory drift is detected - repetition 2",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_8ac6fd545cba",
+          "test_case_id": "case_6c3343511a0a",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_8ac6fd545cba",
+              "test_case_id": "case_6c3343511a0a",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    }
+  ],
+  "generated_at": "2026-08-09T13:45:12+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "campaign_id": "mcp-older-dynamic-sdk-qualification-2026-08-09",
+  "suite_id": "adverscope-mcp-older-dynamic-official-python-sdk",
+  "projects": {
+    "sdk-current-secure-1": {"project_id": "proj_c27a7e6fd951", "assessment_run_ids": ["run_ccdbacc6fe3d"], "tool_run_ids": []},
+    "sdk-current-vulnerable-1": {"project_id": "proj_a8bd3ae42bcc", "assessment_run_ids": ["run_b2b6e17f130e"], "tool_run_ids": []},
+    "sdk-current-secure-2": {"project_id": "proj_a6286a8f9c60", "assessment_run_ids": ["run_70d6d6fa8eb0"], "tool_run_ids": []},
+    "sdk-current-vulnerable-2": {"project_id": "proj_342d0edd58c0", "assessment_run_ids": ["run_3faa53f43561"], "tool_run_ids": []},
+    "sdk-legacy-secure-1": {"project_id": "proj_e64ca493b81b", "assessment_run_ids": ["run_930c69a83c87"], "tool_run_ids": []},
+    "sdk-legacy-vulnerable-1": {"project_id": "proj_ce76f489573b", "assessment_run_ids": ["run_66241b7582ad"], "tool_run_ids": []},
+    "sdk-legacy-secure-2": {"project_id": "proj_38dd1ccacfc5", "assessment_run_ids": ["run_a0755d66b05d"], "tool_run_ids": []},
+    "sdk-legacy-vulnerable-2": {"project_id": "proj_191ff3bbe3c1", "assessment_run_ids": ["run_36439c077c5e"], "tool_run_ids": []}
+  }
+}

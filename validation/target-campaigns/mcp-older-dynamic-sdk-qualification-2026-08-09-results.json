@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "suite_id": "adverscope-mcp-older-dynamic-official-python-sdk",
+  "campaign_id": "mcp-older-dynamic-sdk-qualification-2026-08-09",
+  "summary": {
+    "projects": 8,
+    "gated_expectations": 8,
+    "classifications": {
+      "true_negative": 4,
+      "true_positive": 4
+    },
+    "precision": 1.0,
+    "recall": 1.0,
+    "infrastructure_errors": 0,
+    "inconclusive": 0,
+    "reproduction_required": 4,
+    "reproduction_confirmed": 4,
+    "reproduction_rate": 1.0
+  },
+  "rows": [
+    {
+      "label": "sdk-current-secure-1",
+      "project_id": "proj_c27a7e6fd951",
+      "project_name": "[Qualification] MCP dynamic SDK - current - secure - 1",
+      "assessment_run_ids": [
+        "run_ccdbacc6fe3d"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-current-secure-1-drift",
+          "title": "Approved SDK inventory remains stable after notification",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_ccdbacc6fe3d",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_ccdbacc6fe3d",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-current-vulnerable-1",
+      "project_id": "proj_a8bd3ae42bcc",
+      "project_name": "[Qualification] MCP dynamic SDK - current - vulnerable - 1",
+      "assessment_run_ids": [
+        "run_b2b6e17f130e"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-current-vulnerable-1-drift",
+          "title": "Unapproved SDK inventory drift is detected after notification",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_b2b6e17f130e",
+          "test_case_id": "case_1ffa7b995bd7",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_b2b6e17f130e",
+              "test_case_id": "case_1ffa7b995bd7",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-current-secure-2",
+      "project_id": "proj_a6286a8f9c60",
+      "project_name": "[Qualification] MCP dynamic SDK - current - secure - 2",
+      "assessment_run_ids": [
+        "run_70d6d6fa8eb0"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-current-secure-2-drift",
+          "title": "Approved SDK inventory remains stable after notification",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_70d6d6fa8eb0",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_70d6d6fa8eb0",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-current-vulnerable-2",
+      "project_id": "proj_342d0edd58c0",
+      "project_name": "[Qualification] MCP dynamic SDK - current - vulnerable - 2",
+      "assessment_run_ids": [
+        "run_3faa53f43561"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-current-vulnerable-2-drift",
+          "title": "Unapproved SDK inventory drift is detected after notification",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_3faa53f43561",
+          "test_case_id": "case_c6051678e3e6",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_3faa53f43561",
+              "test_case_id": "case_c6051678e3e6",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-legacy-secure-1",
+      "project_id": "proj_e64ca493b81b",
+      "project_name": "[Qualification] MCP dynamic SDK - legacy - secure - 1",
+      "assessment_run_ids": [
+        "run_930c69a83c87"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-legacy-secure-1-drift",
+          "title": "Approved legacy SDK inventory remains stable after notification",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_930c69a83c87",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_930c69a83c87",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-legacy-vulnerable-1",
+      "project_id": "proj_ce76f489573b",
+      "project_name": "[Qualification] MCP dynamic SDK - legacy - vulnerable - 1",
+      "assessment_run_ids": [
+        "run_66241b7582ad"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-legacy-vulnerable-1-drift",
+          "title": "Unapproved legacy SDK inventory drift is detected after notification",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_66241b7582ad",
+          "test_case_id": "case_26edda6abb3b",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_66241b7582ad",
+              "test_case_id": "case_26edda6abb3b",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-legacy-secure-2",
+      "project_id": "proj_38dd1ccacfc5",
+      "project_name": "[Qualification] MCP dynamic SDK - legacy - secure - 2",
+      "assessment_run_ids": [
+        "run_a0755d66b05d"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-legacy-secure-2-drift",
+          "title": "Approved legacy SDK inventory remains stable after notification",
+          "qualification_role": "secure-control",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "secure",
+          "observed_outcome": "secure",
+          "classification": "true_negative",
+          "root_cause": "payload_generation",
+          "execution_kind": "assessment",
+          "execution_id": "run_a0755d66b05d",
+          "test_case_id": "",
+          "reproduction_required": false,
+          "reproduction_confirmed": false,
+          "observation_results": [
+            {
+              "state": "secure",
+              "execution_kind": "assessment",
+              "execution_id": "run_a0755d66b05d",
+              "test_case_id": "",
+              "root_cause": "payload_generation",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 0,
+                "confirmed": 0,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    },
+    {
+      "label": "sdk-legacy-vulnerable-2",
+      "project_id": "proj_191ff3bbe3c1",
+      "project_name": "[Qualification] MCP dynamic SDK - legacy - vulnerable - 2",
+      "assessment_run_ids": [
+        "run_36439c077c5e"
+      ],
+      "tool_run_ids": [],
+      "expectations": [
+        {
+          "id": "sdk-legacy-vulnerable-2-drift",
+          "title": "Unapproved legacy SDK inventory drift is detected after notification",
+          "qualification_role": "vulnerability",
+          "required_for_gate": true,
+          "supported": true,
+          "expected_outcome": "vulnerable",
+          "observed_outcome": "vulnerable",
+          "classification": "true_positive",
+          "root_cause": "none",
+          "execution_kind": "assessment",
+          "execution_id": "run_36439c077c5e",
+          "test_case_id": "case_c38a949edb23",
+          "reproduction_required": true,
+          "reproduction_confirmed": true,
+          "observation_results": [
+            {
+              "state": "confirmed_vulnerable",
+              "execution_kind": "assessment",
+              "execution_id": "run_36439c077c5e",
+              "test_case_id": "case_c38a949edb23",
+              "root_cause": "none",
+              "counts": {
+                "evaluated": 1,
+                "achieved": 1,
+                "confirmed": 1,
+                "errors": 0
+              }
+            }
+          ]
+        }
+      ],
+      "execution_errors": 0
+    }
+  ],
+  "generated_at": "2026-08-09T15:21:10+00:00"
+}

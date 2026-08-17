@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "campaign_id": "mcp-prompt-qualification-2026-08-09",
+  "suite_id": "adverscope-mcp-prompt-current-legacy-raw-sdk",
+  "projects": {
+    "raw-current-secure-1": {"project_id": "proj_1eb8195f17c3", "assessment_run_ids": ["run_a7da90c3464d"], "tool_run_ids": []},
+    "raw-current-vulnerable-1": {"project_id": "proj_9a9f6ea4663d", "assessment_run_ids": ["run_9ac0c0f83ea7"], "tool_run_ids": []},
+    "raw-current-secure-2": {"project_id": "proj_9d5bb49268c7", "assessment_run_ids": ["run_14f133b266d6"], "tool_run_ids": []},
+    "raw-current-vulnerable-2": {"project_id": "proj_a38f5492dc70", "assessment_run_ids": ["run_e6b6ba1d8361"], "tool_run_ids": []},
+    "raw-legacy-secure-1": {"project_id": "proj_0969122c4d5e", "assessment_run_ids": ["run_ec8426bcb1ca"], "tool_run_ids": []},
+    "raw-legacy-vulnerable-1": {"project_id": "proj_e5a7bd442c25", "assessment_run_ids": ["run_8205442dbb05"], "tool_run_ids": []},
+    "raw-legacy-secure-2": {"project_id": "proj_d93b95658c42", "assessment_run_ids": ["run_f0f49dee07f4"], "tool_run_ids": []},
+    "raw-legacy-vulnerable-2": {"project_id": "proj_a6c2e173a104", "assessment_run_ids": ["run_d0d5e55481f7"], "tool_run_ids": []},
+    "sdk-current-secure-1": {"project_id": "proj_c93a7a690585", "assessment_run_ids": ["run_7a7597e38ca7"], "tool_run_ids": []},
+    "sdk-current-vulnerable-1": {"project_id": "proj_6c74560a12df", "assessment_run_ids": ["run_5beab7d580f8"], "tool_run_ids": []},
+    "sdk-current-secure-2": {"project_id": "proj_5e6ead3d2546", "assessment_run_ids": ["run_adf5abaf4b42"], "tool_run_ids": []},
+    "sdk-current-vulnerable-2": {"project_id": "proj_e2f02c4b0337", "assessment_run_ids": ["run_a94319a0bd71"], "tool_run_ids": []},
+    "sdk-legacy-secure-1": {"project_id": "proj_208a709d3e89", "assessment_run_ids": ["run_cf7f606d4849"], "tool_run_ids": []},
+    "sdk-legacy-vulnerable-1": {"project_id": "proj_b3390101d0c6", "assessment_run_ids": ["run_c8952a5321c6"], "tool_run_ids": []},
+    "sdk-legacy-secure-2": {"project_id": "proj_286efd7f16bc", "assessment_run_ids": ["run_570c077e9299"], "tool_run_ids": []},
+    "sdk-legacy-vulnerable-2": {"project_id": "proj_856c320c0bd3", "assessment_run_ids": ["run_24e6a227d3b1"], "tool_run_ids": []}
+  }
+}

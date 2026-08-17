@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "milestone": "M5.0",
+  "status": "complete",
+  "product_version": "0.9.0",
+  "release_channel": "public-beta",
+  "completion_scope": "tester-onboarding-and-preview-readiness",
+  "next_qualification_stage": "M5.1-M5.4-independent-execution",
+  "required_assets": [
+    "README.md",
+    "SECURITY.md",
+    "RESPONSIBLE_USE.md",
+    "docs/USER_MANUAL.md",
+    "docs/TESTER_PREVIEW_GUIDE.md",
+    "docs/TESTER_PREVIEW_COORDINATOR.md",
+    "docs/INSTALLATION.md",
+    "docs/SUPPORT_MATRIX.md",
+    "docs/BACKUP_AND_RECOVERY.md",
+    ".github/ISSUE_TEMPLATE/m5-tester-feedback.yml"
+  ],
+  "required_tester_commands": [
+    "python scripts/bootstrap.py",
+    "uv run adverscope doctor",
+    "uv run adverscope tutorial create",
+    "uv run adverscope tutorial target",
+    "uv run adverscope serve"
+  ],
+  "required_feedback_fields": [
+    "session_id",
+    "feedback_type",
+    "version",
+    "platform",
+    "installation",
+    "model_profile",
+    "target_category",
+    "target_style",
+    "task_results",
+    "expected_actual",
+    "execution_ids",
+    "reproduction",
+    "usability",
+    "impact",
+    "safety"
+  ],
+  "manual_screenshots": [
+    "docs/images/manual/01-projects-dashboard.jpg",
+    "docs/images/manual/02-authorization-attack-surface.jpg",
+    "docs/images/manual/03-guardrails-objectives.jpg",
+    "docs/images/manual/04-new-assessment.jpg",
+    "docs/images/manual/05-testing-tools.jpg",
+    "docs/images/manual/06-assessment-results.jpg",
+    "docs/images/manual/07-run-assess.jpg",
+    "docs/images/manual/08-run-evidence.jpg",
+    "docs/images/manual/09-exact-request-response.jpg",
+    "docs/images/manual/10-run-review.jpg",
+    "docs/images/manual/11-coverage-registry.jpg",
+    "docs/images/manual/12-exact-response.jpg",
+    "docs/images/manual/13-model-providers.jpg",
+    "docs/images/manual/14-local-data.jpg"
+  ]
+}

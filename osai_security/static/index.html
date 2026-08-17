@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>AdverScope — Autonomous AI Security Assessment</title>
+  <meta name="description" content="AdverScope is a bounded, evidence-first framework for autonomous AI security assessment.">
+  <link rel="icon" href="/static/adverscope-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/app.css?v=0.9.0">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to assessment workspace</a>
+  <header class="topbar">
+    <button class="brand" id="home-button" type="button" aria-label="Open projects">
+      <span class="brand-mark"><img src="/static/adverscope-mark.svg" alt=""></span>
+      <span><strong>AdverScope</strong><small>AI SECURITY WORKBENCH</small></span>
+    </button>
+    <nav class="topnav" aria-label="Primary">
+      <button class="nav-item active" data-view="projects" type="button">01&nbsp; Projects</button>
+      <button class="nav-item" data-view="surface" type="button">02&nbsp; Attack surface</button>
+      <button class="nav-item" data-view="reasoning" type="button">03&nbsp; Assessment reasoning</button>
+      <button class="nav-item" data-view="assess" type="button">04&nbsp; New assessment</button>
+      <button class="nav-item" data-view="tools" type="button">05&nbsp; Testing tools</button>
+      <button class="nav-item" data-view="archive" type="button">06&nbsp; Assessment results</button>
+      <button class="nav-item" data-view="motor" type="button">07&nbsp; Model lab</button>
+    </nav>
+    <div class="system-strip">
+      <span id="release-indicator">VERSION</span>
+      <button id="data-recovery-button" class="model-indicator" type="button" title="Backup, restore, and project transfer"><i class="status-dot online"></i>LOCAL DATA</button>
+      <button id="model-indicator" class="model-indicator" type="button" title="Choose model provider"><i class="status-dot"></i>MODEL</button>
+    </div>
+  </header>
+
+  <div class="workspace">
+    <aside class="project-rail">
+      <div class="rail-head"><span>ASSESSMENT PROJECTS</span><button class="icon-button" id="new-project-button" type="button" title="Create project">+</button></div>
+      <div id="project-list" class="project-list"></div>
+      <div class="rail-foot"><span>LOCAL-FIRST</span><p>Client data stays in isolated project records and evidence directories.</p></div>
+    </aside>
+
+    <main id="main-content" class="main-content" tabindex="-1"></main>
+
+    <aside id="context-rail" class="context-rail"></aside>
+  </div>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <dialog id="project-dialog" class="modal">
+    <form id="project-form" class="modal-card">
+      <div class="modal-head"><div><span class="kicker">NEW WORKSPACE</span><h2>Create assessment project</h2></div><button class="icon-button" id="close-project-dialog" type="button" aria-label="Close">×</button></div>
+      <p class="copy">Everything imported, executed, and captured remains bound to this project.</p>
+      <label>Project name<input name="name" required maxlength="160" placeholder="Support chatbot assessment"></label>
+      <label>Client or team<input name="client" maxlength="160" placeholder="Internal Security"></label>
+      <div class="form-grid two"><label>Environment<select name="environment"><option>test</option><option>staging</option><option>production</option></select></label><label>Classification<select name="data_classification"><option>confidential</option><option>internal</option><option>restricted</option></select></label></div>
+      <button class="primary wide" type="submit">Create isolated project</button>
+    </form>
+  </dialog>
+
+  <dialog id="project-organization-dialog" class="modal">
+    <form id="project-organization-form" class="modal-card">
+      <div class="modal-head"><div><span class="kicker">PROJECT ORGANIZATION</span><h2 id="project-organization-title">Organize project</h2></div><button class="icon-button" id="close-project-organization-dialog" type="button" aria-label="Close">×</button></div>
+      <p class="copy">Folders, tags, and pinning affect navigation only. Assessment evidence and accepted report revisions remain unchanged.</p>
+      <input name="project_id" type="hidden">
+      <div id="project-organization-status" class="organization-status"></div>
+      <label>Folder<input name="folder" maxlength="80" placeholder="Client assessments / 2026"></label>
+      <label>Tags<input name="tags" maxlength="520" placeholder="chatbot, retest, external"><small>Comma-separated. Up to 12 tags, 40 characters each.</small></label>
+      <label class="check-row"><input name="pinned" type="checkbox"><span>Pin this project for quick access.</span></label>
+      <div class="organization-actions"><button class="danger" id="archive-project-button" type="button">Archive project</button><button class="secondary hidden" id="restore-project-button" type="button">Restore project</button><button class="primary" id="save-project-organization" type="submit">Save organization</button></div>
+      <p class="organization-footnote">Archive is recoverable and never deletes project records, evidence, screenshots, or reports. Active work must finish or be cancelled first.</p>
+    </form>
+  </dialog>
+
+  <dialog id="model-provider-dialog" class="modal">
+    <form id="model-provider-form" class="modal-card model-provider-card">
+      <div class="modal-head"><div><span class="kicker">MODEL PROFILES</span><h2>Planning, generation, and evaluation</h2></div><button class="icon-button" id="close-model-provider-dialog" type="button" aria-label="Close">×</button></div>
+      <p class="copy">Create named local or approved remote profiles, then assign each assessment role explicitly. Configuration is local to this AdverScope installation and is not client-project data.</p>
+      <div class="provider-profile-picker"><label>Saved profile<select name="selected_profile" required></select></label><button class="secondary" id="new-model-profile" type="button">New named profile</button></div>
+      <label>Profile ID<input name="profile_id" required minlength="2" maxlength="64" pattern="[a-z][a-z0-9_-]{1,63}" autocomplete="off"><small>Stable lowercase identifier used in run telemetry.</small></label>
+      <label>Profile name<input name="label" required maxlength="120" autocomplete="off"></label>
+      <label>Provider kind<select name="kind" required><option value="local-openai-compatible">Local OpenAI-compatible</option><option value="openai">OpenAI API</option><option value="zai">Z.AI API</option><option value="remote-openai-compatible">Approved remote OpenAI-compatible API</option></select></label>
+      <label>API base URL<input name="base_url" required maxlength="1000" type="url" autocomplete="off"></label>
+      <label>Model<input name="model" required maxlength="200" autocomplete="off"></label>
+      <label>API key environment variable<input name="api_key_env" maxlength="160" autocomplete="off"><small>Recommended for persistent configuration. AdverScope stores only this variable name, never its value.</small></label>
+      <label class="check-row"><input name="use_ssh_tunnel" type="checkbox"><span>Use the SSH tunnel defined in the local AdverScope configuration.</span></label>
+      <label class="check-row"><input name="supports_disable_thinking" type="checkbox"><span>Send the compatible local-model option that disables thinking output.</span></label>
+      <label>Session API key · optional<input name="api_key" type="password" minlength="8" maxlength="1000" autocomplete="new-password" placeholder="Held in memory until AdverScope stops"><small>The field is never populated from the server. A submitted key is held in process memory only.</small></label>
+      <div id="model-provider-remote-warning" class="validation-note warning hidden">Remote providers receive the assessment context, generated prompts, and target responses needed for the selected model role. Use only a provider and account approved for the client data classification.</div>
+      <div id="model-provider-status" class="mapping-tags"></div>
+      <div id="model-provider-qualification" class="provider-qualification"></div>
+      <section class="provider-role-panel"><span class="section-label">MODEL ROLE ASSIGNMENTS</span><p class="copy">Every model interaction records the selected role and profile. Adjudication is optional; all other roles are required.</p><div class="provider-role-grid"><label>Planner<select name="role_planner" required></select></label><label>Generator<select name="role_generator" required></select></label><label>Evaluator<select name="role_evaluator" required></select></label><label>Adjudicator<select name="role_adjudicator"></select></label></div></section>
+      <div class="model-provider-actions"><button class="primary" type="submit">Save profile and roles</button><button class="secondary" id="test-model-provider" type="button">Verify connection</button><button class="secondary" id="clear-model-key" type="button">Clear session key</button><button class="danger" id="delete-model-profile" type="button">Delete custom profile</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="data-recovery-dialog" class="modal data-recovery-dialog">
+    <div class="modal-card data-recovery-card">
+      <div class="modal-head"><div><span class="kicker">DATA CUSTODY</span><h2>Backup, restore, and project transfer</h2></div><button class="icon-button" id="close-data-recovery-dialog" type="button" aria-label="Close">×</button></div>
+      <p class="copy">Create integrity-checked archives without mixing projects. Assessment traffic, responses, screenshots, artifacts, and findings may contain client-confidential material.</p>
+      <label class="check-row recovery-acknowledgement"><input id="recovery-sensitive-ack" type="checkbox"><span>I understand that exported archives contain sensitive assessment data and will store and transfer them according to the engagement rules.</span></label>
+      <section class="recovery-section">
+        <span class="section-label">ONE ISOLATED PROJECT</span>
+        <h3>Transfer a project between installations</h3>
+        <label>Project<select id="recovery-project-select"></select></label>
+        <label class="check-row"><input id="recovery-include-sessions" type="checkbox"><span>Include browser login sessions. This may export reusable authentication material and is normally left disabled.</span></label>
+        <button class="secondary wide" id="export-project-transfer" type="button">Export selected project</button>
+        <label>Import project archive<input id="import-project-transfer-file" type="file" accept=".zip,application/zip"></label>
+        <button class="secondary wide" id="import-project-transfer" type="button">Verify and import as a separate project</button>
+        <p class="copy">Import rejects modified archives, unsafe paths, unsupported schemas, duplicate project IDs, and existing project evidence directories.</p>
+      </section>
+      <section class="recovery-section">
+        <span class="section-label">COMPLETE LOCAL ASSESSMENT STORE</span>
+        <h3>Back up every project and retained evidence file</h3>
+        <button class="primary wide" id="download-local-backup" type="button">Download verified local backup</button>
+        <p class="copy">Browser sessions are excluded unless explicitly selected above. They are ephemeral credentials, not professional finding evidence.</p>
+      </section>
+      <section class="recovery-section recovery-offline">
+        <span class="section-label">OFFLINE RESTORE</span>
+        <h3>Stop AdverScope before replacement restore</h3>
+        <p>Use <code>adverscope backup verify</code>, then <code>adverscope backup restore</code>. AdverScope retains rollback state and automatically recovers an interrupted restore before opening the database.</p>
+      </section>
+      <div id="data-recovery-status" class="validation-note">No recovery operation is running.</div>
+    </div>
+  </dialog>
+
+  <dialog id="recon-dialog" class="modal recon-modal">
+    <div class="modal-card recon-modal-card">
+      <div class="modal-head"><div><span class="kicker">TECHNICAL INPUT</span><h2 id="recon-dialog-title">Inventory source</h2></div><button class="icon-button" id="close-recon-dialog" type="button" aria-label="Close technical input">×</button></div>
+      <div id="recon-dialog-content" class="run-dialog-content"><div class="empty">Loading technical input…</div></div>
+    </div>
+  </dialog>
+
+  <script src="/static/reasoning.js?v=0.9.0" defer></script>
+  <script src="/static/app.js?v=0.9.0" defer></script>
+</body>
+</html>

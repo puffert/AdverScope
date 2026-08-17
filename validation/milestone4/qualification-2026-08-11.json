@@ -1,0 +1,114 @@
+{
+  "schema_version": "adverscope-milestone4-qualification-v1",
+  "registry_version": "2026.08.11.2",
+  "recorded_at": "2026-08-11T18:00:00Z",
+  "milestone": "M4",
+  "status": "qualified",
+  "coverage": {
+    "work_packages": 8,
+    "controls": 62,
+    "configured_contract_controls": 43,
+    "native_adapter_controls": 19,
+    "claim": "Qualified execution and evidence lanes; target applicability and customer configuration remain engagement-specific."
+  },
+  "contract_qualification": {
+    "independent_fixture_families": [
+      "flat-v1",
+      "nested-v2"
+    ],
+    "campaigns": 4,
+    "control_executions": 172,
+    "requests_including_exact_reproduction": 344,
+    "true_positive": 86,
+    "true_negative": 86,
+    "false_positive": 0,
+    "false_negative": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "specificity": 1.0,
+    "finding_reproducibility": 1.0,
+    "required_evidence": [
+      "exact control id",
+      "approved case id",
+      "immutable fixture SHA-256",
+      "oracle version",
+      "measured value and acceptance boundary",
+      "non-secret evidence id",
+      "failed requirement decision",
+      "exact reproduction"
+    ]
+  },
+  "stdio_mcp_qualification": {
+    "fixture_families": 1,
+    "modes": [
+      "secure",
+      "vulnerable"
+    ],
+    "true_positive": 1,
+    "true_negative": 1,
+    "false_positive": 0,
+    "false_negative": 0,
+    "finding_reproducibility": 1.0,
+    "protocol_version": "2026-07-28",
+    "controls": [
+      "absolute executable path",
+      "executable SHA-256 verification before every launch",
+      "shell disabled",
+      "environment references instead of stored values",
+      "bounded response time and bytes",
+      "complete JSON-RPC stdin/stdout custody",
+      "termination on every exit path"
+    ]
+  },
+  "native_evidence": [
+    "validation/agentic-trace/qualification-2026-08-11.json",
+    "validation/target-campaigns/mcp-authorization-qualification-2026-08-09-results.json",
+    "validation/target-campaigns/mcp-content-boundary-qualification-2026-08-09-results.json",
+    "validation/target-campaigns/mcp-inventory-lifecycle-qualification-2026-08-09-results.json",
+    "validation/target-campaigns/mcp-older-dynamic-sdk-qualification-2026-08-09-results.json",
+    "validation/target-campaigns/indirect-document-assistant-qualification-2026-08-09-results.json",
+    "validation/target-campaigns/tool-authorization-qualification-2026-08-09-results.json"
+  ],
+  "verification": {
+    "contract_suite": "python -m unittest tests.test_milestone4_coverage -v",
+    "contract_tests": 4,
+    "stdio_suite": "python -m unittest tests.test_mcp_stdio -v",
+    "stdio_tests": 3,
+    "mcp_regression_suite_tests": 29,
+    "complete_regression_tests": 465,
+    "complete_regression_skipped": 3,
+    "complete_regression_duration_seconds": 193.57,
+    "release_identity": "passed",
+    "javascript_syntax": "passed",
+    "dependency_lock": "passed",
+    "release_artifacts": [
+      "adverscope-0.9.0-py3-none-any.whl",
+      "adverscope-0.9.0.tar.gz",
+      "adverscope-0.9.0.cdx.json",
+      "adverscope-0.9.0.release.json",
+      "SHA256SUMS"
+    ],
+    "release_artifact_integrity": "passed",
+    "clean_wheel_install": "passed",
+    "installed_cli_diagnostics_failures": 0,
+    "installed_cli_tutorial_created": true,
+    "github_release_gate_run": 31496862445,
+    "github_release_gate_status": "passed",
+    "github_platforms": [
+      "windows-2025",
+      "ubuntu-24.04",
+      "macos-15"
+    ],
+    "github_dependency_security": "passed",
+    "github_clean_install_release_and_container": "passed",
+    "status": "passed"
+  },
+  "limitations": [
+    "Qualification proves the execution and evidence mechanism, not universal autonomous discovery of undocumented routes, identities, policies, effects, or statistical thresholds.",
+    "Configured-contract controls require a customer-approved target oracle and immutable fixture identity before they are applicable to an engagement.",
+    "Multimodal contract controls use target-owned approved fixture references; AdverScope does not execute embedded media content.",
+    "Privacy, membership-inference, extraction, resource, and cost controls require customer-approved sample sets, low ceilings, and acceptance thresholds.",
+    "State-changing confirmation remains verifier-backed and reversible; destructive exploitation is outside the autonomous qualification boundary.",
+    "External-platform qualification is retained separately and may be narrower than the complete synthetic control-lane qualification."
+  ]
+}

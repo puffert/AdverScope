@@ -1,0 +1,27 @@
+name: Feature request
+description: Propose a general AdverScope improvement.
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: "Describe a general testing need. Do not include client evidence, credentials, private target details, or unpublished vulnerabilities."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Professional testing problem
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Data safety confirmation
+      options:
+        - label: This request contains no secrets, client evidence, or private target data.
+          required: true

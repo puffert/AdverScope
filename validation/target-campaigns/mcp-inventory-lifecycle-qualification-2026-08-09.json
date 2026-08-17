@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "campaign_id": "mcp-inventory-lifecycle-qualification-2026-08-09",
+  "suite_id": "adverscope-mcp-inventory-lifecycle-current-legacy-modern",
+  "projects": {
+    "raw-stateless-secure-1": {"project_id": "proj_20dbb32a1fdd", "assessment_run_ids": ["run_be94d2132532"], "tool_run_ids": []},
+    "raw-stateless-secure-2": {"project_id": "proj_4f8d77db2d3f", "assessment_run_ids": ["run_7530bef4fcc3"], "tool_run_ids": []},
+    "raw-stateless-vulnerable-1": {"project_id": "proj_5205b5d924bd", "assessment_run_ids": ["run_f0a2ca1b5b3f"], "tool_run_ids": []},
+    "raw-stateless-vulnerable-2": {"project_id": "proj_0e3edbcb273b", "assessment_run_ids": ["run_c3d3e5bcaba4"], "tool_run_ids": []},
+    "raw-streamable-secure-1": {"project_id": "proj_60d183648a03", "assessment_run_ids": ["run_2715a75e3cdb"], "tool_run_ids": []},
+    "raw-streamable-secure-2": {"project_id": "proj_2426c67c4500", "assessment_run_ids": ["run_816c2334f948"], "tool_run_ids": []},
+    "raw-streamable-vulnerable-1": {"project_id": "proj_54d0e5f81c8c", "assessment_run_ids": ["run_a701f487a83d"], "tool_run_ids": []},
+    "raw-streamable-vulnerable-2": {"project_id": "proj_d2b177f3ef7c", "assessment_run_ids": ["run_a513a47fb5ae"], "tool_run_ids": []},
+    "raw-legacy-secure-1": {"project_id": "proj_2da27fdcd3c6", "assessment_run_ids": ["run_9f0600a4f742"], "tool_run_ids": []},
+    "raw-legacy-secure-2": {"project_id": "proj_76b23d76aad7", "assessment_run_ids": ["run_149297998038"], "tool_run_ids": []},
+    "raw-legacy-vulnerable-1": {"project_id": "proj_2018b1516957", "assessment_run_ids": ["run_e297ff976e94"], "tool_run_ids": []},
+    "raw-legacy-vulnerable-2": {"project_id": "proj_91ea10ff7eef", "assessment_run_ids": ["run_03d96b4a8e0f"], "tool_run_ids": []},
+    "sdk-v2-stateless-secure-1": {"project_id": "proj_41947e6717ba", "assessment_run_ids": ["run_cc4c8ae5bd2b"], "tool_run_ids": []},
+    "sdk-v2-stateless-secure-2": {"project_id": "proj_2516e8f55025", "assessment_run_ids": ["run_14193ffb6947"], "tool_run_ids": []},
+    "sdk-v2-stateless-vulnerable-1": {"project_id": "proj_2b935e6947ee", "assessment_run_ids": ["run_093895ec767c"], "tool_run_ids": []},
+    "sdk-v2-stateless-vulnerable-2": {"project_id": "proj_2109f4ca658d", "assessment_run_ids": ["run_8ac6fd545cba"], "tool_run_ids": []}
+  }
+}

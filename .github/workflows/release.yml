@@ -1,0 +1,74 @@
+name: release artifacts
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "20"
+          cache: npm
+      - run: uv sync --extra qualification --locked
+      - run: npm ci
+      - run: npm audit --omit=dev --audit-level=high
+      - run: uv export --locked --extra qualification --no-dev --no-emit-project --quiet --output-file requirements-audit.txt
+      - run: uvx --from pip-audit==2.10.1 pip-audit --requirement requirements-audit.txt
+      - run: uv run python scripts/check_release_identity.py
+      - run: uv run python scripts/check_tester_preview.py
+      - run: uv run python -m unittest discover -s tests -v
+      - run: uv run python scripts/release_integrity.py build --output dist
+      - run: uv run python scripts/release_integrity.py verify --output dist
+      - name: Smoke-test the installed release wheel
+        shell: bash
+        run: |
+          uv venv "$RUNNER_TEMP/adverscope-release" --python 3.12
+          uv pip install --python "$RUNNER_TEMP/adverscope-release/bin/python" dist/adverscope-*.whl
+          "$RUNNER_TEMP/adverscope-release/bin/adverscope" --version
+          "$RUNNER_TEMP/adverscope-release/bin/adverscope" init --config "$RUNNER_TEMP/adverscope-release/config.json" --data-dir "$RUNNER_TEMP/adverscope-release/state" --provider openai --model synthetic-model --api-key-env ADVERSCOPE_CI_MODEL_KEY
+          "$RUNNER_TEMP/adverscope-release/bin/adverscope" doctor --config "$RUNNER_TEMP/adverscope-release/config.json" --skip-model
+          "$RUNNER_TEMP/adverscope-release/bin/adverscope" tutorial --config "$RUNNER_TEMP/adverscope-release/config.json" create --json
+      - run: docker build --tag adverscope:${{ github.ref_name }} .
+      - name: Attest release artifacts
+        if: github.event.repository.visibility == 'public'
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4.2.2
+        with:
+          subject-path: dist/*
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: adverscope-${{ github.ref_name }}
+          path: dist
+          if-no-files-found: error
+      - name: Publish GitHub prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/* \
+            --verify-tag \
+            --title "AdverScope $GITHUB_REF_NAME" \
+            --generate-notes \
+            --prerelease
+      - name: Verify published GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          release_dir="$RUNNER_TEMP/adverscope-published-release"
+          mkdir -p "$release_dir"
+          gh release download "$GITHUB_REF_NAME" --dir "$release_dir"
+          test "$(gh release view "$GITHUB_REF_NAME" --json isPrerelease --jq '.isPrerelease')" = "true"
+          uv run python scripts/release_integrity.py verify --output "$release_dir"

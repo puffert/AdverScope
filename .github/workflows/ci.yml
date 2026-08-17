@@ -1,0 +1,112 @@
+name: release gates
+
+on:
+  push:
+    branches: [main, "codex/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "20"
+          cache: npm
+      - run: uv sync --extra qualification --locked
+      - run: npm ci
+      - run: uv run python scripts/check_release_identity.py
+      - run: uv run python scripts/check_tester_preview.py
+      - run: uv run python scripts/qualify_milestone5.py --check
+      - run: uv run python scripts/qualify_model_roles.py --check
+      - run: uv run python scripts/qualify_reliability.py --check
+      - run: uv run python -m unittest discover -s tests -v
+
+  platform:
+    name: platform ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2025, ubuntu-24.04, macos-15]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "20"
+          cache: npm
+      - run: uv sync --locked
+      - run: npm ci
+      - run: uv run python scripts/platform_qualification.py --output platform-result
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: platform-${{ matrix.os }}
+          path: |
+            platform-result/platform-qualification.json
+            platform-result/browser-platform-result.json
+            platform-result/login-before.png
+            platform-result/login-after.png
+            platform-result/chat-request.png
+            platform-result/chat-response.png
+          if-no-files-found: error
+          include-hidden-files: false
+          retention-days: 7
+
+  clean-install-and-release:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "20"
+          cache: npm
+      - run: python scripts/bootstrap.py --skip-browser --skip-init
+      - run: uv run adverscope init --config "$RUNNER_TEMP/adverscope/config.json" --data-dir "$RUNNER_TEMP/adverscope/data"
+      - run: uv run adverscope doctor --config "$RUNNER_TEMP/adverscope/config.json" --skip-model
+      - run: uv run adverscope tutorial --config "$RUNNER_TEMP/adverscope/config.json" create --json
+      - run: uv run python scripts/release_integrity.py build --output "$RUNNER_TEMP/release"
+      - run: uv run python scripts/release_integrity.py verify --output "$RUNNER_TEMP/release"
+      - name: Smoke-test the installed release wheel
+        shell: bash
+        run: |
+          uv venv "$RUNNER_TEMP/release-install" --python 3.12
+          uv pip install --python "$RUNNER_TEMP/release-install/bin/python" "$RUNNER_TEMP"/release/adverscope-*.whl
+          "$RUNNER_TEMP/release-install/bin/adverscope" --version
+          "$RUNNER_TEMP/release-install/bin/adverscope" init --config "$RUNNER_TEMP/release-install/config.json" --data-dir "$RUNNER_TEMP/release-install/state" --provider openai --model synthetic-model --api-key-env ADVERSCOPE_CI_MODEL_KEY
+          "$RUNNER_TEMP/release-install/bin/adverscope" doctor --config "$RUNNER_TEMP/release-install/config.json" --skip-model
+          "$RUNNER_TEMP/release-install/bin/adverscope" tutorial --config "$RUNNER_TEMP/release-install/config.json" create --json
+      - run: docker build --tag adverscope:ci .
+
+  dependency-security:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "20"
+          cache: npm
+      - run: uv lock --check
+      - run: npm ci
+      - run: npm audit --omit=dev --audit-level=high
+      - run: uv export --locked --extra qualification --no-dev --no-emit-project --quiet --output-file requirements-audit.txt
+      - run: uvx --from pip-audit==2.10.1 pip-audit --requirement requirements-audit.txt

@@ -1,0 +1,1199 @@
+{
+  "corpus": {
+    "frozen_at": "2026-08-14T00:00:00Z",
+    "frozen_sources": 8,
+    "id": "adverscope-m5-independent-field-corpus",
+    "version": "2026.08.14.1"
+  },
+  "gates": [
+    {
+      "id": "frozen-source-integrity",
+      "passed": true,
+      "threshold": 8,
+      "value": 8
+    },
+    {
+      "id": "non-framework-target-portfolio",
+      "passed": true,
+      "threshold": 3,
+      "value": 4
+    },
+    {
+      "id": "required-style-mechanism-coverage",
+      "passed": true,
+      "threshold": 13,
+      "value": 13
+    },
+    {
+      "id": "required-style-independent-depth",
+      "passed": false,
+      "threshold": 13,
+      "value": 3
+    },
+    {
+      "id": "professional-technique-field-qualification",
+      "passed": false,
+      "threshold": 10,
+      "value": 2
+    },
+    {
+      "id": "m4-domain-field-qualification",
+      "passed": false,
+      "threshold": 8,
+      "value": 1
+    }
+  ],
+  "limitations": [
+    "PortSwigger instances are ephemeral and cannot be redistributed as a local target fixture.",
+    "AI Goat results provide independent target-family evidence, but only technique-specific secure/vulnerable pairs already linked by the qualification registry count toward a technique field gate.",
+    "Official SDK-based fixtures prove protocol and SDK compatibility but were assembled for AdverScope qualification and therefore do not count as non-framework field targets.",
+    "Milestone 4 control lanes prove deterministic execution and evidence custody; they do not establish independent customer-target applicability or autonomous discovery.",
+    "Model-role repetition, current target reruns, external usability, and independent product-security review are separate M5 gates."
+  ],
+  "m4_work_packages": [
+    {
+      "controls": 6,
+      "field_status": "mechanism-only",
+      "field_target_style": "multimodal",
+      "id": "M4.1",
+      "mechanism_qualification": "qualified",
+      "non_framework_families": [],
+      "title": "Native multimodal security"
+    },
+    {
+      "controls": 9,
+      "field_status": "field-sampled",
+      "field_target_style": "agentic-multi-agent",
+      "id": "M4.2",
+      "mechanism_qualification": "qualified",
+      "non_framework_families": [
+        "agentdojo-upstream-benchmark"
+      ],
+      "title": "Agentic and multi-agent systems"
+    },
+    {
+      "controls": 8,
+      "field_status": "mechanism-only",
+      "field_target_style": "current-mcp",
+      "id": "M4.3",
+      "mechanism_qualification": "qualified",
+      "non_framework_families": [],
+      "title": "MCP ecosystem expansion"
+    },
+    {
+      "controls": 9,
+      "field_status": "field-covered",
+      "field_target_style": "rag-external-content",
+      "id": "M4.4",
+      "mechanism_qualification": "qualified",
+      "non_framework_families": [
+        "agentdojo-upstream-benchmark",
+        "aigoat-open-source-labs",
+        "portswigger-web-llm"
+      ],
+      "title": "RAG and vector ecosystem expansion"
+    },
+    {
+      "controls": 8,
+      "field_status": "mechanism-only",
+      "field_target_style": "model-training-pipeline",
+      "id": "M4.5",
+      "mechanism_qualification": "qualified",
+      "non_framework_families": [],
+      "title": "Dynamic model and training-pipeline security"
+    },
+    {
+      "controls": 7,
+      "field_status": "mechanism-only",
+      "field_target_style": "privacy-inference",
+      "id": "M4.6",
+      "mechanism_qualification": "qualified",
+      "non_framework_families": [],
+      "title": "Privacy, extraction, and model inference"
+    },
+    {
+      "controls": 7,
+      "field_status": "mechanism-only",
+      "field_target_style": "resource-cost-availability",
+      "id": "M4.7",
+      "mechanism_qualification": "qualified",
+      "non_framework_families": [],
+      "title": "Resource, cost, and availability controls"
+    },
+    {
+      "controls": 8,
+      "field_status": "field-sampled",
+      "field_target_style": "cloud-client-operational",
+      "id": "M4.8",
+      "mechanism_qualification": "qualified",
+      "non_framework_families": [
+        "portswigger-web-llm"
+      ],
+      "title": "Cloud, client, and operational AI controls"
+    }
+  ],
+  "milestone": "M5.1",
+  "schema_version": "1.0",
+  "status": "in_progress",
+  "summary": {
+    "experimental_techniques": 37,
+    "field_covered_m4_work_packages": 1,
+    "field_covered_target_styles": 3,
+    "field_qualified_techniques": 2,
+    "m4_work_packages": 8,
+    "mechanism_qualified_pending_field_evidence": 8,
+    "non_framework_target_families": 4,
+    "professional_claim_candidates": 10,
+    "registry_techniques": 47,
+    "required_target_styles": 13,
+    "target_families": 20
+  },
+  "target_styles": [
+    {
+      "id": "conventional-chatbot",
+      "implementation_families": [
+        "adverscope-independent-semantic-fixture",
+        "adverscope-policy-decision-gateway-fixture",
+        "aigoat-open-source-labs",
+        "owasp-basileak-r4"
+      ],
+      "non_framework_families": [
+        "aigoat-open-source-labs",
+        "owasp-basileak-r4"
+      ],
+      "status": "field-covered"
+    },
+    {
+      "id": "browser-chatbot",
+      "implementation_families": [
+        "portswigger-web-llm"
+      ],
+      "non_framework_families": [
+        "portswigger-web-llm"
+      ],
+      "status": "field-sampled"
+    },
+    {
+      "id": "tool-agent",
+      "implementation_families": [
+        "adverscope-workspace-tool-authorization-fixture",
+        "agentdojo-upstream-benchmark",
+        "portswigger-web-llm"
+      ],
+      "non_framework_families": [
+        "agentdojo-upstream-benchmark",
+        "portswigger-web-llm"
+      ],
+      "status": "field-covered"
+    },
+    {
+      "id": "current-mcp",
+      "implementation_families": [
+        "adverscope-protocol-mcp-inventory-fixture",
+        "adverscope-protocol-mcp-inventory-lifecycle-fixture",
+        "adverscope-protocol-mcp-prompt-boundary-fixture",
+        "adverscope-streamable-mcp-authorization-fixture",
+        "adverscope-streamable-mcp-content-boundary-fixture",
+        "official-mcp-python-sdk-1.25-inventory-fixture",
+        "official-mcp-python-sdk-dynamic-inventory-fixture",
+        "official-mcp-python-sdk-prompt-boundary-fixture",
+        "official-mcp-typescript-sdk-v2-inventory-fixture"
+      ],
+      "non_framework_families": [],
+      "status": "mechanism-only"
+    },
+    {
+      "id": "legacy-mcp",
+      "implementation_families": [
+        "adverscope-legacy-sse-mcp-authorization-fixture",
+        "adverscope-legacy-sse-mcp-content-boundary-fixture",
+        "adverscope-protocol-mcp-inventory-fixture",
+        "adverscope-protocol-mcp-inventory-lifecycle-fixture",
+        "adverscope-protocol-mcp-prompt-boundary-fixture",
+        "official-mcp-python-sdk-1.25-inventory-fixture",
+        "official-mcp-python-sdk-dynamic-inventory-fixture",
+        "official-mcp-python-sdk-prompt-boundary-fixture"
+      ],
+      "non_framework_families": [],
+      "status": "mechanism-only"
+    },
+    {
+      "id": "rag-external-content",
+      "implementation_families": [
+        "adverscope-document-retrieval-assistant-fixture",
+        "agentdojo-upstream-benchmark",
+        "aigoat-open-source-labs",
+        "portswigger-web-llm"
+      ],
+      "non_framework_families": [
+        "agentdojo-upstream-benchmark",
+        "aigoat-open-source-labs",
+        "portswigger-web-llm"
+      ],
+      "status": "field-covered"
+    },
+    {
+      "id": "artifact-static",
+      "implementation_families": [
+        "adverscope-m4-control-fixtures"
+      ],
+      "non_framework_families": [],
+      "status": "mechanism-only"
+    },
+    {
+      "id": "multimodal",
+      "implementation_families": [
+        "adverscope-m4-control-fixtures"
+      ],
+      "non_framework_families": [],
+      "status": "mechanism-only"
+    },
+    {
+      "id": "agentic-multi-agent",
+      "implementation_families": [
+        "adverscope-m4-control-fixtures",
+        "agentdojo-upstream-benchmark"
+      ],
+      "non_framework_families": [
+        "agentdojo-upstream-benchmark"
+      ],
+      "status": "field-sampled"
+    },
+    {
+      "id": "model-training-pipeline",
+      "implementation_families": [
+        "adverscope-m4-control-fixtures"
+      ],
+      "non_framework_families": [],
+      "status": "mechanism-only"
+    },
+    {
+      "id": "privacy-inference",
+      "implementation_families": [
+        "adverscope-m4-control-fixtures"
+      ],
+      "non_framework_families": [],
+      "status": "mechanism-only"
+    },
+    {
+      "id": "resource-cost-availability",
+      "implementation_families": [
+        "adverscope-m4-control-fixtures"
+      ],
+      "non_framework_families": [],
+      "status": "mechanism-only"
+    },
+    {
+      "id": "cloud-client-operational",
+      "implementation_families": [
+        "adverscope-m4-control-fixtures",
+        "portswigger-web-llm"
+      ],
+      "non_framework_families": [
+        "portswigger-web-llm"
+      ],
+      "status": "field-sampled"
+    }
+  ],
+  "techniques": [
+    {
+      "field_support_status": "mechanism-qualified",
+      "gaps": [
+        "requires 1 non-framework secure/vulnerable target family"
+      ],
+      "id": "LLM01-DIRECT",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "supported_recall": 1.0
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": true,
+      "registry_status": "qualified",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [
+        "adverscope-independent-semantic-fixture",
+        "adverscope-policy-decision-gateway-fixture"
+      ],
+      "title": "Direct instruction injection"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM01-PERSONA",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Persona, role, and identity hijacking"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM01-TRANSFORM",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Transformation and encoded injection"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM01-OBFUSCATED",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Multilingual, spacing, and Unicode obfuscation"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM01-SUFFIX",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Adversarial suffix and delimiter injection"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM01-TOKEN",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Tokenization and lexical-filter differential"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM01-CONTEXT",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Bounded context-pressure injection"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM01-INDIRECT",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Indirect external-content injection"
+    },
+    {
+      "field_support_status": "field-qualified",
+      "gaps": [],
+      "id": "LLM01-INDIRECT-WEB",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "supported_recall": 1.0
+      },
+      "non_framework_family_pairs": [
+        "portswigger-web-llm"
+      ],
+      "professional_claim_candidate": true,
+      "registry_status": "qualified",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [
+        "adverscope-document-retrieval-assistant-fixture",
+        "portswigger-web-llm"
+      ],
+      "title": "Stored web-content prompt injection"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM01-RAG",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [],
+      "title": "RAG document injection"
+    },
+    {
+      "field_support_status": "mechanism-qualified",
+      "gaps": [
+        "requires 1 non-framework secure/vulnerable target family"
+      ],
+      "id": "LLM01-MCP-CONTENT",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "supported_recall": 1.0
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": true,
+      "registry_status": "qualified",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [
+        "adverscope-legacy-sse-mcp-content-boundary-fixture",
+        "adverscope-streamable-mcp-content-boundary-fixture"
+      ],
+      "title": "MCP instruction and content injection"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM01-SPLIT",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Payload splitting and multi-turn assembly"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM01-CRESCENDO",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Gradual multi-turn escalation"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM01-MULTIMODAL",
+      "implementation_path": "contract",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM01",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Multimodal image or audio injection"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM02-SECRETS",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM02",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Synthetic secret and token extraction"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM02-PII",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM02",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Personal and customer data disclosure"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM02-CONTEXT",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM02",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Private context and configuration disclosure"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM02-CANONICAL",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM02",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Canonicalized secret reconstruction"
+    },
+    {
+      "field_support_status": "mechanism-qualified",
+      "gaps": [
+        "requires 1 non-framework secure/vulnerable target family"
+      ],
+      "id": "LLM02-MCP-RESOURCE",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "supported_recall": 1.0
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": true,
+      "registry_status": "qualified",
+      "risk_id": "LLM02",
+      "secure_vulnerable_family_pairs": [
+        "adverscope-legacy-sse-mcp-content-boundary-fixture",
+        "adverscope-streamable-mcp-content-boundary-fixture"
+      ],
+      "title": "Sensitive MCP resource disclosure"
+    },
+    {
+      "field_support_status": "mechanism-qualified",
+      "gaps": [
+        "requires 1 non-framework secure/vulnerable target family"
+      ],
+      "id": "LLM02-MCP-PROMPT",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "supported_recall": 1.0
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": true,
+      "registry_status": "qualified",
+      "risk_id": "LLM02",
+      "secure_vulnerable_family_pairs": [
+        "adverscope-protocol-mcp-prompt-boundary-fixture",
+        "official-mcp-python-sdk-prompt-boundary-fixture"
+      ],
+      "title": "Sensitive MCP prompt disclosure"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM03-MODEL",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM03",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Model and adapter provenance"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM03-DEPS",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM03",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Dependency and deployment integrity"
+    },
+    {
+      "field_support_status": "mechanism-qualified",
+      "gaps": [
+        "requires 1 non-framework secure/vulnerable target family"
+      ],
+      "id": "LLM03-MCP-INVENTORY",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "supported_recall": 1.0
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": true,
+      "registry_status": "qualified",
+      "risk_id": "LLM03",
+      "secure_vulnerable_family_pairs": [
+        "adverscope-protocol-mcp-inventory-fixture",
+        "adverscope-protocol-mcp-inventory-lifecycle-fixture",
+        "official-mcp-python-sdk-1.25-inventory-fixture",
+        "official-mcp-python-sdk-dynamic-inventory-fixture",
+        "official-mcp-typescript-sdk-v2-inventory-fixture"
+      ],
+      "title": "MCP tool and schema integrity drift"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM04-DATA",
+      "implementation_path": "contract",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM04",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Training or fine-tuning data poisoning"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM04-BACKDOOR",
+      "implementation_path": "contract",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM04",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Model backdoor and trigger testing"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM05-ACTIVE",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM05",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Active markup and URI output"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM05-COMMAND",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM05",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Command and query output"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM05-FORMAT",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM05",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Data-format injection"
+    },
+    {
+      "field_support_status": "field-qualified",
+      "gaps": [],
+      "id": "LLM06-TOOLS",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "supported_recall": 1.0
+      },
+      "non_framework_family_pairs": [
+        "portswigger-web-llm"
+      ],
+      "professional_claim_candidate": true,
+      "registry_status": "qualified",
+      "risk_id": "LLM06",
+      "secure_vulnerable_family_pairs": [
+        "adverscope-workspace-tool-authorization-fixture",
+        "portswigger-web-llm"
+      ],
+      "title": "Unauthorized tool or function invocation"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM06-PRIVILEGE",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM06",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Excessive tool permissions"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM06-APPROVAL",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM06",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Human-approval bypass"
+    },
+    {
+      "field_support_status": "mechanism-qualified",
+      "gaps": [
+        "requires 1 non-framework secure/vulnerable target family"
+      ],
+      "id": "LLM06-MCP-TOOLS",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "supported_recall": 1.0
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": true,
+      "registry_status": "qualified",
+      "risk_id": "LLM06",
+      "secure_vulnerable_family_pairs": [
+        "adverscope-legacy-sse-mcp-authorization-fixture",
+        "adverscope-streamable-mcp-authorization-fixture"
+      ],
+      "title": "Unauthorized MCP tool exposure or invocation"
+    },
+    {
+      "field_support_status": "mechanism-qualified",
+      "gaps": [
+        "requires 1 non-framework secure/vulnerable target family"
+      ],
+      "id": "LLM06-MCP-DEPUTY",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "supported_recall": 1.0
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": true,
+      "registry_status": "qualified",
+      "risk_id": "LLM06",
+      "secure_vulnerable_family_pairs": [
+        "adverscope-legacy-sse-mcp-authorization-fixture",
+        "adverscope-streamable-mcp-authorization-fixture"
+      ],
+      "title": "MCP confused-deputy authorization boundary"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM07-VERBATIM",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM07",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Verbatim prompt extraction"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM07-TRANSFORM",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM07",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Transformed or encoded prompt extraction"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM07-INFERENCE",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM07",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Prompt reconstruction and inference"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM07-CONTEXT",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM07",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Context-pressure prompt extraction"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM08-POISON",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM08",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Retrieval corpus poisoning"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM08-TENANT",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM08",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Cross-tenant retrieval"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM08-ACCESS",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM08",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Retrieval access-control bypass"
+    },
+    {
+      "field_support_status": "mechanism-qualified",
+      "gaps": [
+        "requires 1 non-framework secure/vulnerable target family"
+      ],
+      "id": "LLM08-MCP-BOUNDARY",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": 0.0,
+        "precision": 1.0,
+        "reproduction_rate": 1.0,
+        "supported_recall": 1.0
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": true,
+      "registry_status": "qualified",
+      "risk_id": "LLM08",
+      "secure_vulnerable_family_pairs": [
+        "adverscope-legacy-sse-mcp-content-boundary-fixture",
+        "adverscope-streamable-mcp-content-boundary-fixture"
+      ],
+      "title": "Cross-identity MCP resource boundary"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM09-FACT",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM09",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Factual and domain misinformation"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM09-CITATION",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM09",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Fabricated sources and citations"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM09-DECISION",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM09",
+      "secure_vulnerable_family_pairs": [],
+      "title": "High-impact decision manipulation"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM10-TOKEN",
+      "implementation_path": "contract",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM10",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Token and context exhaustion"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM10-COST",
+      "implementation_path": "contract",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM10",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Denial-of-wallet and rate-limit testing"
+    },
+    {
+      "field_support_status": "experimental",
+      "gaps": [],
+      "id": "LLM10-LOOP",
+      "implementation_path": "native",
+      "metrics": {
+        "execution_error_rate": null,
+        "precision": null,
+        "reproduction_rate": null,
+        "supported_recall": null
+      },
+      "non_framework_family_pairs": [],
+      "professional_claim_candidate": false,
+      "registry_status": "experimental",
+      "risk_id": "LLM10",
+      "secure_vulnerable_family_pairs": [],
+      "title": "Uncontrolled agent iteration"
+    }
+  ]
+}

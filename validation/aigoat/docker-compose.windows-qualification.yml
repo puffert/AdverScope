@@ -1,0 +1,6 @@
+services:
+  backend:
+    entrypoint:
+      - /bin/bash
+      - -lc
+      - tr -d '\r' < /app/docker-entrypoint.sh | /bin/bash
